@@ -1,3 +1,12 @@
+package amazon;
+
+/**
+* Problem: Find all root-to-leaf sum paths
+*
+* Solution: Use a list to try all paths, remove the node from list to try next node
+*/
+import java.util.*;
+
 public class pathSum {
     public boolean hasPathSum(TreeNode root, int sum){
 		if(root == null){
@@ -11,12 +20,7 @@ public class pathSum {
 		return hasPathSum(root.left, sum-root.val) || hasPathSum(root.right, sum-root.val);
 	}
 
-	/**
-	* Problem: Find all root-to-leaf sum paths
-	*
-	* Solution: Use a list to try all paths, remove the node from list to try next node
-	*/
-	import java.util.*;
+
 
 	public ArrayList<ArrayList<Integer>> pathSum(TreeNode root, int sum){
 		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
