@@ -1,0 +1,45 @@
+package ch9.DFS;
+import java.util.HashMap;
+
+/*Given a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.
+For example: Given the following binary tree,
+   1            <---
+ /   \
+2     3         <---
+ \     \
+  5     4       <---
+You should return [1, 3, 4].*/
+
+/**
+ * Definition for binary tree
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode(int x) { val = x; }
+ * }
+ */
+public class Ch9_199_Binary_Tree_Right_Side_View {
+    private void dfs(HashMap<Integer, Integer> depthToValue, TreeNode node, int depth) {
+        if (node == null) {
+            return;
+        }
+        
+        depthToValue.put(depth, node.val);
+        dfs(depthToValue, node.left, depth + 1);
+        dfs(depthToValue, node.right, depth + 1);
+    }
+    
+    public List<Integer> rightSideView(TreeNode root) {
+        HashMap<Integer, Integer> depthToValue = new HashMap<Integer, Integer>();
+        dfs(depthToValue, root, 1);
+        
+        int depth = 1;
+        List<Integer> result = new ArrayList<Integer>();
+        while (depthToValue.containsKey(depth)) {
+            result.add(depthToValue.get(depth));
+            depth++;
+        }
+        return result;
+    }
+}
