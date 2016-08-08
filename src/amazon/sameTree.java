@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class sameTree{
 	public boolean isSameTree1(TreeNode p, TreeNode q){
 		if(p==null && q==null){

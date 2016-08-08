@@ -1,3 +1,5 @@
+package amazon;
+
 public class DivideTwoIntegers{
 	    public int divide(int dividend, int divisor) {  
         if(divisor == 0)  

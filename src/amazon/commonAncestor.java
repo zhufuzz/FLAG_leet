@@ -1,3 +1,4 @@
+package amazon;
 /**
  * Problem: find the first common ancestor of two nodes in a binary tree
  *          avoid store additional nodes in data stucture

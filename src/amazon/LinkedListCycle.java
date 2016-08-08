@@ -1,3 +1,5 @@
+package amazon;
+
 public class LinkedListCycle{
 	public boolean hasCycle(ListNode head){
 		//no node or one node

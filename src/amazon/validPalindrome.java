@@ -1,3 +1,5 @@
+package amazon;
+
 public class validPalindrome{
 	public boolean isPalindrome(String s){
 		if(s == null){

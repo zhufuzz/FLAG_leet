@@ -1,3 +1,5 @@
+package amazon;
+
 //follow-up: find all pairs
 
 //follow-up: duplicate allowed

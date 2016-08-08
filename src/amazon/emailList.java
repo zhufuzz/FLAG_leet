@@ -1,8 +1,8 @@
+package amazon;
+import java.util.*;
 //Write a function that will take in email lists and 
 //return a new email list that contains only the email addresses that existed in all lists
 
-
-import java.util.*;
 public class emailList{
 	public static void main(String[] args){
 		ArrayList<ArrayList<String>> emails = new ArrayList<ArrayList<String>>();
@@ -65,15 +65,15 @@ public class emailList{
 	public static ArrayList<String> findEmail(ArrayList<ArrayList<String>> in){
 		ArrayList<String> res= new ArrayList<String>();
 		if(in.size() == 0) return res;
-		HashSet<String> set = new HashSet<String>();. 
+		HashSet<String> set = new HashSet<String>();
 		for(int i=0;i<in.get(0).size();i++) set.add(in.get(0).get(i));
 			for(int i=1;i<in.size();i++){
-				HashSet<String> tmp = new HashSet<String>();-google 1point3acres
+				HashSet<String> tmp = new HashSet<String>();
 				ArrayList<String> cur = in.get(i);
 				for(int j=0;j<cur.size();j++){
 					if(set.contains(cur.get(j))) tmp.add(cur.get(j));
 				}
-				set = tmp;. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+				set = tmp;
 			}
 			for(String s:set) res.add(s);
 				return res;

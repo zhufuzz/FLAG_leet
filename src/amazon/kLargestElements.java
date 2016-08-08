@@ -1,3 +1,5 @@
+package amazon;
+import java.util.*;
 //http://www.geeksforgeeks.org/k-largestor-smallest-elements-in-an-array/
 
 //use bubble sort O(nk)
@@ -6,7 +8,7 @@
 //quick select
 
 
-import java.util.*;
+
 public class kLargestElements{
 	public static void main(String[] args){
 		int[] test = new int[]{7,5,2,4,3,9};

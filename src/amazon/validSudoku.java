@@ -1,3 +1,5 @@
+package amazon;
+
 /**
 * Problem: Determine if a sudoku if valid
 *
@@ -6,7 +8,7 @@
 * follow-up: modify the program for any valid side length
 * 
 */
-public class ValidSudoku{
+public class validSudoku{
 	public boolean isValidSudoku(char[][] board){
 		int row = board.length;
 		int col = 0;

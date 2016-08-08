@@ -2,3 +2,8 @@
 //find prev node by using while loop
 //while(iter.next != delete)
 //    iter = iter.next;
+package amazon;
+
+public class DeleteInCircularList{
+	
+}

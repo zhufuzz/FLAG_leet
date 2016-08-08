@@ -1,4 +1,4 @@
-//Amazon
+package amazon;//Amazon
 
 //find SSN numbers in a file that contains other information
 
@@ -12,3 +12,6 @@
 //html tag: <.+?>
 
 //email: ^[\w!#$%&'*+/=?^_`{}~-]+@[\w\-]+(\.[\w\-]+)+$
+public class regExpMatching{
+	
+}

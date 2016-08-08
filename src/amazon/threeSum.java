@@ -1,6 +1,8 @@
+package amazon;
+
 
 import java.util.*;
-public class ThreeSum{
+public class threeSum{
 	public static void main(String[] args){
 		int[] test = new int[]{-1,0,1,2,-1,-4};
 		ArrayList<ArrayList<Integer>> res = threeSum(test);

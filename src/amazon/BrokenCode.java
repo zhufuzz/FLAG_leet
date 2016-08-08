@@ -1,3 +1,5 @@
+package amazon;
+
 public class BrokenCode{
 	public static void main(String[] args){
 		int[] test = new int[]{0,1};

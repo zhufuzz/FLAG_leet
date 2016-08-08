@@ -1,3 +1,5 @@
+package amazon;
+
 public class minRotatedSortedArray {
     public int findMin(int[] num){
 		if(num==null || num.length==0){

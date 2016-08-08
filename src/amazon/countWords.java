@@ -1,3 +1,4 @@
+package amazon;
 //count number of words in a string
 
 public class countWords{

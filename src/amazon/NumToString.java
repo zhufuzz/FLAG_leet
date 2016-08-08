@@ -1,3 +1,5 @@
+package amazon;
+
 public class NumToString{
 	public static void main(String[] args){
 

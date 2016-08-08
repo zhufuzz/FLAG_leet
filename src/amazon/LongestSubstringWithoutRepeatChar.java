@@ -1,3 +1,5 @@
+package amazon;
+
 public class LongestSubstringWithoutRepeatChar{
 	public static void main(String[] args){
          System.out.println(longestSubstring("geeksforgeeks"));

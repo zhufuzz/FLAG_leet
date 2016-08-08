@@ -1,5 +1,7 @@
-public class validBST{
+package amazon;
+import java.util.*;
 
+public class validBST{
 	//recursive
 	Integer pred = null;
      public boolean isValidBST(TreeNode root) { 
@@ -13,7 +15,7 @@ public class validBST{
     }
 
      //use inorder traversal
-    public boolean isValidBST(TreeNode root) {
+    public boolean isValidBST2(TreeNode root) {
         if (root == null) return true;
         List<Integer> result = new ArrayList<Integer>();
         inOrderList(root, result);

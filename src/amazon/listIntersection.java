@@ -1,9 +1,11 @@
+package amazon;
+
 //find the intersection of two lists
 //sol1: compute length difference and move pointers on two lists to the same front
 //sol2: make a circle on one list, then reduce the problem to find the loop head
 // if intersection exists
 public class listIntersection{
-	public ListNode getIntersectionNode(ListNode headA, ListNode headB){
+	public ListNode getIntersectionNode1(ListNode headA, ListNode headB){
 		if(headA==null || headB==null){
 			return null;
 		}
@@ -61,8 +63,8 @@ public class listIntersection{
 		ListNode last = null;
 		int lenA = 0;
 		while(iterA!=null){
-			if(iter.next==null){
-				last = iter;
+			if(iterA.next==null){
+				last = iterA;
 			}
 			iterA = iterA.next;
 			lenA++;

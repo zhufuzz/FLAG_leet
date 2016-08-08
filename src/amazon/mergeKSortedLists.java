@@ -1,9 +1,11 @@
+package amazon;
+import java.util.*;
 //merge k sorted list
 
 //sol1: use merge sort, time O(nklogk), stack space O(logk)
 //sol2: use heap(priority queue), time O(nklogk), space O(k)
 
-import java.util.*;
+
 public class mergeKSortedLists{
 
 	public ListNode mergeKLists(ArrayList<ListNode> lists){

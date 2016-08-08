@@ -1,3 +1,5 @@
+package amazon;
+
 //Write some code that takes as input parameters, two directory paths
 //The code should compare these two directories and return true if the directories are the same
 

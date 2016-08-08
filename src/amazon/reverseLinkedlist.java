@@ -1,3 +1,5 @@
+package amazon;
+
 //reverse a linked list
 public class reverseLinkedlist{
 	public static void main(String[] args){
@@ -31,9 +33,9 @@ public class reverseLinkedlist{
 		return prev;
 	}
 //recursive method
-	public static void recursiveReverse(ListNode head){
+	public static ListNode recursiveReverse(ListNode head){
 		if(head==null || head.next==null){
-			return;
+			return null;
 		}
 		ListNode first = head;
 		ListNode rest = head.next;

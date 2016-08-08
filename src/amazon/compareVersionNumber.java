@@ -1,3 +1,5 @@
+package amazon;
+
 public class compareVersionNumber{
 	public int compareVersion(String version1, String version2){
         //split on dots
@@ -32,3 +34,4 @@ public class compareVersionNumber{
 		}
 		return sum==0;
 	}
+}

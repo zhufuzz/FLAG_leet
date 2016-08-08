@@ -1,3 +1,5 @@
+package amazon;
+
 /**
 * Problem: Find subarray which has the largest sum
 *
@@ -56,3 +58,4 @@ public class maximumSubarray{
 		}
 		return left+right;
 	}
+}

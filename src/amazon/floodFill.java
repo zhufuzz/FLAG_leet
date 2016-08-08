@@ -1,3 +1,4 @@
+package amazon;
 
 // Write a function to “flood fill” a bitmap, function should allow controlling level of flood fill.
 

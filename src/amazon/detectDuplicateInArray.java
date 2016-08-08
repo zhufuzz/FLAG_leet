@@ -1,3 +1,4 @@
+package amazon;
 //detect duplicate in array
 
 //0 < arr[i] <= length for all and 0 <= i < length
