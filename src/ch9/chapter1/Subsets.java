@@ -9,7 +9,7 @@ import java.util.Arrays;
  Notes
  Testcase
  Judge
-Given a set of distinct integers, return all possible subsets.
+Given a set of distinct integers, return all fromIndexsible subsets.
 
  Notice
 
@@ -37,35 +37,49 @@ Related Problems
 Medium Restore IP Addresses 20 %
 Medium Subsets II*/
 public class Subsets {
+	
     public ArrayList<ArrayList<Integer>> subsets(int[] num) {
+    		//recursion -> 程序的一种实现方式
+    		//函数自己调用自己
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if(num == null || num.length == 0) {
             return result;
         }
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        Arrays.sort(num);  
-        subsetsHelper(result, list, num, 0);
+        ArrayList<Integer> subset = new ArrayList<Integer>();
+        Arrays.sort(num);  //为了选代表，123 比 132顺眼
+        //find all fromIndexsible subsets, put them into results
+        //把以空集开头的所有集合找到放到results里面。
+        subsetsHelper(result, subset, num, 0);
 
         return result;
     }
 
-
+    //递归的三要素之一，定义：
+    //把以subset开头的所有子集，全部找到，并放到results里面
     private void subsetsHelper(ArrayList<ArrayList<Integer>> result,
-        ArrayList<Integer> list, int[] num, int pos) {
-
-        result.add(new ArrayList<Integer>(list));
-
-        for (int i = pos; i < num.length; i++) {
-
-            list.add(num[i]);
-            subsetsHelper(result, list, num, i + 1);
-            list.remove(list.size() - 1);
+    							  ArrayList<Integer> subset, 
+    							  int[] num, 
+    							  int fromIndex) {
+    		//递归三要素之2:极端条件
+    		//if xxx {
+    		//return
+    		//}
+    		//fromIndex会越加越大，直到退出循环条件
+    		//reference
+        result.add(new ArrayList<Integer>(subset));
+        //递归三要素之3:如何变为更小的状态
+        for (int i = fromIndex; i < num.length; i++) {
+        		subset.add(num[i]);
+        		//当前选了第i个数，下一次就从i+1开始选
+            subsetsHelper(result, subset, num, i + 1);
+            //以｛1｝开头的都找到了。下一层循环寻找以2开头的
+            subset.remove(subset.size() - 1);
         }
     }
 }
 
 
-// Non Recursion
+// Non Recursion，二进制的方式
 class Solution {
     /**
      * @param S: A set of numbers.

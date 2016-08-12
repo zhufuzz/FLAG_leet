@@ -7,7 +7,9 @@ If target does not exist in source, just return -1.
 Clarification
 Do I need to implement KMP Algorithm in a real interview?
 
-Not necessary. When you meet this problem in a real interview, the interviewer may just want to test your basic implementation ability. But make sure your confirm with the interviewer first.
+Not necessary. When you meet this problem in a real interview, 
+the interviewer may just want to test your basic implementation ability. 
+But make sure your confirm with the interviewer first.
 Example
 If source = "source" and target = "target", return -1.
 

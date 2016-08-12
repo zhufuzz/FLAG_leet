@@ -1,8 +1,9 @@
 package ch9.chapter1;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
-/*Given a list of numbers that may has duplicate numbers, return all possible subsets
+/*Given a subset of numbers that may has duplicate numbers, return all fromIndexsible subsets
 
  Notice
 
@@ -27,34 +28,42 @@ Tags
 Recursion
 Related Problems 
 Medium Subsets*/
+//input有重复的数，result避免有重复结果。
+//实际上是问去重的问题，选代表
+//｛1，2'，2''，2'''｝取12'最顺眼，按顺序取，不能跳着取。
 public class Subset2 {
     /**
      * @param S: A set of numbers.
-     * @return: A list of lists. All valid subsets.
+     * @return: A subset of subsets. All valid subsets.
      */
-    public ArrayList<ArrayList<Integer>> subsetsWithDup(ArrayList<Integer> S) {
-        ArrayList<ArrayList<Integer>> rst = new ArrayList<ArrayList<Integer>>();
-        if ( S == null || S.size() == 0){
-            return rst;
+    public ArrayList<ArrayList<Integer>> subsetsWithDup(ArrayList<Integer> nums) {
+        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+        if ( nums == null || nums.size() == 0){
+            return result;
         }
         
-        Collections.sort(S);
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        helper(rst,list,S,0);
-        return rst;
+        Collections.sort(nums);
+        ArrayList<Integer> subset = new ArrayList<Integer>();
+        helper(result,subset,nums,0);
+        return result;
     }
     
-    public void helper(ArrayList<ArrayList<Integer>> rst, ArrayList<Integer> list,
-    ArrayList<Integer> S, int pos) {
-        rst.add( new ArrayList(list));
-        for ( int i = pos; i < S.size();i++){
-            if ( i != pos && S.get(i) == S.get(i-1)){
+    @SuppressWarnings({ "unchecked", "rawtypes" })
+	public void helper(ArrayList<ArrayList<Integer>> result, 
+    					   ArrayList<Integer> subset,
+    					   ArrayList<Integer> nums, 
+    					   int fromIndex) {    	
+        result.add( new ArrayList(subset));
+        
+        for ( int i = fromIndex; i < nums.size();i++){
+         	//跳过重复元素
+            if ( i != fromIndex && nums.get(i) == nums.get(i-1)){
                 continue;
             }
   
-            list.add(S.get(i));
-            helper(rst,list,S,i+1);
-            list.remove(list.size()-1);
+            subset.add(nums.get(i));
+            helper(result,subset,nums,i+1);
+            subset.remove(subset.size()-1);
         }
     }
 }
