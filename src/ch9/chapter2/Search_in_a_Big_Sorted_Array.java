@@ -27,7 +27,9 @@ Easy First Position of Target 32 %
   
 class ArrayReader {
 // get the number at index, return -1 if index is less than zero.
-	public int get(int index);
+	public int get(int index){
+		return index;
+	}
 }
  
 public class Search_in_a_Big_Sorted_Array {

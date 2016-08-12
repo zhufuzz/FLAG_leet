@@ -47,7 +47,7 @@ class ResultType {
 }
 
 
-class Solution {
+class Balanced_Binary_Tree1 {
  /**
   * @param root: The root of binary tree.
   * @return: True if this Binary tree is Balanced, or false.
@@ -81,7 +81,7 @@ class Solution {
 
 
 //Version 2: without ResultType
-class Solution2 {
+class Balanced_Binary_Tree2 {
  public boolean isBalanced(TreeNode root) {
      return maxDepth(root) != -1;
  }

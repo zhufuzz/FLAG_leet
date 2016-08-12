@@ -53,7 +53,7 @@ public class Search_Insert_Position {
 
 //version 2: find the last position < target, return +1， 要特判一下target小于所有数组里面的元素
 
-class Solution {
+class Search_Insert_Position2 {
  public int searchInsert(int[] A, int target) {
      if (A == null || A.length == 0) {
          return 0;

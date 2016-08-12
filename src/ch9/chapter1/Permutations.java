@@ -59,7 +59,7 @@ public class Permutations {
 
 //Non-Recursion
 
-class Solution {
+class Solution_Permutations {
     /**
      * @param nums: A list of integers.
      * @return: A list of permutations.

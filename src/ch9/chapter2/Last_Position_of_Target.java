@@ -1,4 +1,7 @@
 package ch9.chapter2;
+
+import org.junit.Test;
+
 /*
  * Find the last position of a target number in a sorted array. Return -1 if target does not exist.
 
@@ -33,6 +36,7 @@ public class Last_Position_of_Target {
         }
         
         int start = 0, end = nums.length - 1;
+        //start + 1 ＝ end就是相邻状况，已经不满足以下循环条件，就不会遇到死循环情况
         while (start + 1 < end) {
             int mid = start + (end - start) / 2;
             if (nums[mid] == target) {
@@ -42,10 +46,11 @@ public class Last_Position_of_Target {
                 // or start = mid + 1
             } else {
                 end = mid;
-                // or start = mid - 1
+                // or end = mid - 1
             }
         }
-        
+        //以上循环结束时，start和end有可能是一个很数，也有可能是两个数
+        //因为是看last position，所以先看end，再看start
         if (nums[end] == target) {
             return end;
         }
@@ -54,12 +59,19 @@ public class Last_Position_of_Target {
         }
         return -1;
     }
-}
+    
+    @Test
+    public void testLastPosition(){
+	    	int[] nums = {1,2,2,2,3,4,5,6,7};
+	    	int result = lastPosition(nums, 2);
+	    	System.out.println(result);
+    }
+ }
 
 
 //version 2: without jiuzhang template
 //this code is not working, it will get time limit exceeded because of dead loop
-class Solution {
+class Last_Position_of_Target2 {
  /**
   * @param nums: An integer array sorted in ascending order
   * @param target: An integer

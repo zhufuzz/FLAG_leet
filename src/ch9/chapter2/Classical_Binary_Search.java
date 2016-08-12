@@ -34,8 +34,13 @@ public class Classical_Binary_Search {
         if (nums == null || nums.length == 0) {
             return -1;
         }
-        
+        //A   start < end
+        //B   start  + 1 < end
+        //C   start <= end
+        //D   start + 1 <= end
+        //
         int start = 0, end = nums.length - 1;
+        
         while (start + 1 < end) {
             int mid = start + (end - start) / 2;
             if (nums[mid] == target) {
@@ -58,7 +63,7 @@ public class Classical_Binary_Search {
 }
 
 //version 2: without jiuzhang template
-class Solution {
+class Classical_Binary_Search2 {
  /**
   * @param A an integer array sorted in ascending order
   * @param target an integer

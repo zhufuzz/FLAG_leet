@@ -60,7 +60,7 @@ public class First_Position_of_Target {
 }
 
 //version 2: without jiuzhang template
-class Solution {
+class First_Position_of_Target2 {
  /**
   * @param nums: The integer array.
   * @param target: Target to find.
