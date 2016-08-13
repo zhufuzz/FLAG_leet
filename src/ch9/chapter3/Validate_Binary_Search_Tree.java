@@ -29,7 +29,7 @@ public class Validate_Binary_Search_Tree {
 
 }
 
-//version 1 Traverse
+//version 1 Traverse， 缺点：经常要用到全局变量
 class Solution {
  private int lastVal = Integer.MIN_VALUE;
  private boolean firstNode = true;
