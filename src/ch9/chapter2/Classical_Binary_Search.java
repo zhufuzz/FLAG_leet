@@ -44,7 +44,7 @@ public class Classical_Binary_Search {
         while (start + 1 < end) {
             int mid = start + (end - start) / 2;
             if (nums[mid] == target) {
-                return mid;
+                return mid;//经典二分法，既缩小区间，又找到目标
             } else if (nums[mid] < target) {
                 start = mid;
             } else {

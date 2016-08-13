@@ -36,6 +36,9 @@ public class First_Position_of_Target {
         }
         
         int start = 0, end = nums.length - 1;
+        //把区间变小
+        //只缩小区间，不找目标
+        //每次通过O(1)时间的比较 -> n => n / 2
         while (start + 1 < end) {
             int mid = start + (end - start) / 2;
             if (nums[mid] == target) {
@@ -48,7 +51,7 @@ public class First_Position_of_Target {
                 // or end = mid - 1
             }
         }
-        
+        //区间已经缩小到只有2个数
         if (nums[start] == target) {
             return start;
         }

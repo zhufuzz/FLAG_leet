@@ -33,7 +33,7 @@ public class Binary_Tree_Maximum_Path_Sum_II {
  *     }
  * }
  */
- class Solution {
+ class Binary_Tree_Maximum_Path_Sum_II1 {
     /**
      * @param root the root of binary tree.
      * @return an integer
@@ -42,9 +42,10 @@ public class Binary_Tree_Maximum_Path_Sum_II {
         if (root == null) {
             return Integer.MIN_VALUE;
         }
-        
+        //先无脑分为左右两部分
         int left = maxPathSum2(root.left);
         int right = maxPathSum2(root.right);
+        //要和0比较，以避免负数情况
         return root.val + Math.max(0, Math.max(left, right));
     }
 }

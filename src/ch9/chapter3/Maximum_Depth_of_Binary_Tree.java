@@ -20,14 +20,19 @@ Divide and Conquer Recursion Binary Tree Uber
 Related Problems 
 Easy Minimum Depth of Binary Tree 31 %
  * */
+
+//root -> depth
 public class Maximum_Depth_of_Binary_Tree {
 	  public int maxDepth(TreeNode root) {
+		  //出口
 	        if (root == null) {
 	            return 0;
 	        }
-
+	        //不管三七二十，先分成左右子树
 	        int left = maxDepth(root.left);
 	        int right = maxDepth(root.right);
+	        
+	        //conquer
 	        return Math.max(left, right) + 1;
 	    }
 }
@@ -45,12 +50,12 @@ public class Maximum_Depth_of_Binary_Tree {
 *     }
 * }
 */
-class Solution {
+class Maximum_Depth_of_Binary_Tree2 {
  /**
   * @param root: The root of binary tree.
   * @return: An integer.
   */
- private int depth;
+ private int depth;//用了一个全局变量，不鼓励这么做
  
  public int maxDepth(TreeNode root) {
      depth = 0;

@@ -49,6 +49,30 @@ public class Search_Insert_Position {
             return end + 1;
         }
     }
+ //this is the code in Ch9 2016 summer.
+ public int searchInseart2(int[] A, int target){
+	 if (A == null || A.length == 0){
+		 return 0;
+	 }
+	 
+	 int start = 0, end = A.length - 1;
+	 
+	 while(start + 1 < end){
+		 int mid = start + (end - start) / 2;
+		 if(A[mid] >= target){
+			 end = mid;
+		 }else {
+			 start = mid;
+		 }		 
+	 }
+	 if(A[start] == target){
+		 return start;
+	 }
+	 if(A[end] >= target){
+		 return end;
+	 }
+	 return A.length;
+ }
 }
 
 //version 2: find the last position < target, return +1， 要特判一下target小于所有数组里面的元素

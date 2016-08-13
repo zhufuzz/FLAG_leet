@@ -54,18 +54,22 @@ public class Preorder_Traversal {
     }
 }
 //Version 1: Traverse
- class Solution2 {
+
+ class Preorder_Traversal2 {
   public ArrayList<Integer> preorderTraversal(TreeNode root) {
       ArrayList<Integer> result = new ArrayList<Integer>();
       traverse(root, result);
       return result;
   }
-  // 把root为跟的preorder加入result里面
+  // 1递归定义：把root为跟的preorder加入result里面
   private void traverse(TreeNode root, ArrayList<Integer> result) {
+	// 3.递归的出口：极端小的问题
+	  // 以root为null还是leaf作为出口？
       if (root == null) {
           return;
       }
-
+   
+   // 2.如何拆分为更小的情况（如何扒皮）。一边走一边构造。
       result.add(root.val);
       traverse(root.left, result);
       traverse(root.right, result);
@@ -73,14 +77,17 @@ public class Preorder_Traversal {
 }
 
 //Version 2: Divide & Conquer
- class Solution3 {
+//递归的定义：找到root为根的preorder并return
+ class Preorder_Traversal3 {
   public ArrayList<Integer> preorderTraversal(TreeNode root) {
       ArrayList<Integer> result = new ArrayList<Integer>();
+   // 递归的出口
       // null or leaf
       if (root == null) {
           return result;
       }
-
+      // 递归的拆解：left，right
+   // 先divide，再想每个具体做什么
       // Divide
       ArrayList<Integer> left = preorderTraversal(root.left);
       ArrayList<Integer> right = preorderTraversal(root.right);

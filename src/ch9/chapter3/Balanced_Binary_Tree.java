@@ -37,6 +37,7 @@ public class Balanced_Binary_Tree {
 *     }
 * }
 */
+//为了包含两个信息
 class ResultType {
  public boolean isBalanced;
  public int maxDepth;
@@ -81,8 +82,10 @@ class Balanced_Binary_Tree1 {
 
 
 //Version 2: without ResultType
+//coding style不好，不鼓励使用
 class Balanced_Binary_Tree2 {
  public boolean isBalanced(TreeNode root) {
+	 //用－1表示不平衡，太绕了
      return maxDepth(root) != -1;
  }
 

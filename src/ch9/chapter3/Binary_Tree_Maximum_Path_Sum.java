@@ -21,7 +21,7 @@ public class Binary_Tree_Maximum_Path_Sum {
 
 }
 
-class Solution {
+class Binary_Tree_Maximum_Path_Sum1 {
     private class ResultType {
         // singlePath: 从root往下走到任意点的最大路径，这条路径可以不包含任何点
         // maxPath: 从树中任意到任意点的最大路径，这条路径至少包含一个点
@@ -59,7 +59,7 @@ class Solution {
 
 // Version 2:
 // SinglePath也定义为，至少包含一个点。
-class Solution2 {
+class Binary_Tree_Maximum_Path_Sum2 {
     /**
      * @param root: The root of binary tree.
      * @return: An integer.
@@ -97,4 +97,40 @@ class Solution2 {
         return result.maxPath;
     }
 
+}
+
+
+class ResultType3{
+	int root2Any, any2Any;
+	ResultType3(int root2Any, int any2Any){
+		this.root2Any = root2Any;
+		this.any2Any = any2Any;
+	}
+}
+
+//Ch9 2016summer code
+class Binary_Tree_Maximum_Path_Sum3{
+	private ResultType3 helper(TreeNode root){
+		//illegal
+		if (root == null){
+			return new ResultType3 (Integer.MIN_VALUE, Integer.MIN_VALUE);
+		}
+		//Divide
+		ResultType3 left = helper(root.left);
+		ResultType3 right = helper(root.right);
+		
+		//conquer
+		int root2Any = Math.max(0, Math.max(left.root2Any, right.root2Any))
+								+ root.val;
+		int any2Any = Math.max(left.any2Any, right.any2Any);
+		any2Any = Math.max(any2Any, 
+				Math.max(0, left.root2Any)
+				+ Math.max(0, right.root2Any)
+				+ root.val);
+		return new ResultType3(root2Any, any2Any);
+	}
+	public int maxPathSu(TreeNode root){
+		ResultType3 result = helper(root);
+		return result.any2Any;
+	}
 }
