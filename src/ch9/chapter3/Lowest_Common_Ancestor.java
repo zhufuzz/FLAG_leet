@@ -99,4 +99,13 @@ class Lowest_Common_Ancestor1 {
         }
         return null;
     }
+    
+  //不用recursion的做法？
+    class ResultType{
+    		TreeNode lca;
+    		int count;
+    }
+    class Lowest_Common_Ancestor3 {
+    		
+    }
 }

@@ -46,6 +46,12 @@ public class Binary_Tree_Maximum_Path_Sum_II {
         int left = maxPathSum2(root.left);
         int right = maxPathSum2(root.right);
         //要和0比较，以避免负数情况
+        //root -> any node
         return root.val + Math.max(0, Math.max(left, right));
+        
+        //root -> leaf
+        //return Math.max(left, right) + root.val;
+        
+      //any node -> any node
     }
 }

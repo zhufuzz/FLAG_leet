@@ -58,6 +58,7 @@ class Balanced_Binary_Tree1 {
  }
  
  private ResultType helper(TreeNode root) {
+	 //空集是平衡二叉树，高度为0。
      if (root == null) {
          return new ResultType(true, 0);
      }
@@ -85,10 +86,10 @@ class Balanced_Binary_Tree1 {
 //coding style不好，不鼓励使用
 class Balanced_Binary_Tree2 {
  public boolean isBalanced(TreeNode root) {
-	 //用－1表示不平衡，太绕了
+	//这定义太绕了
      return maxDepth(root) != -1;
  }
-
+//用－1表示不平衡，用其他数字表示高度，这定义太绕了
  private int maxDepth(TreeNode root) {
      if (root == null) {
          return 0;

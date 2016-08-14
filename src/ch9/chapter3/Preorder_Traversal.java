@@ -61,7 +61,7 @@ public class Preorder_Traversal {
       traverse(root, result);
       return result;
   }
-  // 1递归定义：把root为跟的preorder加入result里面
+  // 1递归定义：把root为根的preorder加入result里面
   private void traverse(TreeNode root, ArrayList<Integer> result) {
 	// 3.递归的出口：极端小的问题
 	  // 以root为null还是leaf作为出口？

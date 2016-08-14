@@ -48,7 +48,7 @@ public class Minimum_Depth_of_Binary_Tree {
     		if (root.left == null && root.left == null){
     			return 1;
     		}
-    		//让权
+    		//让权。非法情况下就把结果变得无穷大。
     		
     		int left = root.left == null ? Integer.MAX_VALUE : minDepth2(root.left);
     		int right = root.right == null ? Integer.MAX_VALUE : minDepth2(root.right);

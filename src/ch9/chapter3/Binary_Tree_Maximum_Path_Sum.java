@@ -129,6 +129,7 @@ class Binary_Tree_Maximum_Path_Sum3{
 				+ root.val);
 		return new ResultType3(root2Any, any2Any);
 	}
+	
 	public int maxPathSu(TreeNode root){
 		ResultType3 result = helper(root);
 		return result.any2Any;
