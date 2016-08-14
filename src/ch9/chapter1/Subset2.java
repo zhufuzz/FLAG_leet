@@ -48,7 +48,6 @@ public class Subset2 {
         return result;
     }
     
-    @SuppressWarnings({ "unchecked", "rawtypes" })
 	public void helper(ArrayList<ArrayList<Integer>> result, 
     					   ArrayList<Integer> subset,
     					   ArrayList<Integer> nums, 
