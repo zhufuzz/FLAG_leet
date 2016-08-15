@@ -100,6 +100,8 @@ class Binary_Tree_Maximum_Path_Sum2 {
 }
 
 
+//Ch9 2016summer code
+
 class ResultType3{
 	int root2Any, any2Any;
 	ResultType3(int root2Any, int any2Any){
@@ -108,7 +110,6 @@ class ResultType3{
 	}
 }
 
-//Ch9 2016summer code
 class Binary_Tree_Maximum_Path_Sum3{
 	private ResultType3 helper(TreeNode root){
 		//illegal
