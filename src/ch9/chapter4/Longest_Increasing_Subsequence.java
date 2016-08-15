@@ -39,7 +39,6 @@ class Longest_Increasing_Subsequence1{
      * @param nums: The integer array
      * @return: The length of LIS (longest increasing subsequence)
      */
-   
     
     public int longestIncreasingSubsequence(int[] nums) {
         int []f = new int[nums.length];

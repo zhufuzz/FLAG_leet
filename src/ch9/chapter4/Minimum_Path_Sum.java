@@ -80,7 +80,7 @@ class solution_minPathSum{
 			//f[i][0] = 1;
 		}
 		for(int i = 1; i < m; i++){
-			f[0][i] = f[0][i - a] + grid[0][i];
+			f[0][i] = f[0][i - 1] + grid[0][i];
 			//f[0][i] = 1;
 		}
 		

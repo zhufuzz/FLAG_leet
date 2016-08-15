@@ -1,10 +1,12 @@
 package ch9.chapter4;
 /*
- * Given a triangle, find the minimum path sum from top to bottom. Each step you may move to adjacent numbers on the row below.
+ * Given a triangle, find the minimum path sum from top to bottom. 
+ * Each step you may move to adjacent numbers on the row below.
 
  Notice
 
-Bonus point if you are able to do this using only O(n) extra space, where n is the total number of rows in the triangle.
+Bonus point if you are able to do this using only O(n) extra space, 
+where n is the total number of rows in the triangle.
 
 Have you met this question in a real interview? Yes
 Example
