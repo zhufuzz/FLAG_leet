@@ -18,6 +18,16 @@ String Dynamic Programming
 Related Problems 
 Medium Interleaving String
  */
+
+/*
+ * Distinct Subsequence
+• state: f[i][j] 表示 S的前i个字符中选取T的前j个字符,有多少种方案
+• function: f[i][j] = f[i - 1][j] + f[i - 1][j - 1] // S[i-1] == T[j-1]
+• = f[i - 1][j] // S[i-1] != T[j-1]
+• initialize: f[i][0] = 1, f[0][j] = 0 (j > 0)
+• answer: f[n][m] (n = sizeof(S), m = sizeof(T))
+ */
+
 public class Distinct_Subsequences {
 public int numDistinct(String S, String T) {
     if (S == null || T == null) {

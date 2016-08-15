@@ -20,6 +20,15 @@ Medium Longest Palindromic Substring
 public class Palindrome_Partitioning_II {
 
 }
+/*
+ * ￼￼Palindrome Partitioning II
+• state: f[i]表示前i个字符组成的子串能被分割为最少多少个回文串 
+• function: f[i] = MIN{f[j]+1}, j < i && j+1 ~ i这一段是一个回文串
+• initialize: f[i] = i (f[0] = 0)
+• answer: f[n] – 1
+为什么-1? 分为x个串需要x-1刀
+￼￼￼￼￼￼￼￼￼￼￼
+ * */
 
 //version 1
 //f[i] 表示前i个字母，最少可以被分割为多少个回文串

@@ -21,6 +21,15 @@ Medium Jump Game
 public class Jump_Game_II {
 
 }
+/*
+ * Jump Game II
+￼￼• 最优算法:贪心法 O(n)
+• 次优算法:动态规划 O(n^2)
+• state: f[i]代表我跳到下标i的位置最少需要几步
+• function: f[i] = MIN{f[j]+1} 其中 j < i && j能够跳到i 
+• initialize: f[0] = 0
+ */
+
 //version 1: Dynamic Programming
 class Jump_Game_II1 {
  public int jump(int[] A) {
@@ -63,3 +72,4 @@ class Jump_Game_II2 {
      return jumps;
  }
 }
+

@@ -26,6 +26,18 @@ public class Longest_Common_Subsequence {
  * @param A, B: Two strings.
  * @return: The length of longest common subsequence of A and B.
  */
+/*
+ * ￼￼Longest Common Subsequence
+• state: f[i][j]表示前i个字符配上前j个字符的LCS的长度
+• function: f[i][j] = MAX(f[i-1][j], f[i][j-1], f[i-1][j-1] + 1) // A[i - 1] == B[j - 1]
+• = MAX(f[i-1][j], f[i][j-1]) // A[i - 1] != B[j - 1]
+• intialize: f[i][0] = 0 f[0][j] = 0
+• answer: f[n][m]
+为什么是i-1? A的第i个字符的是A[i-1]
+• Related Question:
+• http://www.lintcode.com/problem/longest-common-substring/
+￼￼￼	
+ */
 public int longestCommonSubsequence(String A, String B) {
     int n = A.length();
     int m = B.length();

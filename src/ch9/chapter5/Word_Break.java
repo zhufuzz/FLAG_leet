@@ -14,6 +14,14 @@ Tags
 String Dynamic Programming
  */
 
+/*单序列动态规划
+￼￼￼• state: f[i]表示前i个位置/数字/字符,第i个... 
+• function: f[i] = f[j] ... j 是i之前的一个位置 
+• initialize: f[0]..
+• answer: f[n]..
+• 一般answer是f(n)而不是f(n-1)
+ * 
+ */
 public class Word_Break {
     private int getMaxLength(Set<String> dict) {
         int maxLength = 0;

@@ -14,7 +14,16 @@ O(n2) time or better
 Tags 
 Longest Common Subsequence Dynamic Programming
 Related Problems
-Medium Distinct Subsequences
+Medium Distinct Subsequences,
+ */
+
+/*Interleaving String
+ * ￼• state: f[i][j]表示s1的前i个字符和s2的前j个字符能否交替组成s3的前i+j个字符 
+ *  ￼• function: f[i][j] = (f[i-1][j] && (s1[i-1]==s3[i+j-1]) ||
+						  (f[i][j-1] && (s2[j-1]==s3[i+j-1]) 
+ ￼• initialize: f[i][0] = (s1[0..i-1] == s3[0..i-1])
+			   f[0][j] = (s2[0..j-1] == s3[0..j-1])
+ • answer: f[n][m], n = sizeof(s1), m = sizeof(s2)
  */
 public class Interleaving_String {
   public boolean isInterleave(String s1, String s2, String s3) {

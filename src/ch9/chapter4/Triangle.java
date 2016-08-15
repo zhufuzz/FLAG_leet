@@ -147,4 +147,4 @@ class Solution2 {
 
      return search(0, 0);
  }
-} 
+}

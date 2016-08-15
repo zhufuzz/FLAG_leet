@@ -26,6 +26,14 @@ public class Longest_Increasing_Subsequence {
 
 }
 
+/*
+ * Longest Increasing Subsequence
+￼￼• 将n个数看做n个木桩,目的是从某个木桩出发,从前向后,从低往高,看做多能踩多少个木桩。 
+• state: f[i] 表示(从任意某个木桩)跳到第i个木桩,最多踩过多少根木桩
+• function: f[i] = max{f[j] + 1}, j必须满足 j < i && nums[j] <= nums[i]
+• initialize: f[0..n-1] = 1
+ */
+
 class Longest_Increasing_Subsequence1{
     /**
      * @param nums: The integer array

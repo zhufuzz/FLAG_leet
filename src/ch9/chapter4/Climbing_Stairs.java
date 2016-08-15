@@ -17,6 +17,14 @@ Naive Fibonacci 25 %
 Medium House Robber
  */
 
+/*
+ * Climbing Stairs
+￼￼• state: f[i]表示跳到第i个位置的方案总数 
+• function: f[i] = f[i-1] + f[i-2]
+• initialize: f[0] = 1
+• answer: f[n] // index from 0~n
+ */
+
 public class Climbing_Stairs {
     public int climbStairs(int n) {
         if (n <= 1) {

@@ -38,3 +38,34 @@ public class Unique_Paths {
         return sum[m - 1][n - 1];
     }
 }
+
+
+/*
+ * Unique Path
+￼￼• state: f[x][y]从起点到x,y的路径数
+• function: (研究倒数第一步) f[x][y] = f[x - 1][y] + f[x][y - 1]
+• initialize: f[0][i] = 1
+• f[i][0] = 1
+• answer: f[n-1][m-1]
+• Related Question: Unique Path II
+ */
+
+//9Ch summer 2016
+class Solution{
+	public int uniquePaths(int m, int n){
+		int[] f = new int[nums.length];
+		int max = 0;
+		for(int i = 0; i < nums.length; i++){
+			f[i] = 1;
+			for(int j = 0; j < i; j++){
+				if(nums[j] <= nums[i]){
+					f[i] = f[i] > f[j] + 1 ? f[i] : f[j] + 1;
+				}
+			}
+			if(f[i] > max){
+				max = f[i];
+			}
+		}
+		return max;
+	}
+}
