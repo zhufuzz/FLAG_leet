@@ -1,14 +1,17 @@
 package ch9.chapter5;
 /*
- * Given a string s, cut s into some substrings such that every substring is a palindrome.
+ * Given a string s, cut s into some substrings 
+ * such that every substring is a palindrome.
 
-Return the minimum cuts needed for a palindrome partitioning of s.
+Return the minimum cuts needed for 
+a palindrome partitioning of s.
 
 Have you met this question in a real interview? Yes
 Example
 Given s = "aab",
 
-Return 1 since the palindrome partitioning ["aa", "b"] could be produced using 1 cut.
+Return 1 since the palindrome partitioning 
+["aa", "b"] could be produced using 1 cut.
 
 Tags 
 Dynamic Programming
