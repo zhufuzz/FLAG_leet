@@ -47,7 +47,8 @@ class Palindrome_Partitioning_II1 {
      for (int length = 2; length < s.length(); length++) {
          for (int start = 0; start + length < s.length(); start++) {
              isPalindrome[start][start + length]
-                 = isPalindrome[start + 1][start + length - 1] && s.charAt(start) == s.charAt(start + length);
+                 = isPalindrome[start + 1][start + length - 1] 
+                		 && s.charAt(start) == s.charAt(start + length);
          }
      }
 
@@ -106,7 +107,8 @@ class Palindrome_Partitioning_II2 {
      for (int length = 2; length < s.length(); length++) {
          for (int start = 0; start + length < s.length(); start++) {
              isPalindrome[start][start + length]
-                 = isPalindrome[start + 1][start + length - 1] && s.charAt(start) == s.charAt(start + length);
+                 = isPalindrome[start + 1][start + length - 1] 
+                		 && s.charAt(start) == s.charAt(start + length);
          }
      }
 

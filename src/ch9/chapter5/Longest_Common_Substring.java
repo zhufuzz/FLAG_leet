@@ -6,7 +6,8 @@ Return the length of it.
 
  Notice
 
-The characters in substring should occur continuously in original string. This is different with subsequence.
+The characters in substring should occur continuously in original string. 
+This is different with subsequence.
 
 Have you met this question in a real interview? Yes
 Example

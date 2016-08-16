@@ -1,6 +1,7 @@
 package ch9.chapter4;
 /*
- * Given an array of non-negative integers, you are initially positioned at the first index of the array.
+ * Given an array of non-negative integers, you are initially positioned 
+ * at the first index of the array.
 
 Each element in the array represents your maximum jump length at that position.
 
