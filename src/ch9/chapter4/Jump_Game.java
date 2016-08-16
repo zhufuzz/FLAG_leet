@@ -54,6 +54,10 @@ class Jump_Game1 {
 //f[...] = false;
 //4.answer
 //f[n - 1]
+//第n个数的坐标是 n － 1 ！！！！！
+     
+     //OR: &&
+     //只考虑倒数第一步，就是i之前的那步
      for (int i = 1; i < A.length; i++) {
          for (int j = 0; j < i; j++) {
              if (can[j] && j + A[j] >= i) {

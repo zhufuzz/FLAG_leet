@@ -75,6 +75,7 @@ class solution_minPathSum{
 		//initialize
 		f[0][0] = grid[0][0];
 		//f[0][0] = 1;// 不用动
+		//特殊情况，先算好
 		for(int i = 1; i< n ; i++){
 			f[i][0] = f[i - 1][0] + grid[i][0];
 			//f[i][0] = 1;
@@ -85,6 +86,7 @@ class solution_minPathSum{
 		}
 		
 		//dp
+		//普通情况
 		for(int i = 1; i < n; i++){
 			for(int j = 1; j < m; j++){
 				f[i][j] = Math.min(f[i - 1][j], f[i][j - 1]) + grid[i][j];

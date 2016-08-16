@@ -1,4 +1,4 @@
-package ch9.chapter4;
+package ch9.chapter4; //不是动态规划
 /*
  * Given a sequence of integers, find the longest increasing subsequence (LIS).
 
@@ -32,6 +32,7 @@ public class Longest_Increasing_Subsequence {
 • state: f[i] 表示(从任意某个木桩)跳到第i个木桩,最多踩过多少根木桩
 • function: f[i] = max{f[j] + 1}, j必须满足 j < i && nums[j] <= nums[i]
 • initialize: f[0..n-1] = 1
+• answer: max{f[0...n-1]}
  */
 
 class Longest_Increasing_Subsequence1{
