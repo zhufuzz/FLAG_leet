@@ -82,9 +82,27 @@ class Palindrome_Partitioning_II1 {
 }
 
 //version 2
+//9CH summer 2016 too
 //f[i] 表示前i个字母，最少被切割几次可以切割为都是回文串。
 //最后return f[n]
+/*
+ * state:
+ * 1, f[i] 表示前i个字符组成的前缀，最少切割几次，能切成全部是回文串
+ * 比如："aab" f[3] = f["aab"] = 1
+ *            f[2] = f["aa"] = 0
+ *            f[1] = f["a"] = 0
+ *            f[0] = f[""] = -1
+ *            f[i] = min{f[j] + 1}
+ *            
+ *            ""|aa
+ *            f[""] + 1 = f["aa"]
+ *            f[""] = f["aa"] - 1
+ *            f[""] = 0 - 1 = -1
+ * 2, f[i] 表示第i个字符，组成的前缀，最少能分割为几个回文串
+ * 		return f[n] - 1
+ */
 class Palindrome_Partitioning_II2 {
+//O(n)
  private boolean isPalindrome(String s, int start, int end) {
      for (int i = start, j = end; i < j; i++, j--) {
          if (s.charAt(i) != s.charAt(j)) {
@@ -140,4 +158,25 @@ class Palindrome_Partitioning_II2 {
 
      return f[s.length()];
  }
+}
+
+//9Ch summer 2016
+class Solution{
+	public int minCut(String s){
+		//
+		for(int i = n - 1; i >= 0; i--){
+			for(int j = i + 1; j < n; j++){
+				f[i][j] = f[i + 1][j - 1] && s[i] == s[j];
+			}
+		}
+	
+		//f[i][j] <- f[i + 1][j - 1];
+		//(0, n - 1)
+		for(int delta = 1; delta < n; delta++){
+			for(int i = 0; i < n; i++){
+				int j = i + delta;
+				f[i][j] = f[i + 1][j - 1] && s[i] == s[j];
+			}
+		}
+	}
 }

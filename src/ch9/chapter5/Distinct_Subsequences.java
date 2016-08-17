@@ -2,7 +2,10 @@ package ch9.chapter5;
 /*
  * Given a string S and a string T, count the number of distinct subsequences of T in S.
 
-A subsequence of a string is a new string which is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (ie, "ACE" is a subsequence of "ABCDE" while "AEC" is not).
+A subsequence of a string is a new string which is formed from the original 
+string by deleting some (can be none) of the characters without disturbing 
+the relative positions of the remaining characters. (ie, "ACE" is a subsequence 
+of "ABCDE" while "AEC" is not).
 
 Have you met this question in a real interview? Yes
 Example
@@ -23,7 +26,7 @@ Medium Interleaving String
  * Distinct Subsequence
 • state: f[i][j] 表示 S的前i个字符中选取T的前j个字符,有多少种方案
 • function: f[i][j] = f[i - 1][j] + f[i - 1][j - 1] // S[i-1] == T[j-1]
-• = f[i - 1][j] // S[i-1] != T[j-1]
+• 					= f[i - 1][j] // S[i-1] != T[j-1]
 • initialize: f[i][0] = 1, f[0][j] = 0 (j > 0)
 • answer: f[n][m] (n = sizeof(S), m = sizeof(T))
  */

@@ -27,15 +27,15 @@ String Dynamic Programming
 
 /*
  * ￼￼Word Break
-• state: f[i]表示“前i”个字符能否被完美切分
+• state: f[i]表示“前i”个字符能否被完美切分（最后剩下一个空串）true／false
 • function: f[i] = OR{f[j]} 其中 j < i && j+1~i is a word 
 	• OR 运算的意思
-	• 假如j=0,1,3,5时满足j<i&&j+1~iisaword 
+	• 假如j=0,1,3,5时满足j<i && j+1~i is a word 
 	• 那么 f[i] = f[0] || f[1] || f[3] || f[5]
 • initialize: f[0] = true 
 • answer: f[n]
 
-• 注意:切分位置的枚举->单词长度枚举 O(NL2) 
+• 注意:切分位置的枚举->单词长度枚举 O(NL^2) 
 	• N: 字符串长度
 	• L: 最长的单词的长度
  */
@@ -76,12 +76,12 @@ public class Word_Break {
         return canSegment[s.length()];
     }
 }
+
 // 9CH summer 2016
 //这个超时
 class Word_Break_2016 {
 	public boolean wordBreak(String s, Set<String> dict){
 		int n = s.length();
-		
 		boolean[] f = new boolean[n + 1];
 		
 		//empty string is valid
@@ -95,7 +95,8 @@ class Word_Break_2016 {
 				if(f[j] == false){
 					continue;
 				}
-				String sub = s.substring(i, j);
+				//
+				String sub = s.substring(j, i);
 				if(dict.contains(sub)){
 					f[i] = true;
 					break;

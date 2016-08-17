@@ -22,7 +22,7 @@ Medium Longest Common Subsequence
  * ￼￼Edit Distance
 • state: f[i][j]表示A的前i个字符最少要用几次编辑可以变成B的前j个字符
 • function: f[i][j] = MIN(f[i-1][j]+1, f[i][j-1]+1, f[i-1][j-1]) // A[i - 1] == B[j - 1]
-• = MIN(f[i-1][j]+1, f[i][j-1]+1, f[i-1][j-1]+1) // A[i - 1] != B[j - 1]
+• 					= MIN(f[i-1][j]+1, f[i][j-1]+1, f[i-1][j-1]+1) // A[i - 1] != B[j - 1]
 • initialize: f[i][0] = i, f[0][j] = j
 • answer: f[n][m]
 ￼￼￼
@@ -34,10 +34,10 @@ public int minDistance(String word1, String word2) {
     
     int[][] dp = new int[n+1][m+1];
     for(int i=0; i< m+1; i++){
-        dp[0][i] = i; 
+        dp[0][i] = i; //一次delete
     }
     for(int i=0; i<n+1; i++){
-        dp[i][0] = i;
+        dp[i][0] = i;//一次insert
     }
     
     

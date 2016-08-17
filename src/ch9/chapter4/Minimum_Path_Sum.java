@@ -21,7 +21,7 @@ public class Minimum_Path_Sum {
 
 }
 
-class Solution {
+class Minimum_Path_Sum1 {
     public int minPathSum(int[][] grid) {
         if (grid == null || grid.length == 0 || grid[0].length == 0) {
             return 0;
@@ -56,12 +56,12 @@ class Solution {
 ￼￼• state: f[x][y]从起点走到x,y的最短路径
 • function: f[x][y] = min(f[x-1][y], f[x][y-1]) + A[x][y]
 • intialize: f[i][0] = sum(0,0 ~ i,0)
-• f[0][i] = sum(0,0 ~ 0,i)
+		     f[0][i] = sum(0,0 ~ 0,i)
 • answer: f[n-1][m-1]
  */
 
 //9ch summer 2016
-class solution_minPathSum{
+class Minimum_Path_Sum_2016{
 	public int minPathSum(int[][] grid){
 		if(grid == null){
 			return 0;
