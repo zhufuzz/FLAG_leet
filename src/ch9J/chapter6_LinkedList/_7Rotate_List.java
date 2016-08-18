@@ -1,6 +1,7 @@
 package ch9J.chapter6_LinkedList;
 /*
- * Given a list, rotate the list to the right by k places, where k is non-negative.
+ * Given a list, rotate the list to the right by k places,
+ *  where k is non-negative.
 
 Have you met this question in a real interview? Yes
 Example

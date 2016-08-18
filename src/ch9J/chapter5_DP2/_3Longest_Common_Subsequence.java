@@ -29,12 +29,15 @@ public class _3Longest_Common_Subsequence {
 /*
  * ￼￼Longest Common Subsequence
 • state: f[i][j]表示前i个字符配上前j个字符的LCS的长度
-• function: f[i][j] = MAX(f[i-1][j], f[i][j-1], f[i-1][j-1] + 1) // A[i - 1] == B[j - 1]
-• 					= MAX(f[i-1][j], f[i][j-1]) 					// A[i - 1] != B[j - 1]
+• function: f[i][j] = MAX(f[i-1][j], f[i][j-1], f[i-1][j-1] + 1) 
+					 // A[i - 1] == B[j - 1]
+• 					= MAX(f[i-1][j], f[i][j-1]) 					
+					// A[i - 1] != B[j - 1]
 • intialize: f[i][0] = 0 f[0][j] = 0
 • answer: f[n][m]
 为什么是i-1? A的第i个字符的是A[i-1]
-• Related Question: • http://www.lintcode.com/problem/longest-common-substring/
+• Related Question: 
+• http://www.lintcode.com/problem/longest-common-substring/
 ￼￼￼	
  */
 public int longestCommonSubsequence(String A, String B) {
@@ -71,13 +74,13 @@ class longestCommonSubsequence{
 		for(int i = 1; i <= n; i++){
 			for(int j = 1; j <= m; j++){
 				if(A.charAt(i - 1) == B.charAt(j - 1)){
-					//lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
-					//lcs[i][j] = Math.max(lcs[i][j], lcs[i - 1][j - 1] + 1);
+				//lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
+				//lcs[i][j] = Math.max(lcs[i][j], lcs[i - 1][j - 1] + 1);
 					lcs[i][j] = lcs[i - 1][j - 1] + 1;
 				} else {
 					lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
-					//lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
-					//lcs[i][j] = Math.max(lcs[i][j], lcs[i - 1][j - 1]);
+				//lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
+				//lcs[i][j] = Math.max(lcs[i][j], lcs[i - 1][j - 1]);
 				}
 			}
 		}

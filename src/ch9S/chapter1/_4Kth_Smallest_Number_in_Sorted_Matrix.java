@@ -49,7 +49,9 @@ public class _4Kth_Smallest_Number_in_Sorted_Matrix {
     };
     
     public int kthSmallest(int[][] matrix, int k) {
-        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+        if (matrix == null 
+        		|| matrix.length == 0 
+        		|| matrix[0].length == 0) {
             return 0;
         }
         if (k > matrix.length * matrix[0].length) {
@@ -66,7 +68,8 @@ public class _4Kth_Smallest_Number_in_Sorted_Matrix {
         for (int i = 0; i < k - 1; i++) {
             Point curr = heap.poll();
             if (curr.y + 1 < matrix[0].length) {
-                heap.offer(new Point(curr.x, curr.y + 1, matrix[curr.x][curr.y + 1]));
+                heap.offer(new Point(curr.x, curr.y + 1, 
+                						matrix[curr.x][curr.y + 1]));
             }
         }
         return heap.peek().val;
@@ -80,7 +83,8 @@ public class _4Kth_Smallest_Number_in_Sorted_Matrix {
         for (int i = 0; i < k - 1; i++) {
             Point curr = heap.poll();
             if (curr.x + 1 < matrix.length) {
-                heap.offer(new Point(curr.x + 1, curr.y, matrix[curr.x + 1][curr.y]));
+                heap.offer(new Point(curr.x + 1, curr.y, 
+                						matrix[curr.x + 1][curr.y]));
             }
         }
         return heap.peek().val;

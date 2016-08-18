@@ -1,6 +1,7 @@
 package ch9J.chapter5_DP2;//区间类
 /*
- * Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively.
+ * Given a string s1, we may represent it as a binary tree by 
+ * partitioning it to two non-empty substrings recursively.
 
 Below is one possible representation of s1 = "great":
 
@@ -11,9 +12,11 @@ Below is one possible representation of s1 = "great":
 g   r  e   at
            / \
           a   t
-To scramble the string, we may choose any non-leaf node and swap its two children.
+To scramble the string, we may choose any non-leaf node and 
+swap its two children.
 
-For example, if we choose the node "gr" and swap its two children, it produces a scrambled string "rgeat".
+For example, if we choose the node "gr" and swap its two children,
+ it produces a scrambled string "rgeat".
 
     rgeat
    /    \
@@ -24,7 +27,8 @@ r   g  e   at
           a   t
 We say that "rgeat" is a scrambled string of "great".
 
-Similarly, if we continue to swap the children of nodes "eat" and "at", it produces a scrambled string "rgtae".
+Similarly, if we continue to swap the children of nodes "eat" 
+and "at", it produces a scrambled string "rgtae".
 
     rgtae
    /    \
@@ -35,7 +39,8 @@ r   g  ta  e
       t   a
 We say that "rgtae" is a scrambled string of "great".
 
-Given two strings s1 and s2 of the same length, determine if s2 is a scrambled string of s1.
+Given two strings s1 and s2 of the same length, 
+determine if s2 is a scrambled string of s1.
 
 Have you met this question in a real interview? Yes
 Example
@@ -107,8 +112,9 @@ public class Solution {
   * @return whether s2 is a scrambled string of s1
   */
   
-  private boolean checkScramble(String s1,int start1, String s2, int start2, int k, int [][][]visit) {
-		if(visit[start1][start2][k] == 1)
+  private boolean checkScramble(String s1,int start1, String s2,
+		  						int start2, int k, int [][][]visit) {
+	if(visit[start1][start2][k] == 1)
          return true;
      if(visit[start1][start2][k] ==-1)
          return false;
@@ -140,12 +146,14 @@ public class Solution {
          String s23 = s2.substring(0, s2.length() - i);
          String s24 = s2.substring(s2.length() - i, s2.length());
          
-         if (checkScramble(s11,start1, s21, start2, i, visit) && checkScramble(s12, start1+i, s22, start2+i,k-i, visit))  {
+         if (checkScramble(s11,start1, s21, start2, i, visit) 
+        		 && checkScramble(s12, start1+i, s22, start2+i,k-i, visit))  {
              visit[start1][start2][k] = 1;
              return true;
          }
          
-         if (checkScramble(s11,start1, s24, start2+k-i, i, visit) && checkScramble(s12,start1+i, s23,start2, k-i, visit))
+         if (checkScramble(s11,start1, s24, start2+k-i, i, visit) 
+        		 && checkScramble(s12,start1+i, s23,start2, k-i, visit))
          {
              visit[start1][start2][k] = 1;
              return true;

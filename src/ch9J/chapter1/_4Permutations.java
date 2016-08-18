@@ -38,7 +38,9 @@ public class _4Permutations {
         return rst;
    }
    
-   public void helper(ArrayList<ArrayList<Integer>> rst, ArrayList<Integer> list, int[] num){
+   public void helper(ArrayList<ArrayList<Integer>> rst, 
+		   			 ArrayList<Integer> list, 
+		   			 int[] num){
        if(list.size() == num.length) {
            rst.add(new ArrayList<Integer>(list));
            return;

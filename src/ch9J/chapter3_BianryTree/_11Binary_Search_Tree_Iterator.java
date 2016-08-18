@@ -9,7 +9,8 @@ Elements are visited in ascending order (i.e. an in-order traversal)
 next() and hasNext() queries run in O(1) time in average.
 Have you met this question in a real interview? Yes
 Example
-For the following binary search tree, in-order traversal by using iterator is [1, 6, 10, 11, 12]
+For the following binary search tree, in-order traversal by using 
+iterator is [1, 6, 10, 11, 12]
 
    10
  /    \
@@ -22,7 +23,8 @@ Extra memory usage O(h), h is the height of the tree.
 Super Star: Extra memory usage O(1)
 
 Tags 
-Binary Tree LintCode Copyright Non Recursion Binary Search Tree Google LinkedIn Facebook
+Binary Tree LintCode Copyright Non Recursion Binary Search Tree 
+Google LinkedIn Facebook
 Related Problems 
 Medium Inorder Successor in Binary Search Tree 30 %
  * */

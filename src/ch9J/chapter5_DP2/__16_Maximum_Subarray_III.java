@@ -5,7 +5,7 @@ public class __16_Maximum_Subarray_III {
 }
 
 //方法一 划分类DP
-public class Solution {
+class __16_Maximum_Subarray_III1 {
  /**
   * @param nums: A list of integers
   * @param k: An integer denote to find k non-overlapping subarrays
@@ -25,7 +25,8 @@ public class Solution {
          localMax[i][i-1] = Integer.MIN_VALUE;
          //小于 i 的数组不能够partition
          for (int j = i; j <= len; j++) {
-             localMax[i][j] = Math.max(localMax[i][j-1], globalMax[i - 1][j-1]) + nums[j-1];
+             localMax[i][j] = Math.max(localMax[i][j-1], globalMax[i - 1][j-1]) 
+            		 			 + nums[j-1];
              if (j == i)
                  globalMax[i][j] = localMax[i][j];
              else
@@ -39,7 +40,7 @@ public class Solution {
 
 
 //方法二
-public class Solution {
+class __16_Maximum_Subarray_III2 {
  /**
   * @param nums: A list of integers
   * @param k: An integer denote to find k non-overlapping subarrays

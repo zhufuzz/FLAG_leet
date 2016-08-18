@@ -1,12 +1,14 @@
 package ch9J.chapter2_BinarySearch;
 /*
- * Write an efficient algorithm that searches for a value in an m x n matrix.
+Write an efficient algorithm that searches for a value 
+in an m x n matrix.
 
 This matrix has the following properties:
 
 Integers in each row are sorted from left to right.
-The first integer of each row is greater than the last integer of the previous row.
-Have you met this question in a real interview? Yes
+The first integerof each row is greater than the last
+ integer of the previous row.
+ 
 Example
 Consider the following matrix:
 

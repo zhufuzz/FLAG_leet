@@ -3,7 +3,9 @@ package ch9S.chapter1;
 import java.util.Arrays;
 
 /*
- * Given an array of integers, how many three numbers can be found in the array, so that we can build an triangle whose three edges length is the three numbers that we find?
+ * Given an array of integers, how many three numbers can be 
+ * found in the array, so that we can build an triangle whose
+ *  three edges length is the three numbers that we find?
 
 Have you met this question in a real interview? Yes
 Example

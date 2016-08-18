@@ -1,6 +1,10 @@
 package ch9J.chapter3_BianryTree;
 //http://www.mathcs.emory.edu/~cheung/Courses/171/Syllabus/9-BinTree/BST-delete.html
-/*Given a root of Binary Search Tree with unique value for each node. Remove the node with given value. If there is no such a node with given value in the binary search tree, do nothing. You should keep the tree still a binary search tree after removal.
+/*Given a root of Binary Search Tree with unique value
+ *  for each node. Remove the node with given value. 
+ *  If there is no such a node with given value in the
+ *   binary search tree, do nothing. You should keep the 
+ *   tree still a binary search tree after removal.
 
 Have you met this question in a real interview? Yes
 Example

@@ -19,7 +19,8 @@ Given lists:
 return -1->2->4->null.
 
 Tags 
-Divide and Conquer Linked List Priority Queue Heap Uber Google Twitter LinkedIn Airbnb Facebook
+Divide and Conquer Linked List Priority Queue Heap Uber Google
+ Twitter LinkedIn Airbnb Facebook
 Related Problems 
 Easy Merge Two Sorted Arrays 35 %
 Medium Ugly Number II 22 %

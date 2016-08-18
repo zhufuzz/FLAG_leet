@@ -3,9 +3,11 @@ package ch9J.chapter3_BianryTree;
 import java.util.*;
 
 /*
- * Given the root and two nodes in a Binary Tree. Find the lowest common ancestor(LCA) of the two nodes.
+ * Given the root and two nodes in a Binary Tree. Find the 
+ * lowest common ancestor(LCA) of the two nodes.
 
-The lowest common ancestor is the node with largest depth which is the ancestor of both nodes.
+The lowest common ancestor is the node with largest depth
+ which is the ancestor of both nodes.
 
 Have you met this question in a real interview? Yes
 Example
@@ -49,7 +51,9 @@ class Lowest_Common_Ancestor1 {
         ArrayList<TreeNode> list2 = getPath2Root(node2);
         
         int i, j;
-        for (i = list1.size() - 1, j = list2.size() - 1; i >= 0 && j >= 0; i--, j--) {
+        for (i = list1.size() - 1, j = list2.size() - 1; 
+        			i >= 0 && j >= 0; i--, j--) {
+        	
             if (list1.get(i) != list2.get(j)) {
                 return list1.get(i).parent;
             }

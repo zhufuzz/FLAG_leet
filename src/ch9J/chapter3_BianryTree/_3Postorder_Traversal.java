@@ -55,13 +55,15 @@ public class _3Postorder_Traversal {
 	    stack.push(root);
 	    while (!stack.empty()) {
 	        curr = stack.peek();
-	        if (prev == null || prev.left == curr || prev.right == curr) { // traverse down the tree
+	        if (prev == null || prev.left == curr || prev.right == curr) { 
+	        	// traverse down the tree
 	            if (curr.left != null) {
 	                stack.push(curr.left);
 	            } else if (curr.right != null) {
 	                stack.push(curr.right);
 	            }
-	        } else if (curr.left == prev) { // traverse up the tree from the left
+	        } else if (curr.left == prev) { 
+	        	// traverse up the tree from the left
 	            if (curr.right != null) {
 	                stack.push(curr.right);
 	            }

@@ -1,14 +1,14 @@
 package ch9J.chapter4_DP1;
 
 import java.util.HashMap;
-
+//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 public class _1Triangle2016 {
 
 }
 //变种，从上到下最大值，从上到下有多少种方案？
 
 //Ch9 2016 summer， recursive， 会超时
-//DFS， traverse，就是把所有路径都穷举一遍 O（2 ^ n）， n是这个数字三角形的高度
+//DFS， traverse，就是把所有路径都穷举一遍 O（2 ^ n），n是这个数字三角形的高度
 //总共有n层，每层都有两个选择
  
 class Triangle2016_1{
@@ -24,7 +24,8 @@ class Triangle2016_1{
 		traverse(triangle, 0, 0, 0);
 		return minPath;
 	}
-	//1, 递归的定义：递归的定义：我从0，0出发，走到x，y这个点，一路上（不包括x，y）得到的和是sum
+	//1, 递归的定义：递归的定义：我从0，0出发，
+	//走到x，y这个点，一路上（不包括x，y）得到的和是sum
 	//可以包括，看个人设计。这里老师觉得不包括比较好。
 	//比如说接下来的递归出口就很好设计，下面的x就是越界的点。
 	private void traverse(int[][] triangle, int x, int y, int sum){

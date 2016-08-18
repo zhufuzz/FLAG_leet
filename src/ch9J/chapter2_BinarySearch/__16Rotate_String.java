@@ -1,6 +1,7 @@
 package ch9J.chapter2_BinarySearch;
 /*
- * Given a string and an offset, rotate string by offset. (rotate from left to right)
+ * Given a string and an offset, rotate string by offset. 
+ * (rotate from left to right)
 
 Have you met this question in a real interview? Yes
 Example

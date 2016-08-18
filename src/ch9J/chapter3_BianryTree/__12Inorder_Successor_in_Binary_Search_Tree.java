@@ -1,12 +1,14 @@
 package ch9J.chapter3_BianryTree;
 /*
- * Given a binary search tree (See Definition) and a node in it, find the in-order successor of that node in the BST.
+ * Given a binary search tree (See Definition) and a node in it,
+ *  find the in-order successor of that node in the BST.
 
 If the given node has no in-order successor in the tree, return null.
 
  Notice
 
-It's guaranteed p is one node in the given tree. (You can directly compare the memory address to find p)
+It's guaranteed p is one node in the given tree. 
+(You can directly compare the memory address to find p)
 
 Have you met this question in a real interview? Yes
 Example

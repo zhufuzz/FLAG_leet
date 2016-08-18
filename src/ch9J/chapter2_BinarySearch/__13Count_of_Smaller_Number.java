@@ -3,11 +3,16 @@ package ch9J.chapter2_BinarySearch;
 import java.util.ArrayList;
 
 /*
- * Give you an integer array (index from 0 to n-1, where n is the size of this array, value from 0 to 10000) and an query list. For each query, give you an integer, return the number of element in the array that are smaller than the given integer.
+ * Give you an integer array (index from 0 to n-1,
+ *  where n is the size of this array, value from 0 
+ *  to 10000) and an query list. For each query, 
+ *  give you an integer, return the number of element
+ *   in the array that are smaller than the given integer.
 
  Notice
 
-We suggest you finish problem Segment Tree Build and Segment Tree Query II first.
+We suggest you finish problem Segment Tree Build 
+and Segment Tree Query II first.
 
 Have you met this question in a real interview? Yes
 Example

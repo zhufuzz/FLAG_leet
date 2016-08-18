@@ -1,11 +1,10 @@
 package ch9J.chapter4_DP1;
 /*
- * Given an array of non-negative integers, you are initially positioned 
- * at the first index of the array.
+ * Given an array of non-negative integers, you are initially 
+ * positioned at the first index of the array.
 
-Each element in the array represents your maximum jump length at that position.
-
-Determine if you are able to reach the last index.
+Each element in the array represents your maximum jump length at 
+that position. Determine if you are able to reach the last index.
 
  Notice
 
@@ -15,10 +14,12 @@ The time complexity of Greedy method is O(n).
 
 The time complexity of Dynamic Programming method is O(n^2).
 
-We manually set the small data set to allow you pass the test in both ways. 
-This is just to let you learn how to use this problem in dynamic programming ways. 
-If you finish it in dynamic programming ways, you can try greedy method to make 
-it accept again.
+We manually set the small data set to allow you pass the test in 
+both ways. This is just to let you learn how to use this problem 
+in dynamic programming ways. 
+
+If you finish it in dynamic programming ways, you can try greedy 
+method to make it accept again.
 
 Have you met this question in a real interview? Yes
 Example
@@ -47,14 +48,15 @@ public class _5Jump_Game {
 • answer: f[n-1]
  */
 
-//version 1: Dynamic Programming
-//1. state:  f[i] = 能不能从index = 0跳到index =i
-//2.function:  f[i] = OR(f[j]) (0 <= j <= i - 1 并且 j能跳到 i: j + A[j] >= i)
-//			   OR: &&  只考虑倒数第一步，就是i之前的那步
-//3.initialize:  f[0] = true; 
+/*version 1: Dynamic Programming
+1. state:  f[i] = 能不能从index = 0跳到index =i
+2.function:  f[i] = OR(f[j]) (0 <= j <= i - 1 
+							并且 j能跳到 i: j + A[j] >= i)
+			 OR: &&  只考虑倒数第一步，就是i之前的那步
+3.initialize:  f[0] = true; 
 //               f[...] = false;
 //4.answer:      f[n - 1]    第n个数的坐标是 n － 1 ！！！！！
-
+*/
 class Jump_Game1 {
  public boolean canJump(int[] A) {
      boolean[] can = new boolean[A.length];

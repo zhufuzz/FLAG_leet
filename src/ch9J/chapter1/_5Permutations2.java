@@ -37,7 +37,9 @@ public class _5Permutations2 {
         return result;
     }
     
-    public void helper(ArrayList<ArrayList<Integer>> result, ArrayList<Integer> list, int[] visited, int[] num) {
+    public void helper(ArrayList<ArrayList<Integer>> result, 
+    			ArrayList<Integer> list, int[] visited, int[] num) {
+    	
         if(list.size() == num.length) {
             result.add(new ArrayList<Integer>(list));
             return;

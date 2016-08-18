@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-/*Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
+/*Given a binary tree, return the level order traversal 
+ * of its nodes' values. (ie, from left to right, level by level).
 
 Have you met this question in a real interview? Yes
 Example
@@ -30,7 +31,9 @@ Challenge 1: Using only 1 queue to implement it.
 Challenge 2: Use DFS algorithm to do it.
 
 Tags 
-Queue Binary Tree Breadth First Search Binary Tree Traversal LinkedIn Uber Facebook*/
+Queue Binary Tree Breadth First Search Binary Tree Traversal 
+LinkedIn Uber Facebook*/
+
 public class _16Binary_Tree_Level_Order_Traversal {
 
 }

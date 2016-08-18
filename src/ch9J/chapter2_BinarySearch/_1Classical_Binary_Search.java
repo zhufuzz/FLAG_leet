@@ -1,6 +1,7 @@
 package ch9J.chapter2_BinarySearch;
 /*
- * Find any position of a target number in a sorted array. Return -1 if target does not exist.
+ * Find any position of a target number in a sorted array. 
+ * Return -1 if target does not exist.
 
 Have you met this question in a real interview? Yes
 Example

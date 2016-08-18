@@ -1,6 +1,8 @@
 package ch9J.chapter2_BinarySearch;
 /*
- * Given a sorted array and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.
+Given a sorted array and a target value,  return the 
+index if the target is found. If not, return the index
+ where it would be if it were inserted in order.
 
 You may assume NO duplicates in the array.
 
@@ -75,7 +77,8 @@ public class _5Search_Insert_Position {
  }
 }
 
-//version 2: find the last position < target, return +1， 要特判一下target小于所有数组里面的元素
+//version 2: find the last position < target, return +1， 
+//要特判一下target小于所有数组里面的元素
 
 class Search_Insert_Position2 {
  public int searchInsert(int[] A, int target) {

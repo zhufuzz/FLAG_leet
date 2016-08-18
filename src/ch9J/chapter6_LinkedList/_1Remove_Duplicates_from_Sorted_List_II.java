@@ -1,6 +1,7 @@
 package ch9J.chapter6_LinkedList;
 /*
- * Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only distinct numbers from the original list.
+ * Given a sorted linked list, delete all nodes that have duplicate
+ *  numbers, leaving only distinct numbers from the original list.
 
 Have you met this question in a real interview? Yes
 Example

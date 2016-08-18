@@ -1,6 +1,8 @@
 package ch9J.chapter5_DP2;//区间类
 /*
- * There are n coins in a line. Two players take turns to take a coin from one of the ends of the line until there are no more coins left. The player with the larger amount of money wins.
+There are n coins in a line. Two players take turns to take
+a coin from one of the ends of the line until there are no 
+more coins left. The player with the larger amount of money wins.
 
 Could you please decide the first player will win or lose?
 
@@ -15,7 +17,8 @@ Given array A = [1,20,4], return false.
 Challenge 
 Follow Up Question:
 
-If n is even. Is there any hacky algorithm that can decide whether first player will win or lose in O(1) memory and O(n) time?
+If n is even. Is there any hacky algorithm that can decide whether 
+first player will win or lose in O(1) memory and O(n) time?
 
 Tags 
 Dynamic Programming Array Game Theory
@@ -92,7 +95,8 @@ public class Solution {
      
      return sum < 2*MemorySearch(0,values.length - 1, dp, flag, values);
  }
- int MemorySearch(int left, int right, int [][]dp, boolean [][]flag, int []values) {
+ int MemorySearch(int left, int right, int [][]dp, 
+		 		  boolean [][]flag, int []values) {
      
      if(flag[left][right])   
          return dp[left][right];
@@ -104,12 +108,17 @@ public class Solution {
      } else if(left + 1 == right) {
          dp[left][right] = Math.max(values[left], values[right]);
      } else {
-         int  pick_left = Math.min(MemorySearch(left + 2, right, dp, flag, values), MemorySearch(left + 1, right - 1, dp, flag, values)) + values[left];
-         int  pick_right = Math.min(MemorySearch(left, right - 2, dp, flag, values), MemorySearch(left + 1, right - 1, dp, flag, values)) + values[right];
+         int  pick_left = Math.min(
+        		 MemorySearch(left + 2, right, dp, flag, values), 
+        		 MemorySearch(left + 1, right - 1, dp, flag, values)) + values[left];
+         
+         int  pick_right = Math.min(
+        		 MemorySearch(left, right - 2, dp, flag, values), 
+        		 MemorySearch(left + 1, right - 1, dp, flag, values)) + values[right];
+         
          dp[left][right] = Math.max(pick_left, pick_right);    
      }
      return dp[left][right];   
  }
- 
  
 }

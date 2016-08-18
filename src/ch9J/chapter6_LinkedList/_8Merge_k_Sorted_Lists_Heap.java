@@ -8,7 +8,8 @@ import java.util.Queue;
 
 //version 2: Heap
 public class _8Merge_k_Sorted_Lists_Heap {
- private Comparator<ListNode> ListNodeComparator = new Comparator<ListNode>() {
+ private Comparator<ListNode> ListNodeComparator = 
+		 							new Comparator<ListNode>() {
      public int compare(ListNode left, ListNode right) {
          if (left == null) {
              return 1;
@@ -24,7 +25,8 @@ public class _8Merge_k_Sorted_Lists_Heap {
          return null;
      }
      
-     Queue<ListNode> heap = new PriorityQueue<ListNode>(lists.size(), ListNodeComparator);
+     Queue<ListNode> heap = new PriorityQueue<ListNode>(lists.size(), 
+    		 										ListNodeComparator);
      for (int i = 0; i < lists.size(); i++) {
          if (lists.get(i) != null) {
              heap.add(lists.get(i));

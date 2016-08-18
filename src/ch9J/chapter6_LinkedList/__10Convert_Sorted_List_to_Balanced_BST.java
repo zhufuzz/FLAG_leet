@@ -1,6 +1,7 @@
 package ch9J.chapter6_LinkedList;
 /*
- * Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
+ * Given a singly linked list where elements are sorted in ascending
+ *  order, convert it to a height balanced BST.
 
 Example
                2

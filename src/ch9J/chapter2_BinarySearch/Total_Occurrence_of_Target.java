@@ -1,6 +1,8 @@
 package ch9J.chapter2_BinarySearch;
 /*
- *Given a target number and an integer array sorted in ascending order. Find the total number of occurrences of target in the array.
+ *Given a target number and an integer array sorted 
+ *in ascending order. Find the total number of occurrences 
+ *of target in the array.
 
 Have you met this question in a real interview? Yes
 Example

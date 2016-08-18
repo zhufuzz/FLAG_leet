@@ -10,7 +10,8 @@ Have you met this question in a real interview? Yes
 Example
 In n=2 arrays [[9,3,2,4,7],[1,2,3,4,8]], the 3rd largest element is 7.
 
-In n=2 arrays [[9,3,2,4,8],[1,2,3,4,2]], the 1st largest element is 9, 2nd largest element is 8, 3rd largest element is 7 and etc.
+In n=2 arrays [[9,3,2,4,8],[1,2,3,4,2]], the 1st largest element is 9, 
+2nd largest element is 8, 3rd largest element is 7 and etc.
 
 Tags 
 Heap
@@ -42,7 +43,8 @@ public class Solution {
      */
     public int KthInArrays(int[][] arrays, int k) {
         // Write your code here
-        Queue<Node> queue =  new PriorityQueue<Node>(k, new Comparator<Node>() {  
+        Queue<Node> queue =  new PriorityQueue<Node>(
+        		k, new Comparator<Node>() {  
                 public int compare(Node o1, Node o2) {  
                     if (o1.value > o2.value)
                         return -1;

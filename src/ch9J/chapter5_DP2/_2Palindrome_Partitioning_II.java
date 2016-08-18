@@ -1,6 +1,7 @@
 package ch9J.chapter5_DP2;
 /*
- * Given a string s, cut s into some substrings such that every substring is a palindrome.
+ * Given a string s, cut s into some substrings such that every 
+ * substring is a palindrome.
 
 Return the minimum cuts needed for a palindrome partitioning of s.
 
@@ -8,7 +9,8 @@ Have you met this question in a real interview? Yes
 Example
 Given s = "aab",
 
-Return 1 since the palindrome partitioning ["aa", "b"] could be produced using 1 cut.
+Return 1 since the palindrome partitioning ["aa", "b"] could be
+ produced using 1 cut.
 
 Tags 
 Dynamic Programming
@@ -72,7 +74,7 @@ class Palindrome_Partitioning_II1 {
      for (int i = 1; i <= s.length(); i++) {
          f[i] = Integer.MAX_VALUE; // or f[i] = i
          for (int j = 0; j < i; j++) {
-        	//下标j到i - 1的String是否为回文字符串， 也就是第j＋1个字符到第i个字符的string
+ //下标j到i - 1的String是否为回文字符串， 也就是第j＋1个字符到第i个字符的string
              if (isPalindrome[j][i - 1]) {
                  f[i] = Math.min(f[i], f[j] + 1);
              }
