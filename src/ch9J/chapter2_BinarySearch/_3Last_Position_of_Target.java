@@ -1,24 +1,22 @@
 package ch9J.chapter2_BinarySearch;
 
+import java.util.Random;
+
 import org.junit.Test;
 
 /*
- * Find the last position of a target number in a sorted array. 
- * Return -1 if target does not exist.
+Find the last position of a target number in a sorted array. 
+Return -1 if target does not exist.
 
 Have you met this question in a real interview? Yes
-Example
-Given [1, 2, 2, 4, 5, 5].
-
-For target = 2, return 2.
-
+Example: Given [1, 2, 2, 4, 5, 5].
+For target = 2, return 2. 
 For target = 5, return 5.
-
 For target = 6, return -1.
 
-Tags 
-Binary Search
-Related Problems 
+Tags: Binary Search
+
+Related Problems: 
 Easy Closest Number in Sorted Array 38 %
 Easy Classical Binary Search 47 %
 Easy First Position of Target 32 %
@@ -37,18 +35,17 @@ public class _3Last_Position_of_Target {
         }
         
         int start = 0, end = nums.length - 1;
-        //start + 1 ＝ end就是相邻状况
-        //已经不满足以下循环条件，就不会遇到死循环情况
+        //start + 1 == end就是相邻状况, 已经不满足以下循环条件，就不会遇到死循环情况
         while (start + 1 < end) {
             int mid = start + (end - start) / 2;
             if (nums[mid] == target) {
                 start = mid;
             } else if (nums[mid] < target) {
-                start = mid;
-                // or start = mid + 1
+               start = mid;
+                 // or  start = mid + 1;
             } else {
-                end = mid;
-                // or end = mid - 1
+            		end = mid;
+             // or   end = mid - 1;
             }
         }
         //以上循环结束时，start和end有可能是一个很数，也有可能是两个数
@@ -64,8 +61,13 @@ public class _3Last_Position_of_Target {
     
     @Test
     public void testLastPosition(){
-	    	int[] nums = {1,2,2,2,3,4,5,6,7};
-	    	int result = lastPosition(nums, 2);
+    		//Random random = new Random();
+    		int[] nums = new int[20000000];
+    		for(int i = 0; i < nums.length; i++){
+    			nums[i] = i;
+    		}
+	    	//int[] nums = {1,2,2,2,3,4,5,6,7,7,7,8,9,10,11,11,12,13,14};
+	    	int result = lastPosition(nums, 7777777);
 	    	System.out.println(result);
     }
  }

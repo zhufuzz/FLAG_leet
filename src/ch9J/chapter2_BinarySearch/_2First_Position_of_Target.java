@@ -5,16 +5,14 @@ package ch9J.chapter2_BinarySearch;
 
 If the target number does not exist in the array, return -1.
 
-Have you met this question in a real interview? Yes
-Example
-If the array is [1, 2, 3, 3, 4, 5, 10], for given target 3, return 2.
+Example: If the array is [1, 2, 3, 3, 4, 5, 10], for given target 3, return 2.
 
-Challenge 
+Challenge :
 If the count of numbers is bigger than 2^32, can your code work properly?
 
-Tags 
-Binary Search Array
-Related Problems 
+Tags: Binary Search Array
+
+Related Problems: 
 Easy Closest Number in Sorted Array 38 %
 Easy Last Position of Target 40 %
 Easy Classical Binary Search 47 %

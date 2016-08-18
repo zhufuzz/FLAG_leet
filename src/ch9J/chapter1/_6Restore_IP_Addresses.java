@@ -3,7 +3,8 @@ package ch9J.chapter1;
 import java.util.ArrayList;
 
 /*
- * Given a string containing only digits, restore it by returning all possible valid IP address combinations.
+ * Given a string containing only digits, restore it by returning 
+ * all possible valid IP address combinations.
 
 Example: Given "25525511135", return
 
