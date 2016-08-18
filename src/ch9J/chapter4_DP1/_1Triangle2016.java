@@ -129,7 +129,7 @@ private int divideConquer(int[][] triangle, int x, int y){
 	return minPath[x][y];
 }
 }
-
+/*
 //时间复杂度：
 class DFS_Traverse{
 	void traverse(int x, int y, int sum){
@@ -230,4 +230,4 @@ for(int i = 1; i < n; i++){
 Math.min(f[n - 1][0], f[n - 1][1], f[n - 1][2]...)
 
 }
-		
+	*/	

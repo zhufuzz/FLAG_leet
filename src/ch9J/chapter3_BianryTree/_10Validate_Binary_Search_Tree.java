@@ -27,6 +27,7 @@ Related Problems
 Medium Inorder Successor in Binary Search Tree 30 %
 Easy Balanced Binary Tree 38 %
  * */
+
 public class _10Validate_Binary_Search_Tree {
 
 }
@@ -53,21 +54,21 @@ class Solution {
      return true;
  }
 }
-
+//////////////////////////////////////////////////////////////////////
 
 //version 2  Divide and Conquer
-class ResultType {
- boolean is_bst;
- int maxValue, minValue;
- 
- ResultType(boolean is_bst, int maxValue, int minValue) {
-     this.is_bst = is_bst;
-     this.maxValue = maxValue;
-     this.minValue = minValue;
- }
-}
 
 class Solution2 {
+	
+class ResultType {
+	 boolean is_bst;
+	 int maxValue, minValue;
+	 ResultType(boolean is_bst, int maxValue, int minValue) {
+	     this.is_bst = is_bst;
+	     this.maxValue = maxValue;
+	     this.minValue = minValue;
+	 }
+}
  /**
   * @param root: The root of binary tree.
   * @return: True if the binary tree is BST, or false

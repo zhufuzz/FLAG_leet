@@ -38,6 +38,10 @@ public class _7Lowest_Common_Ancestor {
 //Version 1: Traditional Method， 如果有父亲节点
 
 class Lowest_Common_Ancestor1 {
+	class TreeNode {
+		      public TreeNode parent, left, right;
+		 }
+	
     private ArrayList<TreeNode> getPath2Root(TreeNode node) {
         ArrayList<TreeNode> list = new ArrayList<TreeNode>();
         while (node != null) {

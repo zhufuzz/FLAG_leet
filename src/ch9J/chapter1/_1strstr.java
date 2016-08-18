@@ -5,13 +5,8 @@ package ch9J.chapter1;
 
 If target does not exist in source, just return -1.
 
-Clarification
-Do I need to implement KMP Algorithm in a real interview?
+Example:
 
-Not necessary. When you meet this problem in a real interview, 
-the interviewer may just want to test your basic implementation ability. 
-But make sure your confirm with the interviewer first.
-Example
 If source = "source" and target = "target", return -1.
 
 If source = "abcdabcdefg" and target = "bcd", return 1.
@@ -19,8 +14,9 @@ If source = "abcdabcdefg" and target = "bcd", return 1.
 Challenge 
 O(n2) is acceptable. Can you implement an O(n) algorithm? (hint: KMP)
 
-Tags 
-Basic Implementation String Facebook*/
+Tags : Basic Implementation String Facebook
+
+*/
 public class _1strstr {
 	/**
      * Returns a index to the first occurrence of target in source,

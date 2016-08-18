@@ -27,11 +27,8 @@ return its zigzag level order traversal as:
 ]
 Tags 
 LinkedIn Queue Binary Tree Binary Tree Traversal Breadth First Search*/
+
 public class __18Binary_Tree_Zigzag_Level_Order_Traversal {
-
-}
-
-class Solution {
     public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
 

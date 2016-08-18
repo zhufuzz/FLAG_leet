@@ -43,7 +43,7 @@ public class _1Two_Sum {
      return [1, 2]
  */
 public int[] twoSum(int[] numbers, int target) {
-    HashMap<Integer,Integer> map = new HashMap<>();
+    HashMap<Integer,Integer> map = new HashMap<Integer, Integer>();
 
     for (int i = 0; i < numbers.length; i++) {
         if (map.get(numbers[i]) != null) {

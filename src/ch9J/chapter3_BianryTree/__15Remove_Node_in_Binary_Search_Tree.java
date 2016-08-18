@@ -33,6 +33,7 @@ Tags
 LintCode Copyright Binary Search Tree
 Related Problems 
 Easy Insert Node in a Binary Search Tree 41 %*/
+
 public class __15Remove_Node_in_Binary_Search_Tree {
 	 /**
      * @param root: The root of the binary search tree.

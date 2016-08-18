@@ -37,7 +37,7 @@ public class __17Binary_Tree_Level_Order_Traversal_II {
      * @return: buttom-up level order a list of lists of integer
      */
     public ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (root == null) {
             return result;
         }
@@ -46,7 +46,7 @@ public class __17Binary_Tree_Level_Order_Traversal_II {
         
         while (!queue.isEmpty()) {
             int size = queue.size();
-            ArrayList<Integer> level = new ArrayList<>();
+            ArrayList<Integer> level = new ArrayList<Integer>();
             for (int i = 0; i < size; i++) {
                 TreeNode head = queue.poll();
                 level.add(head.val);

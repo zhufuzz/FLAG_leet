@@ -23,10 +23,6 @@ Related Problems
 Easy First Position of Target 32 %
 Medium Binary Tree Serialization 19 %
  * */
-public class __13Search_Range_in_Binary_Search_Tree {
-
-}
-
 
 /**
  * Definition of TreeNode:
@@ -39,7 +35,7 @@ public class __13Search_Range_in_Binary_Search_Tree {
  *     }
  * }
  */
-class Solution {
+public class __13Search_Range_in_Binary_Search_Tree {
     private ArrayList<Integer> results;
     /**
      * @param root: The root of the binary search tree.

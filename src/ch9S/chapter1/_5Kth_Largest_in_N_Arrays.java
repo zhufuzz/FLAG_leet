@@ -1,30 +1,26 @@
 package ch9S.chapter1;
+
+import java.util.Arrays;
+import java.util.Comparator;  
+import java.util.PriorityQueue;  
+import java.util.Queue; 
+
 /*
  * Find K-th largest element in N arrays.
 
- Notice
+ Notice: You can swap elements in the array
 
-You can swap elements in the array
+Example:
 
-Have you met this question in a real interview? Yes
-Example
 In n=2 arrays [[9,3,2,4,7],[1,2,3,4,8]], the 3rd largest element is 7.
 
 In n=2 arrays [[9,3,2,4,8],[1,2,3,4,2]], the 1st largest element is 9, 
 2nd largest element is 8, 3rd largest element is 7 and etc.
 
-Tags 
-Heap
-Related Problems 
-Medium Largest Number 18 %
+Tags: Heap
+Related: Problems Medium Largest Number 18 %
  */
-public class _5Kth_Largest_in_N_Arrays {
 
-}
-
-import java.util.Comparator;  
-import java.util.PriorityQueue;  
-import java.util.Queue; 
 
 class Node {
     public int value, from_id, index;
@@ -35,7 +31,7 @@ class Node {
     }
 }
 
-public class Solution {
+public class _5Kth_Largest_in_N_Arrays {
     /**
      * @param arrays a list of array
      * @param k an integer

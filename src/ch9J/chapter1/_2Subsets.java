@@ -4,19 +4,12 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /*Subsets
-
- Description
- Notes
- Testcase
- Judge
 Given a set of distinct integers, return all fromIndexsible subsets.
 
- Notice
+ Notice: Elements in a subset must be in non-descending order.
+		 The solution set must not contain duplicate subsets.
 
-Elements in a subset must be in non-descending order.
-The solution set must not contain duplicate subsets.
-Example
-If S = [1,2,3], a solution is:
+Example: If S = [1,2,3], a solution is:
 
 [
   [3],
