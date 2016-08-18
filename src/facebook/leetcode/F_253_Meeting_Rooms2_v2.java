@@ -3,7 +3,7 @@ import java.util.*;//Java O(n) sweepline solution
 //https://leetcode.com/discuss/88716/java-o-n-sweepline-solution
 public class F_253_Meeting_Rooms2_v2 {
   public int minMeetingRooms(Interval[] intervals) {
-      List<int[]> meet = new ArrayList<>();      
+      List<int[]> meet = new ArrayList<int[]>();      
       for(Interval interval : intervals) {
           meet.add(new int[] {interval.start, 1});
           meet.add(new int[] {interval.end, 0});
@@ -30,11 +30,11 @@ public class F_253_Meeting_Rooms2_v2 {
   //https://leetcode.com/discuss/86333/easy-and-concise-java-sol
   public int minMeetingRooms2(Interval[] intervals) {
     Arrays.sort(intervals, new Comparator<Interval>() {
-        public i-nt compare(Interval in1, Interval in2) {
+        public int compare(Interval in1, Interval in2) {
             return in2.end - in1.end;
         }
     });
-    List<Interval> list = new LinkedList<>(Arrays.asList(intervals));
+    List<Interval> list = new LinkedList<Interval>(Arrays.asList(intervals));
     int count = 0;
     while(!list.isEmpty()) {
         count++;

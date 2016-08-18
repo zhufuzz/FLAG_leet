@@ -1,3 +1,4 @@
+package implementation;
 public class BinaryHeap<E extends Comparable<E>>{
 	private static final int DEFAULT_SIZE = 10;
 	private int currentSize;
@@ -21,14 +22,17 @@ public class BinaryHeap<E extends Comparable<E>>{
 	}
 
 	public E findMin(){
+		return null;
 
 	}
 
 	public E deleteMin(){
+		return null;
 
 	}
 
 	public boolean isEmpty(){
+		return false;
 
 	}
 

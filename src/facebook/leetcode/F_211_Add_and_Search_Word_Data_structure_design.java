@@ -1,15 +1,26 @@
 package facebook.leetcode;
 import java.util.*;//Backtracking, Trie, Design
-/*Design a data structure that supports the following two operations:void addWord(word)  bool search(word) search(word) can search a literal word or a regular expression string containing only letters a-z or .. A . means it can represent any one letter.
-For example:addWord("bad") addWord("dad") addWord("mad") search("pad") -> false search("bad") -> true search(".ad") -> true search("b..") -> true
+/*Design a data structure that supports the following two operations:
+ * void addWord(word)  bool search(word) search(word) can search a 
+ * literal word or a regular expression string containing only letters 
+ * a-z or .. A . means it can represent any one letter.
+ * 
+For example:addWord("bad") addWord("dad") addWord("mad") search("pad") 
+-> false search("bad") -> true search(".ad") -> true search("b..") -> true
+
 You may assume that all words are consist of lowercase letters a-z.*/
 class TrieNode {
-  // Initialize your data structure here. public HashMap<Character, TrieNode> children;
+  // Initialize your data structure here. 
+  public HashMap<Character, TrieNode> children;
   public boolean hasWord;   // Initialize your data structure here.
-  public TrieNode() { children = new HashMap<Character, TrieNode>(); hasWord = false; }}
+  public TrieNode() { 
+	  children = new HashMap<Character, TrieNode>(); 
+	  hasWord = false;
+  }
+}
 
-public class WordDictionary {
-  private TrieNode root;  public WordDictionary(){ root = new TrieNode(); }
+public class F_211_Add_and_Search_Word_Data_structure_design {
+  private TrieNode root;  public F_211_Add_and_Search_Word_Data_structure_design(){ root = new TrieNode(); }
   // Adds a word into the data structure.
   public void addWord(String word) {
       // Write your code here

@@ -7,14 +7,16 @@ For example, Given [[0, 30],[5, 10],[15, 20]], return false.*/
 
 //http://blog.csdn.net/sbitswc/article/details/49068503
 
-class Interval {
+
+public class F_252_Meeting_Rooms {
+	class Interval {
       int start;
       int end;
       Interval() { start = 0; end = 0; }
       Interval(int s, int e) { start = s; end = e; }
  }
  
-public class F_252_Meeting_Rooms {
+	
     public boolean canAttendMeetings(Interval[] intervals) {
         Arrays.sort(intervals, new Comparator<Interval>() {
             @Override

@@ -1,6 +1,8 @@
 package ch9.Array;
 /*Given a 2D board and a word, find if the word exists in the grid.
-The word can be constructed from letters of sequentially adjacent cell, where "adjacent" cells are those horizontally or vertically neighboring. The same letter cell may not be used more than once.
+The word can be constructed from letters of sequentially adjacent cell, 
+where "adjacent" cells are those horizontally or vertically neighboring. 
+The same letter cell may not be used more than once.
 For example, Given board =
 [  ['A','B','C','E'],
   ['S','F','C','S'],
@@ -38,7 +40,7 @@ public class Ch9_79_Word_Search {
         boolean rst = find(board, i-1, j, word, start+1) 
 					|| find(board, i, j-1, word, start+1) 
 					|| find(board, i+1, j, word, start+1) 
-					|| find(board, i, j+1, word, start+1));
+					|| find(board, i, j+1, word, start+1);
         board[i][j] = word.charAt(start);
         return rst;
     }

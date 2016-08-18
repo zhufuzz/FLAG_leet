@@ -11,7 +11,7 @@ Examples:"()())()" -> ["()()()", "(())()"]
 
 public class F_301_Remove_Invalid_Parentheses_v2 {
   public List<String> removeInvalidParentheses(String s) {
-    Set<String> res = new HashSet<>();
+    Set<String> res = new HashSet<String>();
     int rmL = 0, rmR = 0;
     for(int i = 0; i < s.length(); i++) {
         if(s.charAt(i) == '(') rmL++;

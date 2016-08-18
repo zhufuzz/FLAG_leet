@@ -1,7 +1,9 @@
 package facebook.leetcode;
 //DFS, BFS, Graph, Union Find
 
-/*Given n nodes labeled from 0 to n - 1 and a list of undirected edges (each edge is a pair of nodes), write a function to check whether these edges make up a valid tree.
+/*Given n nodes labeled from 0 to n - 1 and a list of undirected edges 
+ * (each edge is a pair of nodes), write a function to check whether these 
+ * edges make up a valid tree.
 
 For example:
 
@@ -11,8 +13,11 @@ Given n = 5 and edges = [[0, 1], [1, 2], [2, 3], [1, 3], [1, 4]], return false.
 
 Hint:
 
-Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], what should your return? Is this case a valid tree?
-According to the definition of tree on Wikipedia: 鈥渁 tree is an undirected graph in which any two vertices are connected by exactly one path. In other words, any connected graph without simple cycles is a tree.鈥�*/
+Given n = 5 and edges = [[0, 1], [1, 2], [3, 4]], what should your return? 
+Is this case a valid tree?
+According to the definition of tree on Wikipedia: 鈥渁 tree is an undirected 
+graph in which any two vertices are connected by exactly one path. 
+In other words, any connected graph without simple cycles is a tree.鈥�*/
 /*题解：
 最简便的写法是Quick-Union，参见Coursera Algorithm Part I.
 

@@ -23,7 +23,7 @@ public class F_325_Maximum_Size_Subarray_Sum_Equals_k{
           return 0;
       
       int len = nums.length, maxLen = 0, sum = 0;
-      HashMap<Integer, Integer> map = new HashMap<>();
+      HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
       
       for (int i = 0; i < len; i++) {
           sum += nums[i];

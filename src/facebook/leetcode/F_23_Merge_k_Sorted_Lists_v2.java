@@ -10,8 +10,7 @@ public class F_23_Merge_k_Sorted_Lists_v2 {
       if (lists == null || lists.length == 0)        return null;
       if (lists.length == 1)                         return lists[0];
       
-      PriorityQueue<ListNode> heap = 
-          new PriorityQueue<>(new Comparator<ListNode>() {
+      PriorityQueue<ListNode> heap = new PriorityQueue<ListNode>(new Comparator<ListNode>() {
           public int compare(ListNode o1, ListNode o2) {
               return o1.val - o2.val;
           }

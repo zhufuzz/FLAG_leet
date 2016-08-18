@@ -18,11 +18,11 @@ All inputs will be in lower-case.*/
 public class F_49_Group_Anagrams1{
   public List<List<String>> groupAnagrams(String[] strs) {
     
-      List<List<String>> ans = new ArrayList<>();
+      List<List<String>> ans = new ArrayList<List<String>>();
       if (strs==null || strs.length==0) { return ans; }
       
       Arrays.sort(strs);
-      Map<String, List<String>> map = new HashMap<>();
+      Map<String, List<String>> map = new HashMap<String, List<String>>();
       
       for (String s: strs) {
         
@@ -32,7 +32,7 @@ public class F_49_Group_Anagrams1{
          List<String> list = map.get(key);
          
          if (list == null) {
-             List<String> temp = new ArrayList<>();
+             List<String> temp = new ArrayList<String>();
              temp.add(s);
              map.put(key, temp);
          } else {

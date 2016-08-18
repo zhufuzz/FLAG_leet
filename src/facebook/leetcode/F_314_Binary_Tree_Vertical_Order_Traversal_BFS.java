@@ -5,11 +5,11 @@ import java.util.*;
   
 public class F_314_Binary_Tree_Vertical_Order_Traversal_BFS {
   public List<List<Integer>> verticalOrder(TreeNode root) {
-    if (root == null)         return new ArrayList<>();
+    if (root == null)         return new ArrayList<List<Integer>>();
     
-    Map<TreeNode, Integer> columnMap = new HashMap<>();
-    Map<Integer, List<Integer>> vertical = new TreeMap<>();
-    Queue<TreeNode> queue = new LinkedList<>();
+    Map<TreeNode, Integer> columnMap = new HashMap<TreeNode, Integer>();
+    Map<Integer, List<Integer>> vertical = new TreeMap<Integer, List<Integer>>();
+    Queue<TreeNode> queue = new LinkedList<TreeNode>();
     
     queue.offer(root);
     columnMap.put(root, 0);
@@ -20,7 +20,7 @@ public class F_314_Binary_Tree_Vertical_Order_Traversal_BFS {
         col = columnMap.get(root);
         
         if (!vertical.containsKey(col)) {
-            vertical.put(col, new ArrayList<>());
+            vertical.put(col, new ArrayList<Object>());
         }
         vertical.get(col).add(root.val);
         
@@ -35,6 +35,6 @@ public class F_314_Binary_Tree_Vertical_Order_Traversal_BFS {
         }
     }
     
-    return new ArrayList<>(vertical.values());
+    return new ArrayList<List<Integer>>(vertical.values());
   }
 }

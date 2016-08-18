@@ -8,7 +8,7 @@ Note: next() and hasNext() should run in average O(1) time and uses O(h) memory,
  where h is the height of the tree.*/
 
 public class BSTIterator {
-  Stack<TreeNode> stack=new Stack<>();
+  Stack<TreeNode> stack=new Stack<TreeNode>();
   public BSTIterator(TreeNode root) {
       inorderTravel(root);
   }
@@ -29,8 +29,8 @@ public class BSTIterator {
   
   //////////////  
   
-  Stack<TreeNode> stack2=new Stack<>();
-  public BSTIterator2(TreeNode root) {
+  Stack<TreeNode> stack2=new Stack<TreeNode>();
+  public void BSTIterator2(TreeNode root) {
       while(root!=null){
           stack2.push(root);
           root=root.left;

@@ -20,7 +20,8 @@ public class F_215_Kth_Largest_Element_in_an_Array {
 	  
     // if(len == 0) return 0; //we get to assume k is always valid
 	  
-    Queue<Integer> pq = new PriorityQueue<>(nums.length, new Comparator<Integer>(){
+    Queue<Integer> pq = new PriorityQueue<Integer>(nums.length, 
+    									new Comparator<Integer>(){
                                     public int compare(Integer a, Integer b) {
                                         return Integer.compare(b, a);
                                     }
