@@ -19,7 +19,7 @@ return its level order traversal as:
 // version 1: BFS
 public class binary_tree_level_order_traversal1 {
     public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
         if (root == null) {
             return result;
         }

@@ -13,7 +13,8 @@ public class myShortestJobFirst{
   
   public class ShortestJobFirst {
   	public float Solution(int[] req, int[] dur) {
-  		if(req == null || dur == null || req.length != dur.length || req.length <= 1 || dur.length <= 1) return (float)0.0;
+  		if(req == null || dur == null || req.length != dur.length 
+  				|| req.length <= 1 || dur.length <= 1) return (float)0.0;
   		int len = req.length;
   		int crtTime = req[0];
   		int waitTime = 0;

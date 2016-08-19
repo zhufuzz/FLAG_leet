@@ -11,7 +11,7 @@ public class BalancedBinaryTree{
 		if(Math.abs(height(root.left)-height(root.right))>1){
 			return false;
 		}else{
-			return isBalanced(root.left) && isBalanced(root.right);
+			return isBalanced1(root.left) && isBalanced1(root.right);
 		}
 	}
 	public int height(TreeNode node){

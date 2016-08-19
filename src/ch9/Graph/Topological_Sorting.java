@@ -11,7 +11,7 @@ public class Topological_Sorting {
     public ArrayList<DirectedGraphNode> topSort(ArrayList<DirectedGraphNode> graph) {
         // write your code here
         ArrayList<DirectedGraphNode> result = new ArrayList<DirectedGraphNode>();
-        HashMap<DirectedGraphNode, Integer> map = new HashMap<>();
+        HashMap<DirectedGraphNode, Integer> map = new HashMap<DirectedGraphNode, Integer>();
         for (DirectedGraphNode node : graph) {
             for (DirectedGraphNode neighbor : node.neighbors) {
                 if (map.containsKey(neighbor)) {

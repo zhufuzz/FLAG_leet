@@ -108,8 +108,9 @@ public class kLargestElements{
 	}
 
 	public static int randomPartition(int[] arr, int left, int right){
+		Random rand = new Random();
 		int n = right-left+1;
-		int pivot = rand()%n;
+		int pivot = rand.nextInt()%n;
 		swap(arr, left+pivot, right);
 		return partition(arr,left,right);
 	}

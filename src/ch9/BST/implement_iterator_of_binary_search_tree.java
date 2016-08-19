@@ -12,7 +12,7 @@ For the following binary search tree, inorder traversal by using iterator is [1,
     \           \
        6           12 */
 public class implement_iterator_of_binary_search_tree {
-    private Stack<TreeNode> stack = new Stack<>();
+    private Stack<TreeNode> stack = new Stack<TreeNode>();
     private TreeNode curt;
     
     // @param root: The root of binary tree.

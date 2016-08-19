@@ -1,5 +1,8 @@
 package ch9.DFS;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 //  http://blog.csdn.net/ljiabin/article/details/45846837
 // http://www.programcreek.com/2014/05/leetcode-course-schedule-java/
 /*There are a total of n courses you have to take, labeled from 0 to n - 1.

@@ -52,8 +52,4 @@ public class findPathInTree{
 		}
 		return false;
 	}
-
-
-
-
 }

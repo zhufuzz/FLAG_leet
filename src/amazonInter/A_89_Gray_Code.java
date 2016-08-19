@@ -25,7 +25,7 @@ public class A_89_Gray_Code {
   
   //All we need to do is to add an '1' to the top digit of the binary string and reversely added the new number to the list.
   public List<Integer> grayCode2(int n) {
-    List<Integer> ans = new ArrayList<>();
+    List<Integer> ans = new ArrayList<Integer>();
     ans.add(0);
     for(int i = 0; i < n ; i++)
         for(int j = ans.size()-1; j>=0; j--)

@@ -22,13 +22,13 @@ return [3, 4]*/
 //http://buttercola.blogspot.com/2016/01/leetcode-minimum-height-trees.html
 public class Ch9_310_Minimum_Height_Trees1 {
     public List<Integer> findMinHeightTrees(int n, int[][] edges) {
-        List<Integer> result = new ArrayList<>();
+        List<Integer> result = new ArrayList<Integer>();
         if (n <= 0 || edges == null || edges.length == 0) {
             return result;
         }
          
         // Step 1: construct the adjList
-        Map<Integer, List<Integer>> adjList = new HashMap<>();
+        Map<Integer, List<Integer>> adjList = new HashMap<Integer, List<Integer>>();
          
         for (int[] edge : edges) {
             // add forward edge
@@ -36,7 +36,7 @@ public class Ch9_310_Minimum_Height_Trees1 {
             int to = edge[1];
              
             if (!adjList.containsKey(from)) {
-                List<Integer> neighbors = new ArrayList<>();
+                List<Integer> neighbors = new ArrayList<Integer>();
                 neighbors.add(to);
                 adjList.put(from, neighbors); 
             } else {
@@ -47,7 +47,7 @@ public class Ch9_310_Minimum_Height_Trees1 {
              
             // Add the reverse edge
             if (!adjList.containsKey(to)) {
-                List<Integer> neighbors = new ArrayList<>();
+                List<Integer> neighbors = new ArrayList<Integer>();
                 neighbors.add(from);
                 adjList.put(to, neighbors);
             } else {

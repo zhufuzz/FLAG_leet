@@ -1,3 +1,5 @@
+package amazon;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -9,7 +11,7 @@ public class sameTree{
 		if(p==null || q==null){
 			return false;
 		}else{
-			return (p.val==q.val) && isSameTree(p.left,q.left) && isSameTree(p.right,q.right);
+			return (p.val==q.val) && isSameTree1(p.left,q.left) && isSameTree1(p.right,q.right);
 		}
 	}
 

@@ -37,7 +37,7 @@ public class BinaryTreeLevelOrderZigzag{
 				}else{
 //next time, visit from left to right
 					if(r.right != null){
-						nextLeve.push(r.right);
+						nextLevel.push(r.right);
 					}
 					if(r.left != null){
 						nextLevel.push(r.left);

@@ -1,4 +1,7 @@
 package ch9.BST;
+
+import ch9J.chapter6_LinkedList.TreeNode;
+
 //Template 1: Traverse
 public class Solution {
     public void traverse(TreeNode root) {
@@ -16,19 +19,21 @@ public class Solution {
 
 //Tempate 2: Divide & Conquer 
 class Solution2 {
-    public node traversal(TreeNode root) {
+	
+	
+   /* public node traversal(TreeNode root) {
         // null or leaf
         if (root == null) {
             // do something and return;
         }
         
         // Divide
-        ResultType left = traversal(root.left);
-        ResultType right = traversal(root.right);
+         TreeNode left = traversal(root.left);
+        TreeNode right = traversal(root.right);
         
         // Conquer
-        ResultType result = Merge from left and right.
-        //return result;
+       // TreeNode result = Merge from left and right.
+        /*return result;
         
-    }
+    }*/
 }

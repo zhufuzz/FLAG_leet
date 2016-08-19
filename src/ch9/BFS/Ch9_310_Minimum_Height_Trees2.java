@@ -23,7 +23,7 @@ return [3, 4]*/
 //http://buttercola.blogspot.com/2016/01/leetcode-minimum-height-trees.html
 public class Ch9_310_Minimum_Height_Trees2 {
     public List<Integer> findMinHeightTrees(int n, int[][] edges) {
-        List<Integer> result = new ArrayList<>();
+        List<Integer> result = new ArrayList<Integer>();
         if (n <= 0) {
             return result;
         }
@@ -35,9 +35,9 @@ public class Ch9_310_Minimum_Height_Trees2 {
         }
          
         // Step 1: construct the graph
-        List<Set<Integer>> adjList = new ArrayList<>();
+        List<Set<Integer>> adjList = new ArrayList<Set<Integer>>();
         for (int i = 0; i < n; i++) {
-            adjList.add(new HashSet<>());
+            adjList.add(new HashSet<Object>());
         }
          
         for (int[] edge : edges) {
@@ -48,7 +48,7 @@ public class Ch9_310_Minimum_Height_Trees2 {
         }
          
         // Remove leaf nodes
-        List<Integer> leaves = new ArrayList<>();
+        List<Integer> leaves = new ArrayList<Integer>();
         for (int i = 0; i < n; i++) {
             if (adjList.get(i).size() == 1) {
                 leaves.add(i);
@@ -58,7 +58,7 @@ public class Ch9_310_Minimum_Height_Trees2 {
         while (n > 2) {
             // identify and remove all leaf nodes
             n -= leaves.size();
-            List<Integer> newLeaves = new ArrayList<>();
+            List<Integer> newLeaves = new ArrayList<Integer>();
             for (int leaf : leaves) {
                 int neighbor = adjList.get(leaf).iterator().next();
                 adjList.get(neighbor).remove(leaf);

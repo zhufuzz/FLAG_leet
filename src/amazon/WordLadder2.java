@@ -86,11 +86,14 @@ List<String> expand(String word, Set<String> dict) {
 	}
 	return res;
 }
+
+
 /**
 * Add current word to first position
 * Add path to result if word is start
 */
-void dfs(List<List<String>> res, List<String> path, String word, String start, Map<String, Integer> dist, Map<String, List<String>> map) {
+void dfs(List<List<String>> res, List<String> path, String word, 
+		String start, Map<String, Integer> dist, Map<String, List<String>> map) {
 	if (word.equals(start)) {
 		path.add(0, word);
 		res.add(new ArrayList<String>(path));
@@ -102,6 +105,7 @@ if (dist.containsKey(next) && dist.get(word) == dist.get(next) + 1) { // backwar
 path.add(0, word); // add current word
 dfs(res, path, next, start, dist, map); // dfs next word
 path.remove(0);
+}
 }
 }
 }

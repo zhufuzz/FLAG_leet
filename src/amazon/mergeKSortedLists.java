@@ -2,11 +2,23 @@ package amazon;
 import java.util.*;
 //merge k sorted list
 
+import ch9J.chapter6_LinkedList.ListNode;
+
 //sol1: use merge sort, time O(nklogk), stack space O(logk)
 //sol2: use heap(priority queue), time O(nklogk), space O(k)
 
 
 public class mergeKSortedLists{
+	
+	class ListNode {
+		 int val;
+		 ListNode next;
+		 ListNode(int x) {
+			 val = x;
+			 next = null;
+		 }
+	}
+
 
 	public ListNode mergeKLists(ArrayList<ListNode> lists){
 		if(lists==null || lists.size()==0){

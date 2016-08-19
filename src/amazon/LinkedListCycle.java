@@ -23,7 +23,7 @@ public class LinkedListCycle{
 
 	public ListNode detectCycle(ListNode head){
 		if(head==null || head.next==null){
-			return true;
+			return head;
 		}
 		ListNode fast = head;
 		ListNode slow = head;

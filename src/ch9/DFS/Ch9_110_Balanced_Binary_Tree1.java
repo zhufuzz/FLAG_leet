@@ -3,12 +3,6 @@ package ch9.DFS;/*Given a binary tree, determine if it is height-balanced.
 For this problem, a height-balanced binary tree is defined as a binary tree in which the depth of the two subtrees of every node never differ by more than 1.*/
 // Version 1: with ResultType
 // Definition of TreeNode:
-   class TreeNode {
-      public int val;   public TreeNode left, right;
-      public TreeNode(int val) {
-          this.val = val;  this.left = this.right = null;
-      }
-  } 
 class ResultType {
     public boolean isBalanced;
     public int maxDepth;
@@ -18,6 +12,12 @@ class ResultType {
     }
 }
 public class Ch9_110_Balanced_Binary_Tree1 {
+	class TreeNode {
+		public int val;   public TreeNode left, right;
+		public TreeNode(int val) {
+			this.val = val;  this.left = this.right = null;
+		}
+	} 
     /*** @param root: The root of binary tree.
      * @return: True if this Binary tree is Balanced, or false. */
     public boolean isBalanced(TreeNode root) {
