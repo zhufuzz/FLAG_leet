@@ -75,7 +75,6 @@ public class __14Scramble_String_1 {
          return false;
      }// Base Cases
      
-     
      for (int i = 1; i < s1.length(); i++) {
          String s11 = s1.substring(0, i);
          String s12 = s1.substring(i, s1.length());
@@ -86,11 +85,9 @@ public class __14Scramble_String_1 {
          
          if (isScramble(s11, s21) && isScramble(s12, s22)) return true;
          if (isScramble(s11, s24) && isScramble(s12, s23)) return true;// cut 
-         
      }
      return false;
  }
- 
  
  private boolean isValid(String s1, String s2) {
      char[] arr1 = s1.toCharArray();

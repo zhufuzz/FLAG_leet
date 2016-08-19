@@ -10,7 +10,6 @@ import java.util.Queue;
  *  traversal of its nodes' values. (ie, from left to right, 
  *  level by level from leaf to root).
 
-Have you met this question in a real interview? Yes
 Example
 Given binary tree {3,9,20,#,#,15,7},
 
@@ -28,39 +27,40 @@ return its bottom-up level order traversal as:
   [9,20],
   [3]
 ]
+
 Tags 
 Queue Binary Tree Binary Tree Traversal Breadth First Search
  * */
 public class __17Binary_Tree_Level_Order_Traversal_II {
-	  /**
-     * @param root: The root of binary tree.
-     * @return: buttom-up level order a list of lists of integer
-     */
-    public ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {
-        ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-        if (root == null) {
-            return result;
-        }
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
-        queue.offer(root);
-        
-        while (!queue.isEmpty()) {
-            int size = queue.size();
-            ArrayList<Integer> level = new ArrayList<Integer>();
-            for (int i = 0; i < size; i++) {
-                TreeNode head = queue.poll();
-                level.add(head.val);
-                if (head.left != null) {
-                    queue.offer(head.left);
-                }
-                if (head.right != null) {
-                    queue.offer(head.right);
-                }
-            }
-            result.add(level);
-        }
-        
-        Collections.reverse(result);
+  /**
+ * @param root: The root of binary tree.
+ * @return: buttom-up level order a list of lists of integer
+ */
+public ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {
+    ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+    if (root == null) {
         return result;
     }
+    Queue<TreeNode> queue = new LinkedList<TreeNode>();
+    queue.offer(root);
+    
+    while (!queue.isEmpty()) {
+        int size = queue.size();
+        ArrayList<Integer> level = new ArrayList<Integer>();
+        for (int i = 0; i < size; i++) {
+            TreeNode head = queue.poll();
+            level.add(head.val);
+            if (head.left != null) {
+                queue.offer(head.left);
+            }
+            if (head.right != null) {
+                queue.offer(head.right);
+            }
+        }
+        result.add(level);
+    }
+    
+    Collections.reverse(result);
+    return result;
+}
 }

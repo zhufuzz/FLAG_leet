@@ -25,11 +25,8 @@ Medium Best Time to Buy and Sell Stock III 26 %
 Medium Best Time to Buy and Sell Stock II 48 %
 Medium Best Time to Buy and Sell Stock 41 %
  */
+
 public class __15Best_Time_to_Buy_and_Sell_Stock_IV {
-
-}
-
-class Solution {
 /**
  * @param k: An integer
  * @param prices: Given an integer array

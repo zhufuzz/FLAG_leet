@@ -26,14 +26,13 @@ Given tree = [2,1,3] and node = 2:
 1   3
 return node 3.
 
-Challenge 
-O(h), where h is the height of the BST.
+Challenge: O(h), where h is the height of the BST.
 
-Tags 
-Binary Search Tree Binary Tree
-Related Problems 
+Tags: Binary Search Tree Binary Tree
+Related Problems: 
 Medium Validate Binary Search Tree 21 %
 Hard Binary Search Tree Iterator 33 %*/
+
 public class __12Inorder_Successor_in_Binary_Search_Tree {
 	public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
         TreeNode successor = null;

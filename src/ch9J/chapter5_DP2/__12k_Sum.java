@@ -1,6 +1,6 @@
 package ch9J.chapter5_DP2;//背包类
 /*
- * Given n distinct positive integers, integer k (k <= n) and a number target.
+Given n distinct positive integers, integer k (k <= n) and a number target.
 
 Find k numbers where sum is target. Calculate how many solutions there are?
 

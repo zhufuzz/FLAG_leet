@@ -25,7 +25,8 @@ package ch9J.chapter5_DP2;
 * 	
 * 		return f[n] - 1
 */
-class _2Palindrome_Partitioning_II2 {
+public class _2Palindrome_Partitioning_II2 {
+	
 //O(n)
 private boolean isPalindrome(String s, int start, int end) {
    for (int i = start, j = end; i < j; i++, j--) {
@@ -35,6 +36,7 @@ private boolean isPalindrome(String s, int start, int end) {
    }
    return true;
 }
+
 //类似于区间动态规划的方法， f[i][j]表示i到j的区间，看可行不可行啊，最大最小啊
 //用一个小于n ^ 3的方法，给出一个可以搜索是否回文串的二维数组
 private boolean[][] getIsPalindrome(String s) {

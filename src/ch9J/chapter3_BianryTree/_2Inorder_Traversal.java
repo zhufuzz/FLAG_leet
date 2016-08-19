@@ -27,24 +27,24 @@ Related Problems
 Easy Binary Tree Preorder Traversal 40 %
  * */
 public class _2Inorder_Traversal {
-	/**
-     * @param root: The root of binary tree.
-     * @return: Inorder in ArrayList which contains node values.
-     */
-    public ArrayList<Integer> inorderTraversal(TreeNode root) {
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        ArrayList<Integer> result = new ArrayList<Integer>();
-        TreeNode curt = root;
-        while (curt != null || !stack.empty()) {
-            while (curt != null) {
-                stack.add(curt);
-                curt = curt.left;
-            }
-            curt = stack.peek();
-            stack.pop();
-            result.add(curt.val);
-            curt = curt.right;
+/**
+ * @param root: The root of binary tree.
+ * @return: Inorder in ArrayList which contains node values.
+ */
+public ArrayList<Integer> inorderTraversal(TreeNode root) {
+    Stack<TreeNode> stack = new Stack<TreeNode>();
+    ArrayList<Integer> result = new ArrayList<Integer>();
+    TreeNode curt = root;
+    while (curt != null || !stack.empty()) {
+        while (curt != null) {
+            stack.add(curt);
+            curt = curt.left;
         }
-        return result;
+        curt = stack.peek();
+        stack.pop();
+        result.add(curt.val);
+        curt = curt.right;
     }
+    return result;
+}
 }

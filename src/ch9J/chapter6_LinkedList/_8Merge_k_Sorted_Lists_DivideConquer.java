@@ -25,6 +25,7 @@ Related Problems
 Easy Merge Two Sorted Arrays 35 %
 Medium Ugly Number II 22 %
  */
+
 public class _8Merge_k_Sorted_Lists_DivideConquer {
 	/**
      * @param lists: a list of ListNode

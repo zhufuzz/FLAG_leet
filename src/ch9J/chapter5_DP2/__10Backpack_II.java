@@ -5,8 +5,8 @@ package ch9J.chapter5_DP2;//背包类
 
  Notice
 
-You cannot divide item into small pieces and the total size of items 
-you choose should smaller or equal to m.
+You cannot divide item into small pieces and the total size of 
+items you choose should smaller or equal to m.
 
 Have you met this question in a real interview? Yes
 Example

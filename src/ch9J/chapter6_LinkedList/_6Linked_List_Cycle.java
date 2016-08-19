@@ -17,6 +17,7 @@ Two Pointers Linked List
 Related Problems 
 Medium Intersection of Two Linked Lists 39 %
  */
+
 public class _6Linked_List_Cycle {
 	public Boolean hasCycle(ListNode head) {
         if (head == null || head.next == null) {

@@ -13,6 +13,7 @@ Related Problems
 Hard Reverse Nodes in k-Group 31 %
 Easy Rotate String 20 %
  */
+
 public class _7Rotate_List {
     private int getLength(ListNode head) {
         int length = 0;

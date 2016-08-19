@@ -11,6 +11,7 @@ Cracking The Coding Interview Linked List
 Related Problems 
 Easy Remove Nth Node From End of List 29 %
  */
+
 public class __12Delete_Node_in_the_Middle_of_Singly_Linked_List {
 	public void deleteNode(ListNode node) {
         // write your code here

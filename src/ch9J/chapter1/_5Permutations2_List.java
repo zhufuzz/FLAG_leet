@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
+//lintcode version
 public class _5Permutations2_List {
 public ArrayList<ArrayList<Integer>> permuteUnique(ArrayList<Integer> nums) {
     ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();

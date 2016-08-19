@@ -13,6 +13,7 @@ Linked List
 Related Problems 
 Naive Remove Linked List Elements
  */
+
 public class _1Remove_Duplicates_from_Sorted_List_II {
 	public ListNode deleteDuplicates(ListNode head) {
 	    if(head == null || head.next == null)

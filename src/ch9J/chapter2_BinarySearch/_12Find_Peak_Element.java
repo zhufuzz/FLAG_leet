@@ -42,7 +42,7 @@ public int findPeak(int[] A) {
         } else if(A[mid] < A[mid + 1]) {
             start = mid;
         } else {
-            end = mid;
+            end = mid;//这里用end或者start都能在lintcode AC
         }
     }
     if(A[start] < A[end]) {
