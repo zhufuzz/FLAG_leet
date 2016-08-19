@@ -1,12 +1,9 @@
 package ch9J.chapter5_DP2;
 
 import java.util.Set;
-
-
 //9CH summer 2016
-//这个超时
+//这个超时\
 /*
- * 
 * ￼￼Word Break
 • state: f[i]表示“前i”个字符能否被完美切分（最后剩下一个空串）true／false
 • function: f[i] = OR{f[j]} 其中 j < i && j+1~i is a word 

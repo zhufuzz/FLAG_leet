@@ -1,22 +1,5 @@
 package ch9J.chapter5_DP2;//背包类
-/*
-Given n distinct positive integers, integer k (k <= n) and a number target.
 
-Find k numbers where sum is target. Calculate how many solutions there are?
-
-Have you met this question in a real interview? Yes
-Example
-Given [1,2,3,4], k = 2, target = 5.
-
-There are 2 solutions: [1,4] and [2,3].
-
-Return 2.
-
-Tags 
-LintCode Copyright Dynamic Programming
-Related Problems 
-Medium k Sum II 33 %
- */
 public class __12k_Sum {
     /**
      * @param A: an integer array.
@@ -44,3 +27,22 @@ public class __12k_Sum {
         return f[n][k][target];
     }
 }
+
+/*
+Given n distinct positive integers, integer k (k <= n) and a number target.
+
+Find k numbers where sum is target. Calculate how many solutions there are?
+
+Have you met this question in a real interview? Yes
+Example
+Given [1,2,3,4], k = 2, target = 5.
+
+There are 2 solutions: [1,4] and [2,3].
+
+Return 2.
+
+Tags 
+LintCode Copyright Dynamic Programming
+Related Problems 
+Medium k Sum II 33 %
+ */

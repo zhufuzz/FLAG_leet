@@ -1,18 +1,4 @@
 package ch9J.chapter6_LinkedList;
-/*
- * Given a sorted linked list, delete all nodes that have duplicate
- *  numbers, leaving only distinct numbers from the original list.
-
-Have you met this question in a real interview? Yes
-Example
-Given 1->2->3->3->4->4->5, return 1->2->5.
-Given 1->1->1->2->3, return 2->3.
-
-Tags 
-Linked List
-Related Problems 
-Naive Remove Linked List Elements
- */
 
 public class _1Remove_Duplicates_from_Sorted_List_II {
 	public ListNode deleteDuplicates(ListNode head) {
@@ -37,3 +23,18 @@ public class _1Remove_Duplicates_from_Sorted_List_II {
 	    return dummy.next;
 	}
 }
+
+/*
+ * Given a sorted linked list, delete all nodes that have duplicate
+ *  numbers, leaving only distinct numbers from the original list.
+
+Have you met this question in a real interview? Yes
+Example
+Given 1->2->3->3->4->4->5, return 1->2->5.
+Given 1->1->1->2->3, return 2->3.
+
+Tags 
+Linked List
+Related Problems 
+Naive Remove Linked List Elements
+ */

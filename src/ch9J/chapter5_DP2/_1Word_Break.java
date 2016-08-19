@@ -1,19 +1,6 @@
 package ch9J.chapter5_DP2;
 
 import java.util.Set;
-/*
- * Given a string s and a dictionary of words dict, determine if s can be 
- * break into a space-separated sequence of one or more dictionary words.
-
-Have you met this question in a real interview? Yes
-Example
-Given s = "lintcode", dict = ["lint", "code"].
-
-Return true because "lintcode" can be break as "lint code".
-
-Tags 
-String Dynamic Programming
- */
 
 /*单序列动态规划
 ￼￼￼• state: f[i]表示前i个位置/数字/字符,第i个... 
@@ -62,3 +49,17 @@ public class _1Word_Break {
         return canSegment[s.length()];
     }
 }
+
+/*
+ * Given a string s and a dictionary of words dict, determine if s can be 
+ * break into a space-separated sequence of one or more dictionary words.
+
+Have you met this question in a real interview? Yes
+Example
+Given s = "lintcode", dict = ["lint", "code"].
+
+Return true because "lintcode" can be break as "lint code".
+
+Tags 
+String Dynamic Programming
+ */

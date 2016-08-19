@@ -1,14 +1,4 @@
 package ch9J.chapter4_DP1;
-/*
- * Given a m x n grid filled with non-negative numbers, 
- * find a path from top left to bottom right which minimizes 
- * the sum of all numbers along its path.
-
- Notice: You can only move either down or right at any point in time.
-
-Tags: Dynamic Programming
-Related Problems: Easy Triangle 25 %, Medium Binary Tree Maximum Path Sum
- */
 
 public class _2Minimum_Path_Sum {
 public int minPathSum(int[][] grid) {
@@ -39,3 +29,14 @@ public int minPathSum(int[][] grid) {
     return sum[M - 1][N - 1];
 }
 }
+
+/*
+ * Given a m x n grid filled with non-negative numbers, 
+ * find a path from top left to bottom right which minimizes 
+ * the sum of all numbers along its path.
+
+ Notice: You can only move either down or right at any point in time.
+
+Tags: Dynamic Programming
+Related Problems: Easy Triangle 25 %, Medium Binary Tree Maximum Path Sum
+ */

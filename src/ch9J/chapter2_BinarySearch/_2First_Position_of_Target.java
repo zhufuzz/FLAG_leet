@@ -1,26 +1,4 @@
 package ch9J.chapter2_BinarySearch;
-/*
- * For a given sorted array (ascending order) and a target number, 
- * find the first index of this number in O(log n) time complexity.
-
-If the target number does not exist in the array, return -1.
-
-Example: If the array is [1, 2, 3, 3, 4, 5, 10], for given target 3, return 2.
-
-Challenge :
-If the count of numbers is bigger than 2^32, can your code work properly?
-
-Tags: Binary Search Array
-
-Related Problems: 
-Easy Closest Number in Sorted Array 38 %
-Easy Last Position of Target 40 %
-Easy Classical Binary Search 47 %
-Medium Search in a Big Sorted Array 27 %
-Medium Unique Binary Search Trees 33 %
-Easy Sqrt(x) 24 %
-Medium Search Range in Binary Search Tree 37 %
- * */
 
 //version 1: with jiuzhang template
 public class _2First_Position_of_Target {
@@ -93,3 +71,25 @@ class First_Position_of_Target2 {
  }
 }
 
+/*
+ * For a given sorted array (ascending order) and a target number, 
+ * find the first index of this number in O(log n) time complexity.
+
+If the target number does not exist in the array, return -1.
+
+Example: If the array is [1, 2, 3, 3, 4, 5, 10], for given target 3, return 2.
+
+Challenge :
+If the count of numbers is bigger than 2^32, can your code work properly?
+
+Tags: Binary Search Array
+
+Related Problems: 
+Easy Closest Number in Sorted Array 38 %
+Easy Last Position of Target 40 %
+Easy Classical Binary Search 47 %
+Medium Search in a Big Sorted Array 27 %
+Medium Unique Binary Search Trees 33 %
+Easy Sqrt(x) 24 %
+Medium Search Range in Binary Search Tree 37 %
+ * */

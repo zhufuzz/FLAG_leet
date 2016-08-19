@@ -1,7 +1,7 @@
 package ch9J.chapter4_DP1;
 
 import java.util.HashMap;
-//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+//
 public class _1Triangle2016 {
 
 }
@@ -129,6 +129,7 @@ private int divideConquer(int[][] triangle, int x, int y){
 	return minPath[x][y];
 }
 }
+
 /*
 //时间复杂度：
 class DFS_Traverse{

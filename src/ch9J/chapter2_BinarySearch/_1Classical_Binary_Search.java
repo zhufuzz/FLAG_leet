@@ -1,26 +1,4 @@
 package ch9J.chapter2_BinarySearch;
-/*
-Find any position of a target number in a sorted array. 
-Return -1 if target does not exist.
-
-Have you met this question in a real interview? Yes
-Example: Given [1, 2, 2, 4, 5, 5].
-
-For target = 2, return 1 or 2.
-
-For target = 5, return 4 or 5.
-
-For target = 6, return -1.
-
-Challenge: O(logn) time
-
-Tags: Binary Search
-
-Related Problems: 
-Easy Closest Number in Sorted Array 38 %
-Easy Last Position of Target 40 %
-Easy First Position of Target 32 %
-*/
 
 //version 1: with jiuzhang template
 public class _1Classical_Binary_Search {
@@ -91,3 +69,26 @@ class Classical_Binary_Search2 {
      return -1;
  }
 }
+
+/*
+Find any position of a target number in a sorted array. 
+Return -1 if target does not exist.
+
+Have you met this question in a real interview? Yes
+Example: Given [1, 2, 2, 4, 5, 5].
+
+For target = 2, return 1 or 2.
+
+For target = 5, return 4 or 5.
+
+For target = 6, return -1.
+
+Challenge: O(logn) time
+
+Tags: Binary Search
+
+Related Problems: 
+Easy Closest Number in Sorted Array 38 %
+Easy Last Position of Target 40 %
+Easy First Position of Target 32 %
+*/

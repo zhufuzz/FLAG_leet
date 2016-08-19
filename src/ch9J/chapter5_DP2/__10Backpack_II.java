@@ -1,4 +1,25 @@
 package ch9J.chapter5_DP2;//背包类
+
+public class __10Backpack_II {
+	/**
+     * @param m: An integer m denotes the size of a backpack
+     * @param A & V: Given n items with size A[i] and value V[i]
+     */
+    public int backPackII(int m, int[] A, int V[]) {
+        // write your code here
+        int[] f = new int[m+1];
+        for (int i = 0; i <=m ; ++i) f[i] = 0;
+        int n = A.length , i, j;
+        for(i = 0; i < n; i++){
+            for(j = m; j >= A[i]; j--){
+                if (f[j] < f[j - A[i]] + V[i])
+                    f[j] = f[j - A[i]] + V[i];
+            }
+        }
+        return f[m];
+    }
+}
+
 /*
  * Given n items with size Ai and value Vi, and a backpack with size m.
  *  What's the maximum value can you put into the backpack?
@@ -22,22 +43,3 @@ Related Problems
 Medium Backpack VI 36 %
 Medium Backpack 22 %
  */
-public class __10Backpack_II {
-	/**
-     * @param m: An integer m denotes the size of a backpack
-     * @param A & V: Given n items with size A[i] and value V[i]
-     */
-    public int backPackII(int m, int[] A, int V[]) {
-        // write your code here
-        int[] f = new int[m+1];
-        for (int i = 0; i <=m ; ++i) f[i] = 0;
-        int n = A.length , i, j;
-        for(i = 0; i < n; i++){
-            for(j = m; j >= A[i]; j--){
-                if (f[j] < f[j - A[i]] + V[i])
-                    f[j] = f[j - A[i]] + V[i];
-            }
-        }
-        return f[m];
-    }
-}

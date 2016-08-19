@@ -18,8 +18,8 @@ public ArrayList<ArrayList<Integer>> permuteUnique(ArrayList<Integer> nums) {
     return result;
 }
 
-public void helper(ArrayList<ArrayList<Integer>> result, ArrayList<Integer> list, 
-				   int[] visited, ArrayList<Integer> nums) {
+public void helper(ArrayList<ArrayList<Integer>> result, 
+		ArrayList<Integer> list, int[] visited, ArrayList<Integer> nums) {
 	
     if(list.size() == nums.size()) {
         result.add(new ArrayList<Integer>(list));

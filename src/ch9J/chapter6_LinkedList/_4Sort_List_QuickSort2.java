@@ -1,17 +1,7 @@
 package ch9J.chapter6_LinkedList;
 
 //version 3: Quick Sort 2
-/**
-* Definition for ListNode.
-* public class ListNode {
-*     int val;
-*     ListNode next;
-*     ListNode(int val) {
-*         this.val = val;
-*         this.next = null;
-*     }
-* }
-*/ 
+
 class Pair {
 	public ListNode first, second; 
 	public Pair(ListNode first, ListNode second) {
@@ -101,3 +91,15 @@ public class _4Sort_List_QuickSort2 {
 	   return head;
 	}
 }
+
+/**
+* Definition for ListNode.
+* public class ListNode {
+*     int val;
+*     ListNode next;
+*     ListNode(int val) {
+*         this.val = val;
+*         this.next = null;
+*     }
+* }
+*/ 

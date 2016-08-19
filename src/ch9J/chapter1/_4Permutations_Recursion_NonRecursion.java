@@ -3,7 +3,6 @@ package ch9J.chapter1;
 import java.util.ArrayList;
 
 //Non-Recursion
-
 class _4Permutations_Recursion_NonRecursion {
   /**
    * @param nums: A list of integers.

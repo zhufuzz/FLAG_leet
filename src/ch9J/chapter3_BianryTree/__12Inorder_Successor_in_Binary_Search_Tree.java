@@ -1,4 +1,34 @@
 package ch9J.chapter3_BianryTree;
+
+public class __12Inorder_Successor_in_Binary_Search_Tree {
+	public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
+        TreeNode successor = null;
+        while (root != null && root != p) {
+            if (root.val > p.val) {
+                successor = root;
+                root = root.left;
+            } else {
+                root = root.right;
+            }
+        }
+        
+        if (root == null) {
+            return null;
+        }
+        
+        if (root.right == null) {
+            return successor;
+        }
+        
+        root = root.right;
+        while (root.left != null) {
+            root = root.left;
+        }
+        
+        return root;
+    }
+}
+
 /*
  * Given a binary search tree (See Definition) and a node in it,
  *  find the in-order successor of that node in the BST.
@@ -33,31 +63,3 @@ Related Problems:
 Medium Validate Binary Search Tree 21 %
 Hard Binary Search Tree Iterator 33 %*/
 
-public class __12Inorder_Successor_in_Binary_Search_Tree {
-	public TreeNode inorderSuccessor(TreeNode root, TreeNode p) {
-        TreeNode successor = null;
-        while (root != null && root != p) {
-            if (root.val > p.val) {
-                successor = root;
-                root = root.left;
-            } else {
-                root = root.right;
-            }
-        }
-        
-        if (root == null) {
-            return null;
-        }
-        
-        if (root.right == null) {
-            return successor;
-        }
-        
-        root = root.right;
-        while (root.left != null) {
-            root = root.left;
-        }
-        
-        return root;
-    }
-}

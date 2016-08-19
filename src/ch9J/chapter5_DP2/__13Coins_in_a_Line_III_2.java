@@ -1,32 +1,6 @@
 package ch9J.chapter5_DP2;
 //区间类
-/*
-There are n coins in a line. Two players take turns to take
-a coin from one of the ends of the line until there are no 
-more coins left. The player with the larger amount of money wins.
 
-Could you please decide the first player will win or lose?
-
-Have you met this question in a real interview? Yes
-Example
-Given array A = [3,2,2], return true.
-
-Given array A = [1,2,4], return true.
-
-Given array A = [1,20,4], return false.
-
-Challenge 
-Follow Up Question:
-
-If n is even. Is there any hacky algorithm that can decide whether 
-first player will win or lose in O(1) memory and O(n) time?
-
-Tags 
-Dynamic Programming Array Game Theory
-Related Problems 
-Medium Coins in a Line II 30 %
-Medium Coins in a Line 41 %
-*/
 public class __13Coins_in_a_Line_III_2 {
 /**
   * @param values: an array of integers
@@ -71,3 +45,31 @@ public class __13Coins_in_a_Line_III_2 {
      return dp[left][right];   
  }
 }
+
+/*
+There are n coins in a line. Two players take turns to take
+a coin from one of the ends of the line until there are no 
+more coins left. The player with the larger amount of money wins.
+
+Could you please decide the first player will win or lose?
+
+Have you met this question in a real interview? Yes
+Example
+Given array A = [3,2,2], return true.
+
+Given array A = [1,2,4], return true.
+
+Given array A = [1,20,4], return false.
+
+Challenge 
+Follow Up Question:
+
+If n is even. Is there any hacky algorithm that can decide whether 
+first player will win or lose in O(1) memory and O(n) time?
+
+Tags 
+Dynamic Programming Array Game Theory
+Related Problems 
+Medium Coins in a Line II 30 %
+Medium Coins in a Line 41 %
+*/

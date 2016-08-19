@@ -1,27 +1,4 @@
 package ch9J.chapter2_BinarySearch;
-/*
- * Given a string and an offset, rotate string by offset. 
- * (rotate from left to right)
-
-Have you met this question in a real interview? Yes
-Example
-Given "abcdefg".
-
-offset=0 => "abcdefg"
-offset=1 => "gabcdef"
-offset=2 => "fgabcde"
-offset=3 => "efgabcd"
-Challenge 
-Rotate in-place with O(1) extra memory.
-
-Tags 
-String
-Related Problems 
-Medium Rotate List 25 %
-Medium Rotate Image 34 %
-Easy Recover Rotated Sorted Array 26 %
- * 
- * */
 
 public class __16Rotate_String {
 	  /*
@@ -49,3 +26,27 @@ public class __16Rotate_String {
 	    }
 	}
 }
+
+/*
+ * Given a string and an offset, rotate string by offset. 
+ * (rotate from left to right)
+
+Have you met this question in a real interview? Yes
+Example
+Given "abcdefg".
+
+offset=0 => "abcdefg"
+offset=1 => "gabcdef"
+offset=2 => "fgabcde"
+offset=3 => "efgabcd"
+Challenge 
+Rotate in-place with O(1) extra memory.
+
+Tags 
+String
+Related Problems 
+Medium Rotate List 25 %
+Medium Rotate Image 34 %
+Easy Recover Rotated Sorted Array 26 %
+ * 
+ * */

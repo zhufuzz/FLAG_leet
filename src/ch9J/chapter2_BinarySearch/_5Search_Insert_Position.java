@@ -1,28 +1,4 @@
 package ch9J.chapter2_BinarySearch;
-/*
-Given a sorted array and a target value,  return the 
-index if the target is found. If not, return the index
- where it would be if it were inserted in order.
-
-You may assume NO duplicates in the array.
-
-Have you met this question in a real interview? Yes
-Example
-[1,3,5,6], 5 → 2
-
-[1,3,5,6], 2 → 1
-
-[1,3,5,6], 7 → 4
-
-[1,3,5,6], 0 → 0
-
-Challenge 
-O(log(n)) time
-
-Tags 
-Binary Search Sorted Array Array
- * 
- * */
 
 //version 1: find the first position >= target
 public class _5Search_Insert_Position {
@@ -117,3 +93,28 @@ class Search_Insert_Position2 {
      return start + 1;
  }
 }
+
+/*
+Given a sorted array and a target value,  return the 
+index if the target is found. If not, return the index
+ where it would be if it were inserted in order.
+
+You may assume NO duplicates in the array.
+
+Have you met this question in a real interview? Yes
+Example
+[1,3,5,6], 5 → 2
+
+[1,3,5,6], 2 → 1
+
+[1,3,5,6], 7 → 4
+
+[1,3,5,6], 0 → 0
+
+Challenge 
+O(log(n)) time
+
+Tags 
+Binary Search Sorted Array Array
+ * 
+ * */

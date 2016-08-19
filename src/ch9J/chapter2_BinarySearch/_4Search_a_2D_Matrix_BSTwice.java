@@ -1,36 +1,6 @@
 package ch9J.chapter2_BinarySearch;
-/*
-Write an efficient algorithm that searches for a value 
-in an m x n matrix.
-
-This matrix has the following properties:
-
-Integers in each row are sorted from left to right.
-The first integerof each row is greater than the last
- integer of the previous row.
- 
-Example: Consider the following matrix:
-
-[
-    [1, 3, 5, 7],
-    [10, 11, 16, 20],
-    [23, 30, 34, 50]
-]
-
-Given target = 3, return true.
-
-Challenge: O(log(n) + log(m)) time
-
-Tags: 
-Binary Search Matrix
-Related Problems 
-Medium Search in Rotated Sorted Array 29 %
-Medium Search a 2D Matrix II 33 %
- * 
- * */
 
 //Binary Search Twice
-
 public class _4Search_a_2D_Matrix_BSTwice {
  public boolean searchMatrix(int[][] matrix, int target) {
     if (matrix == null || matrix.length == 0) {
@@ -91,3 +61,33 @@ public class _4Search_a_2D_Matrix_BSTwice {
     return false;
  }
 }
+
+/*
+Write an efficient algorithm that searches for a value 
+in an m x n matrix.
+
+This matrix has the following properties:
+
+Integers in each row are sorted from left to right.
+The first integerof each row is greater than the last
+ integer of the previous row.
+ 
+Example: Consider the following matrix:
+
+[
+    [1, 3, 5, 7],
+    [10, 11, 16, 20],
+    [23, 30, 34, 50]
+]
+
+Given target = 3, return true.
+
+Challenge: O(log(n) + log(m)) time
+
+Tags: 
+Binary Search Matrix
+Related Problems 
+Medium Search in Rotated Sorted Array 29 %
+Medium Search a 2D Matrix II 33 %
+ * 
+ * */

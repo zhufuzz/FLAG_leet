@@ -1,19 +1,4 @@
 package ch9J.chapter3_BianryTree;
-/*Given a binary tree, find the maximum path sum.
-
-The path may start and end at any node in the tree.
-
-Example: Given the below binary tree:
-
-  1
- / \
-2   3
-return 6.
-
-Tags: Divide and Conquer Dynamic Programming Recursion
-Related Problems: Medium Binary Tree Maximum Path Sum II 42 %
-				  Easy Minimum Path Sum 34 %
-*/
 
 public class _9Binary_Tree_Maximum_Path_Sum_1 {
 private class ResultType {
@@ -49,3 +34,19 @@ private ResultType helper(TreeNode root) {
     return new ResultType(singlePath, maxPath);
 }
 }
+
+/*Given a binary tree, find the maximum path sum.
+
+The path may start and end at any node in the tree.
+
+Example: Given the below binary tree:
+
+  1
+ / \
+2   3
+return 6.
+
+Tags: Divide and Conquer Dynamic Programming Recursion
+Related Problems: Medium Binary Tree Maximum Path Sum II 42 %
+				  Easy Minimum Path Sum 34 %
+*/

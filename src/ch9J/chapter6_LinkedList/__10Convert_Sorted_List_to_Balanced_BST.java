@@ -1,18 +1,4 @@
 package ch9J.chapter6_LinkedList;
-/*
- * Given a singly linked list where elements are sorted in ascending
- *  order, convert it to a height balanced BST.
-
-Example
-               2
-1->2->3  =>   / \
-             1   3
-Tags 
-Recursion Linked List
-Related Problems 
-Easy Flatten Binary Tree to Linked List 28 %
-Easy Convert Sorted Array to Binary Search Tree With Minimal Height 31 %
- */
 
 public class __10Convert_Sorted_List_to_Balanced_BST {
     private ListNode current;
@@ -53,3 +39,19 @@ public class __10Convert_Sorted_List_to_Balanced_BST {
         return root;
     }
 }
+
+
+/*
+ * Given a singly linked list where elements are sorted in ascending
+ *  order, convert it to a height balanced BST.
+
+Example
+               2
+1->2->3  =>   / \
+             1   3
+Tags 
+Recursion Linked List
+Related Problems 
+Easy Flatten Binary Tree to Linked List 28 %
+Easy Convert Sorted Array to Binary Search Tree With Minimal Height 31 %
+ */

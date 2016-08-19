@@ -1,22 +1,4 @@
 package ch9J.chapter5_DP2;
-/*
- * Given two words word1 and word2, find the minimum number of steps 
- * required to convert word1 to word2. (each operation is counted as 1 step.)
-
-You have the following 3 operations permitted on a word:
-
-Insert a character
-Delete a character
-Replace a character
-Have you met this question in a real interview? Yes
-Example
-Given word1 = "mart" and word2 = "karma", return 3.
-
-Tags 
-String Dynamic Programming
-Related Problems 
-Medium Longest Common Subsequence
- */
 
 /*
  * ￼￼Edit Distance
@@ -56,3 +38,22 @@ public int minDistance(String word1, String word2) {
     return dp[n][m];
 }
 }
+
+/*
+ * Given two words word1 and word2, find the minimum number of steps 
+ * required to convert word1 to word2. (each operation is counted as 1 step.)
+
+You have the following 3 operations permitted on a word:
+
+Insert a character
+Delete a character
+Replace a character
+Have you met this question in a real interview? Yes
+Example
+Given word1 = "mart" and word2 = "karma", return 3.
+
+Tags 
+String Dynamic Programming
+Related Problems 
+Medium Longest Common Subsequence
+ */

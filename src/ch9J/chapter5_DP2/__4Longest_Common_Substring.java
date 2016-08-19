@@ -1,26 +1,5 @@
 package ch9J.chapter5_DP2;
-/*
- * Given two strings, find the longest common substring.
 
-Return the length of it.
-
- Notice
-
-The characters in substring should occur continuously in original string. 
-This is different with subsequence.
-
-Have you met this question in a real interview? Yes
-Example
-Given A = "ABCD", B = "CBCE", return 2.
-
-Challenge 
-O(n x m) time and memory.
-
-Tags 
-String LintCode Copyright
-Related Problems 
-Medium Longest Common Subsequence
- */
 public class __4Longest_Common_Substring {
 	/**
 	 * @param A, B: Two string.
@@ -46,3 +25,26 @@ public class __4Longest_Common_Substring {
 	    return maxlen;
 	}
 }
+
+/*
+ * Given two strings, find the longest common substring.
+
+Return the length of it.
+
+ Notice
+
+The characters in substring should occur continuously in original string. 
+This is different with subsequence.
+
+Have you met this question in a real interview? Yes
+Example
+Given A = "ABCD", B = "CBCE", return 2.
+
+Challenge 
+O(n x m) time and memory.
+
+Tags 
+String LintCode Copyright
+Related Problems 
+Medium Longest Common Subsequence
+ */

@@ -1,20 +1,4 @@
 package ch9J.chapter3_BianryTree;
-/*
- * Given a binary tree, find the maximum path sum from root.
-
-The path may end at any node in the tree and contain at 
-least one node in it.
-
-Example: Given the below binary tree:
-
-  1
- / \
-2   3
-return 4. (1->3)
-
-Tags: Binary Tree
-Related Problems: Medium Binary Tree Maximum Path Sum 24 %
- * */
 
 public class _8Binary_Tree_Maximum_Path_Sum_II {
     /**
@@ -39,3 +23,20 @@ public class _8Binary_Tree_Maximum_Path_Sum_II {
       //any node -> any node
     }
 }
+
+/*
+ * Given a binary tree, find the maximum path sum from root.
+
+The path may end at any node in the tree and contain at 
+least one node in it.
+
+Example: Given the below binary tree:
+
+  1
+ / \
+2   3
+return 4. (1->3)
+
+Tags: Binary Tree
+Related Problems: Medium Binary Tree Maximum Path Sum 24 %
+ * */

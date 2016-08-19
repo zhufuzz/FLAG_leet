@@ -1,22 +1,4 @@
 package ch9J.chapter5_DP2;
-/*
- * Given three strings: s1, s2, s3, determine whether s3 is formed 
-by the interleaving of s1 and s2.
-
-Have you met this question in a real interview? Yes
-Example
-For s1 = "aabcc", s2 = "dbbca"
-
-When s3 = "aadbbcbcac", return true.
-When s3 = "aadbbbaccc", return false.
-Challenge 
-O(n2) time or better
-
-Tags 
-Longest Common Subsequence Dynamic Programming
-Related Problems
-Medium Distinct Subsequences,
- */
 
 /*Interleaving String
  * ￼• state: f[i][j]表示s1的前i个字符和s2的前j个字符能否交替组成s3的前i+j个字符 
@@ -26,6 +8,7 @@ Medium Distinct Subsequences,
 			   f[0][j] = (s2[0..j-1] == s3[0..j-1])
  • answer: f[n][m], n = sizeof(s1), m = sizeof(s2)
  */
+
 public class _7Interleaving_String {
   public boolean isInterleave(String s1, String s2, String s3) {
     if (s1.length() + s2.length() != s3.length()) {
@@ -58,3 +41,22 @@ public class _7Interleaving_String {
     return interleaved[s1.length()][s2.length()];
     }
 }
+
+/*
+ * Given three strings: s1, s2, s3, determine whether s3 is formed 
+by the interleaving of s1 and s2.
+
+Have you met this question in a real interview? Yes
+Example
+For s1 = "aabcc", s2 = "dbbca"
+
+When s3 = "aadbbcbcac", return true.
+When s3 = "aadbbbaccc", return false.
+Challenge 
+O(n2) time or better
+
+Tags 
+Longest Common Subsequence Dynamic Programming
+Related Problems
+Medium Distinct Subsequences,
+ */

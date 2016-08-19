@@ -1,4 +1,28 @@
 package ch9J.chapter3_BianryTree;
+
+//version 1 Traverse， 缺点：经常要用到全局变量
+public class _10Validate_Binary_Search_Tree_Traverse {
+	 private int lastVal = Integer.MIN_VALUE;
+	 private boolean firstNode = true;
+	 public boolean isValidBST(TreeNode root) {
+	     if (root == null) {
+	         return true;
+	     }
+	     if (!isValidBST(root.left)) {
+	         return false;
+	     }
+	     if (!firstNode && lastVal >= root.val) {
+	         return false;
+	     }
+	     firstNode = false;
+	     lastVal = root.val;
+	     if (!isValidBST(root.right)) {
+	         return false;
+	     }
+	     return true;
+	 }
+}
+
 /*
 Given a binary tree, determine if it is a valid binary search tree (BST).
 
@@ -24,26 +48,3 @@ Tags: Divide and Conquer Recursion Binary Search Tree Binary Tree
 Related Problems:Medium Inorder Successor in Binary Search Tree 30 %
 				 Easy Balanced Binary Tree 38 %
  * */
-
-//version 1 Traverse， 缺点：经常要用到全局变量
-public class _10Validate_Binary_Search_Tree_Traverse {
-	 private int lastVal = Integer.MIN_VALUE;
-	 private boolean firstNode = true;
-	 public boolean isValidBST(TreeNode root) {
-	     if (root == null) {
-	         return true;
-	     }
-	     if (!isValidBST(root.left)) {
-	         return false;
-	     }
-	     if (!firstNode && lastVal >= root.val) {
-	         return false;
-	     }
-	     firstNode = false;
-	     lastVal = root.val;
-	     if (!isValidBST(root.right)) {
-	         return false;
-	     }
-	     return true;
-	 }
-}

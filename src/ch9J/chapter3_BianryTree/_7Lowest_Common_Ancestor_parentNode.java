@@ -2,31 +2,6 @@ package ch9J.chapter3_BianryTree;
 
 import java.util.*;
 
-/*
- * Given the root and two nodes in a Binary Tree. Find the 
- * lowest common ancestor(LCA) of the two nodes.
-
-The lowest common ancestor is the node with largest depth
- which is the ancestor of both nodes.
-
-Example: For the following binary tree:
-
-  4
- / \
-3   7
-   / \
-  5   6
-LCA(3, 5) = 4
-
-LCA(5, 6) = 7
-
-LCA(6, 7) = 7
-
-Tags：LintCode Copyright LinkedIn Binary Tree Facebook
-Related Problems： Easy Lowest Common Ancestor II 29 %
- * 
- * */
-
 //Version 1: Traditional Method， 如果有父亲节点
 public class _7Lowest_Common_Ancestor_parentNode {
 	class TreeNode {
@@ -68,3 +43,30 @@ public class _7Lowest_Common_Ancestor_parentNode {
     		
     }
  */
+
+
+
+/*
+ * Given the root and two nodes in a Binary Tree. Find the 
+ * lowest common ancestor(LCA) of the two nodes.
+
+The lowest common ancestor is the node with largest depth
+ which is the ancestor of both nodes.
+
+Example: For the following binary tree:
+
+  4
+ / \
+3   7
+   / \
+  5   6
+LCA(3, 5) = 4
+
+LCA(5, 6) = 7
+
+LCA(6, 7) = 7
+
+Tags：LintCode Copyright LinkedIn Binary Tree Facebook
+Related Problems： Easy Lowest Common Ancestor II 29 %
+ * 
+ * */

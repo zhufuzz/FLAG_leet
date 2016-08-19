@@ -1,19 +1,4 @@
 package ch9J.chapter6_LinkedList;
-/*
- * Given a singly linked list L: L0 → L1 → … → Ln-1 → Ln
-
-reorder it to: L0 → Ln → L1 → Ln-1 → L2 → Ln-2 → …
-
-Have you met this question in a real interview? Yes
-Example
-Given 1->2->3->4->null, reorder it to 1->4->2->3->null.
-
-Challenge 
-Can you do this in-place without altering the nodes' values?
-
-Tags 
-Linked List
- */
 
 public class _5Reorder_List {
     private ListNode reverse(ListNode head) {
@@ -69,3 +54,19 @@ public class _5Reorder_List {
         merge(head, tail);
     }
 }
+
+/*
+ * Given a singly linked list L: L0 → L1 → … → Ln-1 → Ln
+
+reorder it to: L0 → Ln → L1 → Ln-1 → L2 → Ln-2 → …
+
+Have you met this question in a real interview? Yes
+Example
+Given 1->2->3->4->null, reorder it to 1->4->2->3->null.
+
+Challenge 
+Can you do this in-place without altering the nodes' values?
+
+Tags 
+Linked List
+ */

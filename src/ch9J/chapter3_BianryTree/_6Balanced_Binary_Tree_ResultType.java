@@ -1,28 +1,4 @@
 package ch9J.chapter3_BianryTree;
-/*
- * Given a binary tree, determine if it is height-balanced.
-
-For this problem, a height-balanced binary tree is defined 
-as a binary tree in which the depth of the two subtrees of 
-every node never differ by more than 1.
-
-Have you met this question in a real interview? Yes
-Example
-Given binary tree A = {3,9,20,#,#,15,7}, B = {3,#,20,15,7}
-
-A)  3            B)    3 
-   / \                  \
-  9  20                 20
-    /  \                / \
-   15   7              15  7
-The binary tree A is a height-balanced binary tree, but B is not.
-
-Tags 
-Binary Search Divide and Conquer Recursion
-Related Problems 
-Easy Complete Binary Tree 25 %
-Medium Validate Binary Search Tree 21 %
- * */
 
 //Version 1: with ResultType
 //为了包含两个信息
@@ -66,3 +42,29 @@ public class _6Balanced_Binary_Tree_ResultType {
      return new ResultType(true, Math.max(left.maxDepth, right.maxDepth) + 1);
  }
 }
+
+/*
+ * Given a binary tree, determine if it is height-balanced.
+
+For this problem, a height-balanced binary tree is defined 
+as a binary tree in which the depth of the two subtrees of 
+every node never differ by more than 1.
+
+Have you met this question in a real interview? Yes
+Example
+Given binary tree A = {3,9,20,#,#,15,7}, B = {3,#,20,15,7}
+
+A)  3            B)    3 
+   / \                  \
+  9  20                 20
+    /  \                / \
+   15   7              15  7
+The binary tree A is a height-balanced binary tree, but B is not.
+
+Tags 
+Binary Search Divide and Conquer Recursion
+Related Problems 
+Easy Complete Binary Tree 25 %
+Medium Validate Binary Search Tree 21 %
+ * */
+

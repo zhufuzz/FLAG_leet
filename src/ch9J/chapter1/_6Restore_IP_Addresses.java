@@ -2,23 +2,6 @@ package ch9J.chapter1;
 
 import java.util.ArrayList;
 
-/*
- * Given a string containing only digits, restore it by returning 
- * all possible valid IP address combinations.
-
-Example: Given "25525511135", return
-
-[
-  "255.255.11.135",
-  "255.255.111.35"
-]
-Order does not matter.
-
-Tags 
-String Backtracking Recursion
-Related Problems 
-Medium Subsets 25 %
- */
 public class _6Restore_IP_Addresses {
 	public ArrayList<String> restoreIpAddresses(String s) {
 	    ArrayList<String> result = new ArrayList<String>();
@@ -65,3 +48,21 @@ public class _6Restore_IP_Addresses {
         return digit >= 0 && digit <= 255;
     }
 }
+
+/*
+ * Given a string containing only digits, restore it by returning 
+ * all possible valid IP address combinations.
+
+Example: Given "25525511135", return
+
+[
+  "255.255.11.135",
+  "255.255.111.35"
+]
+Order does not matter.
+
+Tags 
+String Backtracking Recursion
+Related Problems 
+Medium Subsets 25 %
+ */

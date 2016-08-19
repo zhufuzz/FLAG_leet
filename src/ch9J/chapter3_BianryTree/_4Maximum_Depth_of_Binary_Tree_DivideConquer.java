@@ -1,4 +1,21 @@
 package ch9J.chapter3_BianryTree;
+
+//root -> depth Divide & Conquer
+public class _4Maximum_Depth_of_Binary_Tree_DivideConquer {
+  public int maxDepth(TreeNode root) {
+	  //出口
+        if (root == null) {
+            return 0;
+        }
+        //不管三七二十，先分成左右子树
+        int left = maxDepth(root.left);
+        int right = maxDepth(root.right);
+        
+        //conquer
+        return Math.max(left, right) + 1;
+    }
+}
+
 /*
  * Given a binary tree, find its maximum depth.
 The maximum depth is the number of nodes along the longest
@@ -26,19 +43,3 @@ Related Problems: Easy Minimum Depth of Binary Tree 31 %
  *     }
  * }
  */
-
-//root -> depth Divide & Conquer
-public class _4Maximum_Depth_of_Binary_Tree_DivideConquer {
-  public int maxDepth(TreeNode root) {
-	  //出口
-        if (root == null) {
-            return 0;
-        }
-        //不管三七二十，先分成左右子树
-        int left = maxDepth(root.left);
-        int right = maxDepth(root.right);
-        
-        //conquer
-        return Math.max(left, right) + 1;
-    }
-}

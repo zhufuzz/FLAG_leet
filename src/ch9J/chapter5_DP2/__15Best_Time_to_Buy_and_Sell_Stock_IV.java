@@ -1,30 +1,4 @@
 package ch9J.chapter5_DP2;//划分类
-/*
- * Say you have an array for which the ith element is the price 
- * of a given stock on day i.
-
-Design an algorithm to find the maximum profit. 
-You may complete at most k transactions.
-
- Notice
-
-You may not engage in multiple transactions at the same time 
-(i.e., you must sell the stock before you buy again).
-
-Have you met this question in a real interview? Yes
-Example
-Given prices = [4,4,6,1,1,4,2,5], and k = 2, return 6.
-
-Challenge 
-O(nk) time.
-
-Tags 
-Dynamic Programming
-Related Problems 
-Medium Best Time to Buy and Sell Stock III 26 %
-Medium Best Time to Buy and Sell Stock II 48 %
-Medium Best Time to Buy and Sell Stock 41 %
- */
 
 public class __15Best_Time_to_Buy_and_Sell_Stock_IV {
 /**
@@ -75,3 +49,30 @@ public int maxProfit(int k, int[] prices) {
     return globalbest[(n - 1)][k];
 }
 }
+
+/*
+ * Say you have an array for which the ith element is the price 
+ * of a given stock on day i.
+
+Design an algorithm to find the maximum profit. 
+You may complete at most k transactions.
+
+ Notice
+
+You may not engage in multiple transactions at the same time 
+(i.e., you must sell the stock before you buy again).
+
+Have you met this question in a real interview? Yes
+Example
+Given prices = [4,4,6,1,1,4,2,5], and k = 2, return 6.
+
+Challenge 
+O(nk) time.
+
+Tags 
+Dynamic Programming
+Related Problems 
+Medium Best Time to Buy and Sell Stock III 26 %
+Medium Best Time to Buy and Sell Stock II 48 %
+Medium Best Time to Buy and Sell Stock 41 %
+ */

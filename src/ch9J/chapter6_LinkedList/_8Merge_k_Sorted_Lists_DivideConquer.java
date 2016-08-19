@@ -2,30 +2,6 @@ package ch9J.chapter6_LinkedList;
 
 import java.util.List;
 
-/*
- * Merge k sorted linked lists and return it as one sorted list.
-
-Analyze and describe its complexity.
-
-Have you met this question in a real interview? Yes
-Example
-Given lists:
-
-[
-  2->4->null,
-  null,
-  -1->null
-],
-return -1->2->4->null.
-
-Tags 
-Divide and Conquer Linked List Priority Queue Heap Uber Google
- Twitter LinkedIn Airbnb Facebook
-Related Problems 
-Easy Merge Two Sorted Arrays 35 %
-Medium Ugly Number II 22 %
- */
-
 public class _8Merge_k_Sorted_Lists_DivideConquer {
 	/**
      * @param lists: a list of ListNode
@@ -72,3 +48,28 @@ public class _8Merge_k_Sorted_Lists_DivideConquer {
         return dummy.next;
     }
 }
+
+
+/*
+ * Merge k sorted linked lists and return it as one sorted list.
+
+Analyze and describe its complexity.
+
+Have you met this question in a real interview? Yes
+Example
+Given lists:
+
+[
+  2->4->null,
+  null,
+  -1->null
+],
+return -1->2->4->null.
+
+Tags 
+Divide and Conquer Linked List Priority Queue Heap Uber Google
+ Twitter LinkedIn Airbnb Facebook
+Related Problems 
+Easy Merge Two Sorted Arrays 35 %
+Medium Ugly Number II 22 %
+ */

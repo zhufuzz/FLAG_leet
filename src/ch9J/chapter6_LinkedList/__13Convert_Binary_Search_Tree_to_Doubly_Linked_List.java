@@ -1,24 +1,4 @@
 package ch9J.chapter6_LinkedList;
-/*
- * Convert a binary search tree to doubly linked list with in-order traversal.
-
-Have you met this question in a real interview? Yes
-Example
-Given a binary search tree:
-
-    4
-   / \
-  2   5
- / \
-1   3
-return 1<->2<->3<->4<->5
-
-Tags 
-Linked List
-Related Problems 
-Easy Flatten Binary Tree to Linked List 28 %
-Medium Convert Sorted List to Balanced BST 28 %
- */
 
 public class __13Convert_Binary_Search_Tree_to_Doubly_Linked_List {
 
@@ -99,3 +79,24 @@ class Solution {
         return result;
     }
 }
+
+/*
+ * Convert a binary search tree to doubly linked list with in-order traversal.
+
+Have you met this question in a real interview? Yes
+Example
+Given a binary search tree:
+
+    4
+   / \
+  2   5
+ / \
+1   3
+return 1<->2<->3<->4<->5
+
+Tags 
+Linked List
+Related Problems 
+Easy Flatten Binary Tree to Linked List 28 %
+Medium Convert Sorted List to Balanced BST 28 %
+ */

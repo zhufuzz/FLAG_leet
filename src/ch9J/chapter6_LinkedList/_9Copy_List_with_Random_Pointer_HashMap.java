@@ -2,22 +2,6 @@ package ch9J.chapter6_LinkedList;
 
 import java.util.HashMap;
 
-/*
- * A linked list is given such that each node contains an additional
- *  random pointer which could point to any node in the list or null.
-
-Return a deep copy of the list.
-
-Have you met this question in a real interview? Yes
-Example
-Challenge 
-Could you solve it with O(1) space?
-
-Tags 
-Hash Table Linked List Uber
-Related Problems 
- */
-
 public class _9Copy_List_with_Random_Pointer_HashMap {
 	public RandomListNode copyRandomList(RandomListNode head) {
 	    if (head == null) {
@@ -54,3 +38,20 @@ public class _9Copy_List_with_Random_Pointer_HashMap {
 	    return dummy.next;
     }
 }
+
+
+/*
+ * A linked list is given such that each node contains an additional
+ *  random pointer which could point to any node in the list or null.
+
+Return a deep copy of the list.
+
+Have you met this question in a real interview? Yes
+Example
+Challenge 
+Could you solve it with O(1) space?
+
+Tags 
+Hash Table Linked List Uber
+Related Problems 
+ */

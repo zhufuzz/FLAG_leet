@@ -1,21 +1,4 @@
 package ch9J.chapter4_DP1;
-/*
- * A robot is located at the top-left corner of a m x n grid 
- * (marked 'Start' in the diagram below).
-
-The robot can only move either down or right at any point in time. 
-The robot is trying to reach the bottom-right corner of the grid 
-(marked 'Finish' in the diagram below).
-
-How many possible unique paths are there?
-
- Notice  m and n will be at most 100.
-Have you met this question in a real interview? Yes
-Example
-Above is a 3 x 7 grid. How many possible unique paths are there?
-Tags 
-Dynamic Programming Array
- */
 
 /*
  * Unique Path
@@ -48,3 +31,21 @@ public class _3Unique_Paths {
         return sum[m - 1][n - 1];
     }
 }
+
+/*
+ * A robot is located at the top-left corner of a m x n grid 
+ * (marked 'Start' in the diagram below).
+
+The robot can only move either down or right at any point in time. 
+The robot is trying to reach the bottom-right corner of the grid 
+(marked 'Finish' in the diagram below).
+
+How many possible unique paths are there?
+
+ Notice  m and n will be at most 100.
+Have you met this question in a real interview? Yes
+Example
+Above is a 3 x 7 grid. How many possible unique paths are there?
+Tags 
+Dynamic Programming Array
+ */

@@ -1,4 +1,34 @@
 package ch9J.chapter2_BinarySearch;
+
+public class _10First_Bad_Version {
+	 /**
+     * @param n: An integers.
+     * @return: An integer which is the first bad version.
+     */
+    public int findFirstBadVersion(int n) {
+        int start = 1, end = n;
+        while (start + 1 < end) {
+            int mid = start + (end - start) / 2;
+            if (SVNRepo.isBadVersion(mid)) {
+                end = mid;
+            } else {
+                start = mid;
+            }
+        }
+            
+        if (SVNRepo.isBadVersion(start)) {
+            return start;
+        }
+        return end;
+    }
+}
+
+class SVNRepo{
+	public static boolean isBadVersion(int i){
+		return true;
+	}
+}
+
 /*
  * The code base version is an integer start from 1 to n. 
  * One day, someone committed a bad version in the code case, 
@@ -30,31 +60,4 @@ Binary Search LintCode Copyright Facebook
 Related Problems 
 Medium Nuts & Bolts Problem 15 %
  * */
-public class _10First_Bad_Version {
-	 /**
-     * @param n: An integers.
-     * @return: An integer which is the first bad version.
-     */
-    public int findFirstBadVersion(int n) {
-        int start = 1, end = n;
-        while (start + 1 < end) {
-            int mid = start + (end - start) / 2;
-            if (SVNRepo.isBadVersion(mid)) {
-                end = mid;
-            } else {
-                start = mid;
-            }
-        }
-            
-        if (SVNRepo.isBadVersion(start)) {
-            return start;
-        }
-        return end;
-    }
-}
 
-class SVNRepo{
-	public static boolean isBadVersion(int i){
-		return true;
-	}
-}

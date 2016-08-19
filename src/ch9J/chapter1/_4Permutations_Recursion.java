@@ -2,24 +2,6 @@ package ch9J.chapter1;
 
 import java.util.ArrayList;
 
-/*
- * Given a list of numbers, return all possible permutations.
-Example：For nums = [1,2,3], the permutations are:
-[
-  [1,2,3],
-  [1,3,2],
-  [2,1,3],
-  [2,3,1],
-  [3,1,2],
-  [3,2,1]
-]
-Challenge：Do it without recursion.
-Tags： LinkedIn Recursion
-Related Problems： 
-				Medium Print Numbers by Recursion 24 %
-				Medium Permutation Sequence 27 %
-				Medium Permutations II 24 %
-*/
 public class _4Permutations_Recursion {
     public ArrayList<ArrayList<Integer>> permute(int[] num) {
         ArrayList<ArrayList<Integer>> rst = new ArrayList<ArrayList<Integer>>();
@@ -50,3 +32,22 @@ public class _4Permutations_Recursion {
        }
    }
 }
+
+/*
+ * Given a list of numbers, return all possible permutations.
+Example：For nums = [1,2,3], the permutations are:
+[
+  [1,2,3],
+  [1,3,2],
+  [2,1,3],
+  [2,3,1],
+  [3,1,2],
+  [3,2,1]
+]
+Challenge：Do it without recursion.
+Tags： LinkedIn Recursion
+Related Problems： 
+				Medium Print Numbers by Recursion 24 %
+				Medium Permutation Sequence 27 %
+				Medium Permutations II 24 %
+*/

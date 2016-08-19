@@ -2,6 +2,31 @@ package ch9S.chapter1;
 
 import java.util.HashMap;
 
+public class _1Two_Sum {
+	/*
+	 * @param numbers : An array of Integer
+	 * @param target : target = numbers[index1] + numbers[index2]
+	 * @return : [index1 + 1, index2 + 1] (index1 < index2)
+	     numbers=[2, 7, 11, 15],  target=9
+	     return [1, 2]
+	 */
+	public int[] twoSum(int[] numbers, int target) {
+	    HashMap<Integer,Integer> map = new HashMap<Integer, Integer>();
+	
+	    for (int i = 0; i < numbers.length; i++) {
+	        if (map.get(numbers[i]) != null) {
+	            int[] result = {map.get(numbers[i]) + 1, i + 1};
+	            return result;
+	        }
+	        map.put(target - numbers[i], i);
+	    }
+	    
+	    int[] result = {};
+	    return result;
+	}
+}
+
+
 /*
  * Given an array of integers, find two numbers such that they 
  * add up to a specific target number.
@@ -34,26 +59,3 @@ Medium 3Sum Closest 30 %
 Medium 4Sum 20 %
 Medium 3Sum 19 %
  */
-public class _1Two_Sum {
-/*
- * @param numbers : An array of Integer
- * @param target : target = numbers[index1] + numbers[index2]
- * @return : [index1 + 1, index2 + 1] (index1 < index2)
-     numbers=[2, 7, 11, 15],  target=9
-     return [1, 2]
- */
-public int[] twoSum(int[] numbers, int target) {
-    HashMap<Integer,Integer> map = new HashMap<Integer, Integer>();
-
-    for (int i = 0; i < numbers.length; i++) {
-        if (map.get(numbers[i]) != null) {
-            int[] result = {map.get(numbers[i]) + 1, i + 1};
-            return result;
-        }
-        map.put(target - numbers[i], i);
-    }
-    
-    int[] result = {};
-    return result;
-}
-}

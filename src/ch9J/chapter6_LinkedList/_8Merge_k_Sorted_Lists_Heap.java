@@ -5,7 +5,6 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-
 //version 2: Heap
 public class _8Merge_k_Sorted_Lists_Heap {
 	 private Comparator<ListNode> ListNodeComparator = 

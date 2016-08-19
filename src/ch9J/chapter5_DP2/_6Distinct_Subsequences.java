@@ -1,4 +1,37 @@
 package ch9J.chapter5_DP2;
+
+/*
+ * Distinct Subsequence
+• state: f[i][j] 表示 S的前i个字符中选取T的前j个字符,有多少种方案
+• function: f[i][j] = f[i - 1][j] + f[i - 1][j - 1] // S[i-1] == T[j-1]
+• 					= f[i - 1][j] // S[i-1] != T[j-1]
+• initialize: f[i][0] = 1, f[0][j] = 0 (j > 0)
+• answer: f[n][m] (n = sizeof(S), m = sizeof(T))
+ */
+
+public class _6Distinct_Subsequences {
+	public int numDistinct(String S, String T) {
+	    if (S == null || T == null) {
+	        return 0;
+	    }
+	
+	    int[][] nums = new int[S.length() + 1][T.length() + 1];
+	
+	    for (int i = 0; i <= S.length(); i++) {
+	        nums[i][0] = 1;
+	    }
+	    for (int i = 1; i <= S.length(); i++) {
+	        for (int j = 1; j <= T.length(); j++) {
+	            nums[i][j] = nums[i - 1][j];
+	            if (S.charAt(i - 1) == T.charAt(j - 1)) {
+	                nums[i][j] += nums[i - 1][j - 1];
+	            }
+	        }
+	    }
+	    return nums[S.length()][T.length()];
+	}
+}
+
 /*
  * Given a string S and a string T, count the number of distinct 
  * subsequences of T in S.
@@ -22,35 +55,3 @@ String Dynamic Programming
 Related Problems 
 Medium Interleaving String
  */
-
-/*
- * Distinct Subsequence
-• state: f[i][j] 表示 S的前i个字符中选取T的前j个字符,有多少种方案
-• function: f[i][j] = f[i - 1][j] + f[i - 1][j - 1] // S[i-1] == T[j-1]
-• 					= f[i - 1][j] // S[i-1] != T[j-1]
-• initialize: f[i][0] = 1, f[0][j] = 0 (j > 0)
-• answer: f[n][m] (n = sizeof(S), m = sizeof(T))
- */
-
-public class _6Distinct_Subsequences {
-public int numDistinct(String S, String T) {
-    if (S == null || T == null) {
-        return 0;
-    }
-
-    int[][] nums = new int[S.length() + 1][T.length() + 1];
-
-    for (int i = 0; i <= S.length(); i++) {
-        nums[i][0] = 1;
-    }
-    for (int i = 1; i <= S.length(); i++) {
-        for (int j = 1; j <= T.length(); j++) {
-            nums[i][j] = nums[i - 1][j];
-            if (S.charAt(i - 1) == T.charAt(j - 1)) {
-                nums[i][j] += nums[i - 1][j - 1];
-            }
-        }
-    }
-    return nums[S.length()][T.length()];
-}
-}

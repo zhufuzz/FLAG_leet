@@ -1,18 +1,4 @@
 package ch9J.chapter6_LinkedList;
-/*
- * Given a list, rotate the list to the right by k places,
- *  where k is non-negative.
-
-Have you met this question in a real interview? Yes
-Example
-Given 1->2->3->4->5 and k = 2, return 4->5->1->2->3.
-
-Tags 
-Basic Implementation Linked List
-Related Problems 
-Hard Reverse Nodes in k-Group 31 %
-Easy Rotate String 20 %
- */
 
 public class _7Rotate_List {
     private int getLength(ListNode head) {
@@ -52,3 +38,19 @@ public class _7Rotate_List {
         return dummy.next;
     }
 }
+
+
+/*
+ * Given a list, rotate the list to the right by k places,
+ *  where k is non-negative.
+
+Have you met this question in a real interview? Yes
+Example
+Given 1->2->3->4->5 and k = 2, return 4->5->1->2->3.
+
+Tags 
+Basic Implementation Linked List
+Related Problems 
+Hard Reverse Nodes in k-Group 31 %
+Easy Rotate String 20 %
+ */

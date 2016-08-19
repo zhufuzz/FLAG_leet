@@ -3,28 +3,6 @@ package ch9J.chapter1;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/*Given a list of numsbers with duplicate numsber in it. Find all unique permutations.
-
-Example: For numsbers [1,2,2] the unique permutations are:
-
-[
-  [1,2,2],
-  [2,1,2],
-  [2,2,1]
-]
-Challenge 
-Using recursion to do it is acceptable. 
-If you can do it without recursion, that would be great!
-
-Tags 
-LinkedIn Recursion Depth First Search
-Related Problems 
-Medium Next Permutation II 32 %
-Medium Permutation Sequence 27 %
-Medium Next Permutation 23 %
-Medium Permutations 25 %
-*/
-
 //this is the leetcode version, accepting int[] input
 public class _5Permutations2_intArr {
 public ArrayList<ArrayList<Integer>> permuteUnique(int[] nums) {
@@ -66,3 +44,26 @@ public void helper(ArrayList<ArrayList<Integer>> result,
     }
 }
 }
+
+
+/*Given a list of numsbers with duplicate numsber in it. Find all unique permutations.
+
+Example: For numsbers [1,2,2] the unique permutations are:
+
+[
+  [1,2,2],
+  [2,1,2],
+  [2,2,1]
+]
+Challenge 
+Using recursion to do it is acceptable. 
+If you can do it without recursion, that would be great!
+
+Tags 
+LinkedIn Recursion Depth First Search
+Related Problems 
+Medium Next Permutation II 32 %
+Medium Permutation Sequence 27 %
+Medium Next Permutation 23 %
+Medium Permutations 25 %
+*/
