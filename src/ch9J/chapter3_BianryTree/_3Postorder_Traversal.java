@@ -5,7 +5,7 @@ import java.util.*;
 public class _3Postorder_Traversal {
 	//Recursive
 	public ArrayList<Integer> postorderTraversal(TreeNode root) {
-	    ArrayList<Integer> result = new ArrayList<Integer>();
+	    ArrayList<Integer> result = new ArrayList<>();
 	    if (root == null) {
 	        return result;
 	    }
@@ -18,8 +18,8 @@ public class _3Postorder_Traversal {
 
 	//Iterative
 	public ArrayList<Integer> postorderTraversal2(TreeNode root) {
-	    ArrayList<Integer> result = new ArrayList<Integer>();
-	    Stack<TreeNode> stack = new Stack<TreeNode>();
+	    ArrayList<Integer> result = new ArrayList<>();
+	    Stack<TreeNode> stack = new Stack<>();
 	    TreeNode prev = null; // previously traversed node
 	    TreeNode curr = root;
 

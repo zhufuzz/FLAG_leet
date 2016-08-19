@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class _2Subsets {
 public ArrayList<ArrayList<Integer>> subsets(int[] num) {
-    ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+    ArrayList<ArrayList<Integer>> result = new ArrayList<>();
     if(num == null || num.length == 0) {
         return result;
     }

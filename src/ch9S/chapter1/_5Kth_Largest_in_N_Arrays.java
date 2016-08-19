@@ -39,7 +39,7 @@ public class _5Kth_Largest_in_N_Arrays {
      */
     public int KthInArrays(int[][] arrays, int k) {
         // Write your code here
-        Queue<Node> queue =  new PriorityQueue<Node>(
+        Queue<Node> queue =  new PriorityQueue<>(
         		k, new Comparator<Node>() {  
                 public int compare(Node o1, Node o2) {  
                     if (o1.value > o2.value)

@@ -37,7 +37,7 @@ public class Ch9_310_Minimum_Height_Trees2 {
         // Step 1: construct the graph
         List<Set<Integer>> adjList = new ArrayList<Set<Integer>>();
         for (int i = 0; i < n; i++) {
-            adjList.add(new HashSet<Object>());
+            adjList.add(new HashSet<Object>());//这到底应该用什么方法？
         }
          
         for (int[] edge : edges) {

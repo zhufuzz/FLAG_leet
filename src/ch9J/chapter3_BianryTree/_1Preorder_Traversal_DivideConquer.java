@@ -6,7 +6,7 @@ import java.util.ArrayList;
 //递归的定义：找到root为根的preorder并return
 public class _1Preorder_Traversal_DivideConquer {
 	public ArrayList<Integer> preorderTraversal(TreeNode root) {
-	    ArrayList<Integer> result = new ArrayList<Integer>();
+	    ArrayList<Integer> result = new ArrayList<>();
 	    // 递归的出口  // null or leaf? null!
 	    if (root == null) {
 	        return result;

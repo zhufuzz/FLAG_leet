@@ -5,8 +5,8 @@ import java.util.*;
 //Version 0: Non-Recursion (Recommend)
 public class _1Preorder_Traversal_NonRecursion {
 	public List<Integer> preorderTraversal(TreeNode root) {
-	    Stack<TreeNode> stack = new Stack<TreeNode>();
-	    List<Integer> preorder = new ArrayList<Integer>();
+	    Stack<TreeNode> stack = new Stack<>();
+	    List<Integer> preorder = new ArrayList<>();
 	    
 	    if (root == null) {
 	        return preorder;

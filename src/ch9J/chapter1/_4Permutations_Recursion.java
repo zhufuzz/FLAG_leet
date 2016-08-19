@@ -4,12 +4,12 @@ import java.util.ArrayList;
 
 public class _4Permutations_Recursion {
     public ArrayList<ArrayList<Integer>> permute(int[] num) {
-        ArrayList<ArrayList<Integer>> rst = new ArrayList<ArrayList<Integer>>();
+        ArrayList<ArrayList<Integer>> rst = new ArrayList<>();
         if (num == null || num.length == 0) {
             return rst; 
         }
 
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<>();
         helper(rst, list, num);
         return rst;
    }
@@ -18,7 +18,7 @@ public class _4Permutations_Recursion {
 		   			 ArrayList<Integer> list, 
 		   			 int[] num){
        if(list.size() == num.length) {
-           rst.add(new ArrayList<Integer>(list));
+           rst.add(new ArrayList<>(list));
            return;
        }
        

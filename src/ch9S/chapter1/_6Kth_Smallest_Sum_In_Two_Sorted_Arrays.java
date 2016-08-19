@@ -52,8 +52,8 @@ public class _6Kth_Smallest_Sum_In_Two_Sorted_Arrays {
 	    } else if (B.length == 0) {
 	        return A[k];
 	    }
-	    HashSet<Pair> isVisited = new HashSet<Pair>();
-	    PriorityQueue<Pair> minHeap = new PriorityQueue<Pair>();
+	    HashSet<Pair> isVisited = new HashSet<>();
+	    PriorityQueue<Pair> minHeap = new PriorityQueue<>();
 	    Pair p;
 	    Pair nextP;
 	    p = new Pair(0, 0, A[0] + B[0]);

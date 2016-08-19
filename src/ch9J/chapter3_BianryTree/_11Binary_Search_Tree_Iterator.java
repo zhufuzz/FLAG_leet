@@ -7,7 +7,7 @@ public class _11Binary_Search_Tree_Iterator {
 }
 
 class BSTIterator {
-    private Stack<TreeNode> stack = new Stack<TreeNode>();
+    private Stack<TreeNode> stack = new Stack<>();
     private TreeNode curt;
     
     // @param root: The root of binary tree.

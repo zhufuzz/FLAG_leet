@@ -87,7 +87,7 @@ public class __13Count_of_Smaller_Number {
     public ArrayList<Integer> countOfSmallerNumber(int[] A, int[] queries) {
         // write your code here
         root = build(0, 10000);
-        ArrayList<Integer> ans = new ArrayList<Integer>();
+        ArrayList<Integer> ans = new ArrayList<>();
         int res;
         for(int i = 0; i < A.length; i++) {
             modifySegmentTree(root, A[i], 1);

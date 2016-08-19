@@ -1,7 +1,5 @@
 package ch9J.chapter2_BinarySearch;
 
-import java.util.Random;
-
 import org.junit.Test;
 
 //version 1: with jiuzhang template

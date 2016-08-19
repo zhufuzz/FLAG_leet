@@ -10,7 +10,7 @@ public class _4Maximum_Depth_of_Binary_Tree_NonRecursion {
 			return 0;
 		}
 		
-		Deque<TreeNode> stack = new LinkedList<TreeNode>();
+		Deque<TreeNode> stack = new LinkedList<>();
 		
 		stack.push(root);
 		int count = 0;

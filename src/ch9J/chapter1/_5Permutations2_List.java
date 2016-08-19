@@ -7,7 +7,7 @@ import java.util.Collections;
 //lintcode version
 public class _5Permutations2_List {
 public ArrayList<ArrayList<Integer>> permuteUnique(ArrayList<Integer> nums) {
-    ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+    ArrayList<ArrayList<Integer>> result = new ArrayList<>();
     if(nums == null || nums.size() == 0)
         return result;
     ArrayList<Integer> list = new ArrayList<Integer>();

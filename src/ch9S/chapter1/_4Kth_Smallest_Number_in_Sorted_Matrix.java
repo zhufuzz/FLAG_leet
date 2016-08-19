@@ -39,7 +39,7 @@ public class _4Kth_Smallest_Number_in_Sorted_Matrix {
     }
     
     private int horizontal(int[][] matrix, int k) {
-        Queue<Point> heap = new PriorityQueue<Point>(k, comp);
+        Queue<Point> heap = new PriorityQueue<>(k, comp);
         for (int i = 0; i < Math.min(matrix.length, k); i++) {
             heap.offer(new Point(i, 0, matrix[i][0]));
         }
@@ -53,7 +53,8 @@ public class _4Kth_Smallest_Number_in_Sorted_Matrix {
         return heap.peek().val;
     }
     
-    private int vertical(int[][] matrix, int k) {
+    @SuppressWarnings("unused")
+	private int vertical(int[][] matrix, int k) {
         Queue<Point> heap = new PriorityQueue<Point>(k, comp);
         for (int i = 0; i < Math.min(matrix[0].length, k); i++) {
             heap.offer(new Point(0, i, matrix[0][i]));

@@ -5,7 +5,7 @@ import java.util.Stack;
 
 public class __18Binary_Tree_Zigzag_Level_Order_Traversal {
 public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
-    ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+    ArrayList<ArrayList<Integer>> result = new ArrayList<>();
 
     if (root == null) {
         return result;
@@ -19,7 +19,7 @@ public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
     boolean normalOrder = true;
 
     while (!currLevel.isEmpty()) {
-        ArrayList<Integer> currLevelResult = new ArrayList<Integer>();
+        ArrayList<Integer> currLevelResult = new ArrayList<>();
 
         while (!currLevel.isEmpty()) {
             TreeNode node = currLevel.pop();

@@ -13,7 +13,7 @@ public class _3Subset2 {
  * @return: A subset of subsets. All valid subsets.
  */
 public ArrayList<ArrayList<Integer>> subsetsWithDup(ArrayList<Integer> nums) {
-    ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+    ArrayList<ArrayList<Integer>> result = new ArrayList<>();
     if ( nums == null || nums.size() == 0){
         return result;
     }

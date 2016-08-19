@@ -9,14 +9,13 @@ class _4Permutations_Recursion_NonRecursion {
    * @return: A list of permutations.
    */
   public ArrayList<ArrayList<Integer>> permute(ArrayList<Integer> nums) {
-      ArrayList<ArrayList<Integer>> permutations
-           = new ArrayList<ArrayList<Integer>>();
+      ArrayList<ArrayList<Integer>> permutations = new ArrayList<>();
       if (nums == null || nums.size() == 0) {
           return permutations;
       }
       
       int n = nums.size();
-      ArrayList<Integer> stack = new ArrayList<Integer>();
+      ArrayList<Integer> stack = new ArrayList<>();
       
       stack.add(-1);
       while (stack.size() != 0) {
@@ -44,7 +43,7 @@ class _4Permutations_Recursion_NonRecursion {
           }
           
           // copy to permutations set
-          ArrayList<Integer> permutation = new ArrayList<Integer>();
+          ArrayList<Integer> permutation = new ArrayList<>();
           for (int i = 0; i < n; i++) {
               permutation.add(nums.get(stack.get(i)));
           }

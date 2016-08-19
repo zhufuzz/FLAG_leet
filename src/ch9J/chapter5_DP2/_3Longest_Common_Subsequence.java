@@ -35,7 +35,7 @@ public int longestCommonSubsequence(String A, String B) {
 }
 
 //9CH summer 2016
-class longestCommonSubsequence{
+class longestCommonSubsequence_2016{
 	public int longestCommonSubsequence(String A, String B){
 		int n = A.length();
 		int m = B.length();

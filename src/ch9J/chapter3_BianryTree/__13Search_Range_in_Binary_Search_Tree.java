@@ -10,7 +10,7 @@ public class __13Search_Range_in_Binary_Search_Tree {
      * @return: Return all keys that k1<=key<=k2 in increasing order.
      */
     public ArrayList<Integer> searchRange(TreeNode root, int k1, int k2) {
-        results = new ArrayList<Integer>();
+        results = new ArrayList<>();
         helper(root, k1, k2);
         return results;
     }

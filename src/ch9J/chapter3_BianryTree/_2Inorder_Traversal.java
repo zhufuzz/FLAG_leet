@@ -9,7 +9,7 @@ public class _2Inorder_Traversal {
 	 */
 	public ArrayList<Integer> inorderTraversal(TreeNode root) {
 	    Stack<TreeNode> stack = new Stack<TreeNode>();
-	    ArrayList<Integer> result = new ArrayList<Integer>();
+	    ArrayList<Integer> result = new ArrayList<>();
 	    TreeNode curt = root;
 	    while (curt != null || !stack.empty()) {
 	        while (curt != null) {

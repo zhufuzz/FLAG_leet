@@ -13,11 +13,11 @@ public class _16Binary_Tree_Level_Order_Traversal_BFS {
          return result;
      }
 
-     Queue<TreeNode> queue = new LinkedList<TreeNode>();
+     Queue<TreeNode> queue = new LinkedList<>();
      queue.offer(root);
 
      while (!queue.isEmpty()) {
-         ArrayList<Integer> level = new ArrayList<Integer>();
+         ArrayList<Integer> level = new ArrayList<>();
          int size = queue.size();
          for (int i = 0; i < size; i++) {
              TreeNode head = queue.poll();

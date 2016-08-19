@@ -5,7 +5,7 @@ import java.util.ArrayList;
 //Version 1: Traverse
 public class _1Preorder_Traversal_Preorder_Traverse {
 	public ArrayList<Integer> preorderTraversal(TreeNode root) {
-	    ArrayList<Integer> result = new ArrayList<Integer>();
+	    ArrayList<Integer> result = new ArrayList<>();
 	    traverse(root, result);
 	    return result;
 	}

@@ -11,7 +11,7 @@ class _16Binary_Tree_Level_Order_Traversal_Q_DummyNode {
 	  * @return: Level order a list of lists of integer
 	  */
 	 public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
-	     ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+	     ArrayList<ArrayList<Integer>> result = new ArrayList<>();
 	     if (root == null) {
 	         return result;
 	     }

@@ -6,10 +6,10 @@ import java.util.Arrays;
 //this is the leetcode version, accepting int[] input
 public class _5Permutations2_intArr {
 public ArrayList<ArrayList<Integer>> permuteUnique(int[] nums) {
-    ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+    ArrayList<ArrayList<Integer>> result = new ArrayList<>();
     if(nums == null || nums.length == 0)
         return result;
-    ArrayList<Integer> list = new ArrayList<Integer>();
+    ArrayList<Integer> list = new ArrayList<>();
     int[] visited = new int[nums.length];
     
     Arrays.sort(nums);
@@ -21,7 +21,7 @@ public void helper(ArrayList<ArrayList<Integer>> result,
 				   ArrayList<Integer> list, int[] visited, int[] nums) {
 	
     if(list.size() == nums.length) {
-        result.add(new ArrayList<Integer>(list));
+        result.add(new ArrayList<>(list));
         return;
     }
     

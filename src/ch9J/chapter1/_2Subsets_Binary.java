@@ -10,7 +10,7 @@ public class _2Subsets_Binary {
   * @return: A list of lists. All valid subsets.
   */
  public ArrayList<ArrayList<Integer>> subsets(int[] nums) {
-     ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+     ArrayList<ArrayList<Integer>> result = new ArrayList<>();
      int n = nums.length;
      Arrays.sort(nums);
      
@@ -22,7 +22,7 @@ public class _2Subsets_Binary {
      // ..
      // 7 -> 111 -> [1,2,3]
      for (int i = 0; i < (1 << n); i++) {
-         ArrayList<Integer> subset = new ArrayList<Integer>();
+         ArrayList<Integer> subset = new ArrayList<>();
          for (int j = 0; j < n; j++) {
              // check whether the jth digit in i's binary representation is 1
              if ((i & (1 << j)) != 0) {

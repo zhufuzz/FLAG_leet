@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 public class _6Restore_IP_Addresses {
 	public ArrayList<String> restoreIpAddresses(String s) {
-	    ArrayList<String> result = new ArrayList<String>();
-	    ArrayList<String> list = new ArrayList<String>();
+	    ArrayList<String> result = new ArrayList<>();
+	    ArrayList<String> list = new ArrayList<>();
 	    
 	    if(s.length() <4 || s.length() > 12)
 	        return result;
@@ -14,8 +14,8 @@ public class _6Restore_IP_Addresses {
 	    return result;
 	}
 	    
-	public void helper(ArrayList<String> result, ArrayList<String> list, 
-						String s, int start){
+	public void helper(ArrayList<String> result, 
+						ArrayList<String> list, 	String s, int start){
 		if(list.size() == 4){
 		    if(start != s.length())
 		        return;

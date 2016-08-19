@@ -11,7 +11,7 @@ public class __17Binary_Tree_Level_Order_Traversal_II {
 	 * @return: buttom-up level order a list of lists of integer
 	 */
 	public ArrayList<ArrayList<Integer>> levelOrderBottom(TreeNode root) {
-	    ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
+	    ArrayList<ArrayList<Integer>> result = new ArrayList<>();
 	    if (root == null) {
 	        return result;
 	    }
