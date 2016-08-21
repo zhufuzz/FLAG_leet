@@ -24,20 +24,20 @@ public class _5Minimum_Depth_of_Binary_Tree_1 {
 //////////////////////////////////////////////////////////////
 
 class _5Minimum_Depth_of_Binary_Tree_2 {
-	public int minDepth2(TreeNode root){
-		if (root == null){
-			return 0;
-		}
-		if (root.left == null && root.left == null){
-			return 1;
-		}
-		
-		//让权。非法情况下就把结果变得无穷大。	
-		int left = root.left == null ? Integer.MAX_VALUE : minDepth2(root.left);
-		int right = root.right == null ? Integer.MAX_VALUE : minDepth2(root.right);
-		
-		return Math.min(left, right) + 1;
+public int minDepth2(TreeNode root){
+	if (root == null){
+		return 0;
 	}
+	if (root.left == null && root.left == null){
+		return 1;
+	}
+	
+	//让权。非法情况下就把结果变得无穷大。	
+	int left = root.left == null ? Integer.MAX_VALUE : minDepth2(root.left);
+	int right = root.right == null ? Integer.MAX_VALUE : minDepth2(root.right);
+	
+	return Math.min(left, right) + 1;
+}
 }
 
 /*

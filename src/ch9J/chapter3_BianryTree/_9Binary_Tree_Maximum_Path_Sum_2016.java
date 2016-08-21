@@ -27,7 +27,7 @@ private ResultType3 helper(TreeNode root){
 	
 	//conquer
 	int root2Any = Math.max(0, Math.max(left.root2Any, right.root2Any))
-							+ root.val;
+				  		   + root.val;
 	
 	int any2Any = Math.max(left.any2Any, right.any2Any);
 	
