@@ -62,6 +62,7 @@ class Triangle2016_2{
 	//
 	private int divideConquer(int[][] triangle, int x, int y){
 		//2, 递归的出口，当我走过了最后一层的时候
+		//the last level shoudl be triangle.length - 1
 		if(x == triangle.length){
 			return 0; //有负数也应该return 0
 		}

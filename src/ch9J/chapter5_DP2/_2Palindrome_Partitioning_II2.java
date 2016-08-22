@@ -6,7 +6,7 @@ package ch9J.chapter5_DP2;
 //最后return f[n]
 /*
 * state:
-* 1, f[i] 表示前i个字符组成的前缀，最少切割几次，能切成全部是回文串
+* 2, f[i] 表示前i个字符组成的前缀，最少切割几次，能切成全部是回文串
 * 比如："aab" f[3] = f["aab"] = 1
 *            f[2] = f["aa"] = 0
 *            f[1] = f["a"] = 0
@@ -17,7 +17,7 @@ package ch9J.chapter5_DP2;
 *            f[""] = f["aa"] - 1
 *            f[""] = 0 - 1 = -1
 *            
-* 2, f[i] 表示第i个字符，组成的前缀，最少能分割为几个回文串
+* 1, f[i] 表示第i个字符，组成的前缀，最少能分割为几个回文串
 * 		      f[3] = f["aab"] = 2
 *            f[2] = f["aa"] = 1
 *            f[1] = f["a"] = 1
@@ -25,9 +25,13 @@ package ch9J.chapter5_DP2;
 * 	
 * 		return f[n] - 1
 */
+
+
+//state2: f[0] = -1;  f[i] 表示前i个字符组成的前缀，最少切割几次，能切成全部是回文串
 public class _2Palindrome_Partitioning_II2 {
 	
 //O(n)
+@SuppressWarnings("unused")
 private boolean isPalindrome(String s, int start, int end) {
    for (int i = start, j = end; i < j; i++, j--) {
        if (s.charAt(i) != s.charAt(j)) {
@@ -49,7 +53,7 @@ private boolean[][] getIsPalindrome(String s) {
    for (int i = 0; i < s.length() - 1; i++) {
        isPalindrome[i][i + 1] = (s.charAt(i) == s.charAt(i + 1));
    }
-
+   //区间型动态规划for循环不能写成i.....s
    //大区间依赖于小区间，所以小区间要先做
    for (int length = 2; length < s.length(); length++) {
        for (int start = 0; start + length < s.length(); start++) {
@@ -71,7 +75,7 @@ public int minCut(String s) {
    // preparation
    boolean[][] isPalindrome = getIsPalindrome(s);
    
-   // initialize
+   // initialize //f[0] = -1;
    int[] f = new int[s.length() + 1];
    for (int i = 0; i <= s.length(); i++) {
        f[i] = i - 1;

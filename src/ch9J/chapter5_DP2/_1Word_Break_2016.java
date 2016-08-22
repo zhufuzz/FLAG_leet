@@ -37,9 +37,11 @@ public boolean wordBreak(String s, Set<String> dict){
 				continue;
 			}
 			//能走到这里，说面前面的部分可以完美切分
+			// which is: f[j] = true;
 			
 			String sub = s.substring(j, i);
-			//那么如果切下来的部分可以构成一个单词，到i为止的就都能完美切分
+		//那么如果切下来的部分可以构成一个单词，到i为止的就都能完美切分
+		//which is j to i - 1 is also true which makes f[i] true
 			if(dict.contains(sub)){
 				f[i] = true;
 				break;

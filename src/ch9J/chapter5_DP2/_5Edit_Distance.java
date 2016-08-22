@@ -15,13 +15,15 @@ public class _5Edit_Distance {
 public int minDistance(String word1, String word2) {
     int n = word1.length();
     int m = word2.length();
-    
     int[][] dp = new int[n+1][m+1];
+    
+    //空串经过i次insert变成目标串
     for(int i=0; i< m+1; i++){
-        dp[0][i] = i; //一次delete
+        dp[0][i] = i; //一次insert
     }
+    //经过i次delete变成空串
     for(int i=0; i<n+1; i++){
-        dp[i][0] = i;//一次insert
+        dp[i][0] = i;//一次delete
     }
     
     for(int i = 1; i<n+1; i++){

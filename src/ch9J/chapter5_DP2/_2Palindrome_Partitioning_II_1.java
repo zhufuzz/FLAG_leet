@@ -1,6 +1,16 @@
 package ch9J.chapter5_DP2;
 //version 1
 //f[i] 表示前i个字母，最少可以被分割为多少个回文串
+/* 1, f[i] 表示第i个字符，组成的前缀，最少能分割为几个回文串
+* 		      f[3] = f["aab"] = 2
+*            f[2] = f["aa"] = 1
+*            f[1] = f["a"] = 1
+*            f[0] = f[""] = 0
+* 	
+* 		return f[n] - 1 */
+
+//this is the easier undersStanding way.
+//f[n] = 0;
 //最后return f[n] - 1
 
 public class _2Palindrome_Partitioning_II_1 {
@@ -34,7 +44,7 @@ public class _2Palindrome_Partitioning_II_1 {
      // preparation
      boolean[][] isPalindrome = getIsPalindrome(s);
      
-     // initialize
+     // initialize f[0] = 0;
      int[] f = new int[s.length() + 1];
      f[0] = 0;
      
