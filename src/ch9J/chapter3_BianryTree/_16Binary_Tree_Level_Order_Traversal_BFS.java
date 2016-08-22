@@ -7,7 +7,7 @@ import java.util.Queue;
 //version 1: BFS
 public class _16Binary_Tree_Level_Order_Traversal_BFS {
  public ArrayList<ArrayList<Integer>> levelOrder(TreeNode root) {
-     ArrayList result = new ArrayList();
+     ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
 
      if (root == null) {
          return result;

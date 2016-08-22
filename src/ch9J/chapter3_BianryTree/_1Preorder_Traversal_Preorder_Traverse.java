@@ -16,10 +16,20 @@ public class _1Preorder_Traversal_Preorder_Traverse {
 	    if (root == null) {
 	        return;
 	    }
-	 
 	 // 2.如何拆分为更小的情况（如何扒皮）。一边走一边构造。
 	    result.add(root.val);
 	    traverse(root.left, result);
 	    traverse(root.right, result);
 	}
 }
+/* inorder
+traverse(root.left, result);
+result.add(root.val);
+traverse(root.right, result);
+ */
+
+/* postorder
+traverse(root.left, result);
+traverse(root.right, result);
+result.add(root.val);
+ */

@@ -2,7 +2,7 @@ package ch9J.chapter3_BianryTree;
 
 import java.util.*;
 
-public class _2Inorder_Traversal {
+public class _2Inorder_Traversal_NonRecursive {
 	/**
 	 * @param root: The root of binary tree.
 	 * @return: Inorder in ArrayList which contains node values.

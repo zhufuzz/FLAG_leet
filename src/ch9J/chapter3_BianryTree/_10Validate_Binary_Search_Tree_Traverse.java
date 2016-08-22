@@ -22,6 +22,27 @@ public class _10Validate_Binary_Search_Tree_Traverse {
 	     return true;
 	 }
 }
+//this is a better solution
+class _10Validate_Binary_Search_Tree_Traverse2{
+private TreeNode lastNode = null;
+ public boolean isValidBST(TreeNode root) {
+     if (root == null) {
+         return true;
+     }
+     if (!isValidBST(root.left)) {
+         return false;
+     }
+     if (lastNode != null && lastNode.val >= root.val) {
+         return false;
+     }
+     lastNode = root;
+     if (!isValidBST(root.right)) {
+         return false;
+     }
+     return true;
+ }
+}
+
 
 /*
 Given a binary tree, determine if it is a valid binary search tree (BST).

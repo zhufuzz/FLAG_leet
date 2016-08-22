@@ -23,3 +23,12 @@ public class _1Preorder_Traversal_DivideConquer {
 	    return result;
 	}
 }
+/* inorder
+result.addAll(left);
+result.add(root.val);
+result.addAll(right);*/
+
+/* postorder
+result.addAll(left);
+result.addAll(right);
+result.add(root.val);*/
