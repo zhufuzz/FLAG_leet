@@ -2,6 +2,7 @@ package ch9J.chapter6_LinkedList;
 
 public class _2Reverse_Linked_List_II {
 	public ListNode reverseBetween(ListNode head, int m, int n) {
+		//corner case checking
 	    if (m >= n || head == null) {
 	        return head;
 	    }
@@ -10,6 +11,7 @@ public class _2Reverse_Linked_List_II {
 	    dummy.next = head;
 	    head = dummy;
 	    
+	    //find the mth node
 	    for (int i = 1; i < m; i++) {
 	        if (head == null) {
 	            return null;
@@ -17,6 +19,7 @@ public class _2Reverse_Linked_List_II {
 	        head = head.next;
 	    }
 	    
+	    //reverse	    
 	    ListNode premNode = head;
 	    ListNode mNode = head.next;
 	    ListNode nNode = mNode, postnNode = mNode.next;
@@ -29,6 +32,8 @@ public class _2Reverse_Linked_List_II {
 	        nNode = postnNode;
 	        postnNode = temp;
 	    }
+	    
+	    //connect
 	    mNode.next = postnNode;
 	    premNode.next = nNode;
 	    
@@ -41,7 +46,7 @@ public class _2Reverse_Linked_List_II {
 
  Notice
 
-Given m, n satisfy the following condition: 1 ² m ² n ² length of list.
+Given m, n satisfy the following condition: 1 ï¿½ m ï¿½ n ï¿½ length of list.
 
 Have you met this question in a real interview? Yes
 Example
