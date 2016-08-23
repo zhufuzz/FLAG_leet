@@ -20,7 +20,7 @@ public class F_314_Binary_Tree_Vertical_Order_Traversal_BFS {
         col = columnMap.get(root);
         
         if (!vertical.containsKey(col)) {
-            vertical.put(col, new ArrayList<Object>());
+            vertical.put(col, new ArrayList<>());
         }
         vertical.get(col).add(root.val);
         

@@ -7,6 +7,20 @@ package implementation.heap;
  * @author jinglu
  *
  */
+
+class Process{
+
+	public int getPriority() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public void setPriority(int inf) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
 public class Heap {
     Process[] array;
     int currentSize;

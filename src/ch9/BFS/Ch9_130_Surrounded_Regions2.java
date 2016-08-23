@@ -27,7 +27,7 @@ public class Ch9_130_Surrounded_Regions2 {
         // Note: The Solution object is instantiated only once and is reused by each test case.
         if (board.length == 0 || board[0].length == 0) return;
         queue = new LinkedList<Integer>();
-        board = board;
+        Ch9_130_Surrounded_Regions2.board = board;
         rows = board.length;
         cols = board[0].length;
 

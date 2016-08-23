@@ -1,7 +1,6 @@
 package ch9J.chapter1;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 
 //lintcode version

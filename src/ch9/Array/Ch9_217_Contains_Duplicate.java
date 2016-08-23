@@ -11,7 +11,7 @@ public class Ch9_217_Contains_Duplicate {
             return false;
         }
         Boolean hasDup = false;
-        HashMap hm = new HashMap();
+        HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
         for (int i = 0; i < nums.length; i++){
             if (hm.containsKey(nums[i])){
                 hasDup = true;

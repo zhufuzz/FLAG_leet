@@ -27,7 +27,7 @@ public void helper(ArrayList<ArrayList<Integer>> result,
 					   ArrayList<Integer> subset,
 					   ArrayList<Integer> nums, 
 					   int fromIndex) {
-    result.add( new ArrayList(subset));
+    result.add( new ArrayList<>(subset));
     
     for ( int i = fromIndex; i < nums.size(); i++){
      	//跳过重复元素

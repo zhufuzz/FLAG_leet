@@ -46,7 +46,7 @@ public class BTree{
 		System.out.print("INSERT: ");
 		if (root == null) {
 		    
-		    root = new LeafNode  (degree, val, null, null);
+		    root = new LeafNode  (degree, null, null);
 		    System.out.println(val);
 		} else {
 		

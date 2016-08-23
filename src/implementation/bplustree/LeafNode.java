@@ -1,12 +1,65 @@
-package bplustree;
+package implementation.bplustree;
 import java.io.*;
 import java.lang.Math.*;
 import java.util.*;
+class Node{
 
+	public int lastindex;
+	public Integer[] keys;
+
+	public Node(int d, Node n, Node p) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getLast() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public int getKey(int k) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public Object getNext() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setPrev(LeafNode leafNode) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Object getParent() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void setParent(Reference reference) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void insert(int parentVal, Node split) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void delete(int i) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}
 public class LeafNode extends Node {
     
     
-    public LeafNode (int d, int k, Node n, Node p){
+    private int[] keys;
+	private int lastindex;
+	private int degree;
+
+	public LeafNode (int d, int k, Node n, Node p){
       	super (d, n, p);
       	keys [1] = k;
       	lastindex = 1;
@@ -24,7 +77,13 @@ public class LeafNode extends Node {
     }
     
    
-    public boolean combinable (Node other){
+    public Object getParent() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	public boolean combinable (Node other){
     	int keyNum = getLast();
 	    int otherKeyNum = other.getLast();
 	    
@@ -34,7 +93,19 @@ public class LeafNode extends Node {
     }
 
     
-    public void combine (){
+    private int maxkeys() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	public int getLast() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	public void combine (){
     	//add keys to current node
     	for(int k=1; k<=this.getNext().getLast(); k++){
     		this.keys[this.getLast()+k] = this.getNext().getKey(k);
@@ -50,11 +121,23 @@ public class LeafNode extends Node {
     	}
     	
     	//delete key in parent node because of the combine
-    	this.getParent().getNode().delete(this.getParent().getIndex()+1);
+    	((Reference) this.getParent()).getNode().delete(((Reference) this.getParent()).getIndex()+1);
  
     }
 
-    public int redistribute (){  
+    private void setNext(Object next) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public Node getNext() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	public int redistribute (){  
     	//decide the new size of current node
     	int newSize = (int)Math.ceil((this.getLast()+this.getNext().getLast())/2.0);
     	//create a list to store all keys of current node and next node
@@ -94,8 +177,8 @@ public class LeafNode extends Node {
     	
     	//if parent is not null, update val in the parent
     	if(this.getNext().getParent()!=null){
-    		int parentIndex = this.getNext().getParent().getIndex();
-    		this.getParent().getNode().keys[parentIndex] = parentVal;
+    		int parentIndex = ((Reference) this.getNext().getParent()).getIndex();
+    		((Reference) this.getParent()).getNode().keys[parentIndex] = parentVal;
     	}
     	//return val to be inserted into parent
     	return parentVal;
@@ -154,8 +237,8 @@ public class LeafNode extends Node {
         	//keep going up in the tree until reach the top or index into parent is not zero
         	while(target.getParent()!=null && !stop){
         		//update index p and target node
-        		p = target.getParent().getIndex();
-        		target = target.getParent().getNode();
+        		p = ((Reference) target.getParent()).getIndex();
+        		target = ((Reference) target.getParent()).getNode();
         		//check if we need to continue
         		stop = (p!=0);
         	}
@@ -191,7 +274,13 @@ public class LeafNode extends Node {
       	}
     }
     
-    public void insert (int val, Node ptr){
+    private int findKeyIndex(int val) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	public void insert (int val, Node ptr){
     	//find correct position to insert
         int p = this.findKeyIndex(val);
         
@@ -215,8 +304,8 @@ public class LeafNode extends Node {
      	   
      	   //if current node has a parent, insert value into parent
      	   if(this.getParent() != null){
-     		   split.setParent(new Reference(this.getParent().getNode(), -1, false));
-     		   this.getParent().getNode().insert(parentVal, split);
+     		   split.setParent(new Reference(((Reference) this.getParent()).getNode(), -1, false));
+     		   ((Reference) this.getParent()).getNode().insert(parentVal, split);
      	   //if no parent for current node, create a new root
      	   }else{
      		   Node newRoot = new InternalNode(degree, this, parentVal, split, null, null);
@@ -228,7 +317,13 @@ public class LeafNode extends Node {
          
     }
     
-    void printNode (){
+    private boolean full() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	void printNode (){
     	System.out.print ("[");
     	for (int i = 1; i < lastindex; i++) 
     	    System.out.print (keys[i]+" ");

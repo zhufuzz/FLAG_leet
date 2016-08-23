@@ -1,6 +1,4 @@
 package ch9J.chapter4_DP1;
-
-import java.util.HashMap;
 //
 public class _1Triangle2016 {
 

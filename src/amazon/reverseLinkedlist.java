@@ -45,7 +45,6 @@ public class reverseLinkedlist{
 		first.next.next = first;
 //unlink
 		first.next = null;
-//reset head
-		head = rest;
+return head = rest;
 	}
 }

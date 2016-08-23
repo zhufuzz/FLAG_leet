@@ -11,6 +11,19 @@ package implementation.hashtable;
  * @author jinglu
  *
  */
+class Process {
+
+	public int getId() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	public Object getName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}
 public class Bucket {
     public int key;
     public Process value;

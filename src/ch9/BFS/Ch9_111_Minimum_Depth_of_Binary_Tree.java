@@ -1,5 +1,4 @@
 package ch9.BFS;
-import java.util.*;
 
 /*Given a binary tree, find its minimum depth.
 

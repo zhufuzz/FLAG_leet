@@ -2,16 +2,20 @@ package implementation;
 //Source: Data Structure and Algorithm Analysis in Java
 
 
-public class QuadraticProbingHashTable{
+public class QuadraticProbingHashTable<E>{
 	private static class HashEnty<E>{
 		public E element;
 		public boolean isActive;
 
-		public HashEntry(E element){
+		public  HashEnty(E element){
 			this(element, true);
 		}
 
-		public HashEntry(E element, boolean i){
+		public HashEnty(E element2, boolean b) {
+			// TODO Auto-generated constructor stub
+		}
+
+		public void HashEntry(E element, boolean i){
 			this.element = element;
 			this.isActive = i;
 		}
@@ -48,14 +52,14 @@ public class QuadraticProbingHashTable{
 
 	}
 
-	public void insert(E element){
+	public void insert(Object element){
 		int currentPos = findPos(element);
 
 		if(isActive(currentPos)){
 			return;
 		}
 
-		array[currentPos] = new HashEntry<>(element, true);
+		array[currentPos] = new HashEntry<>();
 
 		if(++currentSize > array.length/2){
 			rehash();
@@ -81,7 +85,7 @@ public class QuadraticProbingHashTable{
 
 	}
 
-	private int findPos(E element){
+	private int findPos(Object element){
 		int offset = 1;
 		int currentPos = myhash(element);
 
@@ -111,15 +115,18 @@ public class QuadraticProbingHashTable{
 
 	}
 
-	private int myhash(E element){
+	private int myhash(Object element){
+		return currentSize;
 
 	}
 
 	private static int nextPrime(int n){
+		return n;
 
 	}
 
 	private static boolean isPrime(int n){
+		return false;
 
 	}
 

@@ -18,7 +18,7 @@ public class myShortestJobFirst{
   		int len = req.length;
   		int crtTime = req[0];
   		int waitTime = 0;
-  		PriorityQueue<Process> processPQ = new PriorityQueue<Process>(new Comparator<Process>(){
+  		PriorityQueue<Process> processPQ = new PriorityQueue<Process>(waitTime, new Comparator<Process>(){
   			@Override
   			public int compare(Process p1, Process p2){
   				if(p1.exeTime == p2.exeTime) return p1.arrTime - p2.arrTime;

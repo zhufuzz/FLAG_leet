@@ -1,3 +1,5 @@
+package implementation;
+
 
 import java.util.Random;
 
@@ -61,7 +63,7 @@ public class Deck {
 	 * @return the next Card object in the deck
 	 * @throws EmptyDeckException
 	 */
-	public Card deal() {
+	public Card deal() throws EmptyDeckException {
 
 		if (cardsInDeck == 0) // check for an empty deck
 			throw new EmptyDeckException();

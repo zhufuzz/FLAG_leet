@@ -19,6 +19,7 @@ public class findPathInTree{
     	for(int i=l2.size()-1; i>=1; i--){
     		l1.add(l2.get(i));
     	}
+		return l2;
 
     }
 
@@ -35,10 +36,10 @@ public class findPathInTree{
 
 		TreeNode left_lca = lca(root.left, x, y);
 		TreeNode right_cla = lca(root.right, x, y);
-		if(left_lca!=null && right_lca!=null){
+		if(left_lca!=null && right_cla!=null){
 			return root;
 		}
-		return left_lca!=null ? left_lca : right_lca;
+		return left_lca!=null ? left_lca : right_cla;
 	}
     
     //time O(n)

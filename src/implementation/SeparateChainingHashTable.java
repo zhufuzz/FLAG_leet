@@ -5,9 +5,9 @@ package implementation;
 //hash table using separate hash table
 
 import java.util.*;
-public class SeparateChainingHashTable{
+public class SeparateChainingHashTable<E>{
 	private static final int DEFAULT_SIZE = 101;
-	private List<E>[] lists ;
+	private LinkedList[] lists ;
 	private int currentSize;
 
 	public SeparateChainingHashTable(){
@@ -24,7 +24,7 @@ public class SeparateChainingHashTable{
 	}
 
 	public void insert(E element){
-		List<E> whichList = lists[myhash(element)];
+		List<E> whichList = (List<E>) lists[myhash(element)];
 		if(!whichList.contains(element)){
 			whichList.add(element);
 
@@ -37,7 +37,7 @@ public class SeparateChainingHashTable{
 	}
 
 	public void remove(E element){
-		List<E> whichList = lists[myhash(element)];
+		List<E> whichList = (List<E>) lists[myhash(element)];
 		if(whichList.contains(element)){
 			whichList.remove(element);
 			currentSize --;
@@ -46,7 +46,7 @@ public class SeparateChainingHashTable{
 	}
 
 	public boolean contains(E element){
-		List<E> whichList = lists[myhash(element)];
+		List<E> whichList = (List<E>) lists[myhash(element)];
 		return whichList.contains(element);
 	}
 
@@ -59,9 +59,9 @@ public class SeparateChainingHashTable{
 	}
 
 	private void rehash(){
-		List<E>[] oldLists = lists;
+		List<E>[] oldLists = (List<E>[]) lists;
 
-		lists = new List[nextPrime(2*oldLists.length)];
+		lists = (LinkedList[]) new List[nextPrime(2*oldLists.length)];
 		for(int i=0; i<lists.length; i++){
 			lists[i] = new LinkedList<>();
 		}
@@ -92,10 +92,12 @@ public class SeparateChainingHashTable{
 	}
 
 	private static int nextPrime(int n){
+		return n;
 
 	}
 
 	private static boolean isPrime(int n){
+		return false;
 
 	}
 

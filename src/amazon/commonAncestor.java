@@ -25,9 +25,10 @@ public class commonAncestor{
         	System.out.println(ancestor.print());
         }
 	}
-    
+	/*  
     //assuming tree node has a pointer to its parent
 	public static TreeNode ancestor1(TreeNode root, TreeNode x, TreeNode y){
+		boolean visited = true;
 		if(root == null){
 			return null;
 		}
@@ -54,7 +55,7 @@ public class commonAncestor{
 		}
 		return null;
 	}
-
+*/
 	//keep branching until two given nodes are on differnt subtree
 	public static TreeNode ancestor2(TreeNode root, TreeNode x, TreeNode y){
 		if(root == null){
@@ -146,10 +147,10 @@ public class commonAncestor{
 
 		TreeNode left_lca = lca(root.left, x, y);
 		TreeNode right_cla = lca(root.right, x, y);
-		if(left_lca!=null && right_lca!=null){
+		if(left_lca!=null && right_cla!=null){
 			return root;
 		}
-		return left_lca!=null ? left_lca : right_lca;
+		return left_lca!=null ? left_lca : right_cla;
     }
 
 
