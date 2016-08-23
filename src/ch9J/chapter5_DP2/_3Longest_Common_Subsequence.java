@@ -14,10 +14,12 @@ public class _3Longest_Common_Subsequence {
 					// A[i - 1] != B[j - 1]
 • intialize: f[i][0] = 0 f[0][j] = 0
 • answer: f[n][m]
-为什么是i-1? A的第i个字符的是A[i-1]
+为什么是i-1? A的第i个字符的是A[i-1] 
 • Related Question: 
 • http://www.lintcode.com/problem/longest-common-substring/
  */
+	
+//重要：f[i][j]里的i，j指的是String A B里的i-1和j-1 char ！！！！
 	
 public int longestCommonSubsequence(String A, String B) {
     int n = A.length();
@@ -55,7 +57,7 @@ class longestCommonSubsequence_2016{
 				if(A.charAt(i - 1) == B.charAt(j - 1)){
 				//lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
 				//lcs[i][j] = Math.max(lcs[i][j], lcs[i - 1][j - 1] + 1);
-					lcs[i][j] = lcs[i - 1][j - 1] + 1;
+					lcs[i][j] = lcs[i - 1][j - 1] + 1; //＋1指的是charAt(i - 1) 
 				} else {
 					lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
 				//lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
