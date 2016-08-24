@@ -1,4 +1,4 @@
-package ch9S.chapter2DataStructure;
+package ch9S.chapter2DataStructure1;
 
 public class _3Number_of_Islands {
 	/**

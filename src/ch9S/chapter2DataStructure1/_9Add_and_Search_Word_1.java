@@ -1,4 +1,4 @@
-package ch9S.chapter2DataStructure;
+package ch9S.chapter2DataStructure1;
 //Version1 use Array
 public class _9Add_and_Search_Word_1 {
 
