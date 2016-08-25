@@ -36,7 +36,7 @@ public static int findKth(int[] A, int A_start,
 	            : Integer.MAX_VALUE; 
 	
 	if (A_key < B_key) {
-		//give up A
+		//give up half A 
 		return findKth(A, A_start + k / 2, B, B_start, k - k / 2);
 	} else {
 		return findKth(A, A_start, B, B_start + k / 2, k - k / 2);

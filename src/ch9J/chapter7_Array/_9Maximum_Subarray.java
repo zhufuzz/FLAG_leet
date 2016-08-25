@@ -20,6 +20,8 @@ public class _9Maximum_Subarray {
     }
 	  
 //Version 2: Prefix Sum
+//凡是subarray的问题，都要想到prefix sum
+//推荐这种算法
   public int maxSubArray2(int[] A) {
       if (A == null || A.length == 0){
           return 0;
