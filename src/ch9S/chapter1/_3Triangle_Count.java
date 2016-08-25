@@ -13,8 +13,10 @@ public class _3Triangle_Count {
         int ans = 0;
         Arrays.sort(S);
         for(int i = 0; i < S.length; i++) {
+        	//two pointer to make n^2 to n
             left = 0;
             right = i - 1;
+            //useS[i] instead of target in TwoSumII
             while(left < right) {
                 if(S[left] + S[right] > S[i]) {
                     ans = ans + (right - left);

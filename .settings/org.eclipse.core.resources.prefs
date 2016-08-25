@@ -1,5 +1,8 @@
 eclipse.preferences.version=1
 encoding//src/amazon/findPathInTree.java=UTF-8
+encoding//src/bittiger/algorithm/BSTInorderSuccessor.java=UTF-8
+encoding//src/bittiger/algorithm/BinaryTree.java=UTF-8
+encoding//src/bittiger/algorithm/List.java=UTF-8
 encoding//src/ch9/Array/Ch9_162_Find_Peak_Element=UTF-8
 encoding//src/ch9/Array/Ch9_169_Majority_Element.java=UTF-8
 encoding//src/ch9/Array/Ch9_209_Minimum_Size_Subarray_Sum.java=UTF-8

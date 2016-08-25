@@ -42,6 +42,7 @@ public class _6Kth_Smallest_Sum_In_Two_Sorted_Arrays {
 	 * @param k an integer
 	 * @return an integer
 	 */
+	//the only two possible smallest sum in the matrix
 	int[] dx = {1, 0};
 	int[] dy = {0, 1};
 	public int kthSmallestSum(int[] A, int[] B, int k) {
