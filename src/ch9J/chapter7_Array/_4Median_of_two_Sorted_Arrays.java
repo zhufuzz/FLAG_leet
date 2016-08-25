@@ -14,10 +14,12 @@ public double findMedianSortedArrays(int A[], int B[]) {
 // find kth number of two sorted array
 public static int findKth(int[] A, int A_start,
                           int[] B, int B_start,
-                          int k){		
+                          int k){	
+	//A is empty
 	if (A_start >= A.length) {
 		return B[B_start + k - 1];
 	}
+	//B is empty
 	if (B_start >= B.length) {
 		return A[A_start + k - 1];
 	}
@@ -25,7 +27,7 @@ public static int findKth(int[] A, int A_start,
 	if (k == 1) {
 		return Math.min(A[A_start], B[B_start]);
 	}
-	
+	//可以先默认把这两个都设成MAX_VALUE
 	int A_key = A_start + k / 2 - 1 < A.length
 	            ? A[A_start + k / 2 - 1]
 	            : Integer.MAX_VALUE;
@@ -34,6 +36,7 @@ public static int findKth(int[] A, int A_start,
 	            : Integer.MAX_VALUE; 
 	
 	if (A_key < B_key) {
+		//give up A
 		return findKth(A, A_start + k / 2, B, B_start, k - k / 2);
 	} else {
 		return findKth(A, A_start, B, B_start + k / 2, k - k / 2);

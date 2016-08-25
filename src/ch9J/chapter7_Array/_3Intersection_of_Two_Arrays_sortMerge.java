@@ -2,6 +2,9 @@ package ch9J.chapter7_Array;
 
 import java.util.Arrays;
 //version 1: sort & merge
+//merge two sorted arrays
+//Time O(nlogn + mlogm)
+//O(1)
 public class _3Intersection_of_Two_Arrays_sortMerge {
 	/**
      * @param nums1 an integer array

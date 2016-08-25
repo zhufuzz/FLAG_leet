@@ -3,6 +3,8 @@ package ch9J.chapter7_Array;
 import java.util.HashSet;
 
 //version 2: hash map
+//Time O(n+m)
+//Space O(min(n,m))
 public class _3Intersection_of_Two_Arrays_HashMap {
 	/**
      * @param nums1 an integer array

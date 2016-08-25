@@ -3,6 +3,8 @@ package ch9J.chapter7_Array;
 import java.util.*;
 
 //version 3: sort & binary search
+//time O(nlogn + mlogn)
+//Space O(1)
 public class _3Intersection_of_Two_Arrays_SortBinarySearch {
 	/**
      * @param nums1 an integer array
