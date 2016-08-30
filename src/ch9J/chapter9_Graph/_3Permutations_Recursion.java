@@ -29,7 +29,8 @@ public class _3Permutations_Recursion {
            list.add(num[i]);
            helper(rst, list, num);
            list.remove(list.size() - 1);
-       }
+       } 
+       //return
    }
 }
 
