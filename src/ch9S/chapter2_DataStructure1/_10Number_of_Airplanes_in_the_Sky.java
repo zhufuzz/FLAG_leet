@@ -43,7 +43,7 @@ class Interval {
       list.add(new Point_2(i.start, 1));
       list.add(new Point_2(i.end, 0));
     }
-
+    //sort with time
     Collections.sort(list,Point_2.Point_2Comparator );
     int count = 0, ans = 0;
     for(Point_2 p : list){
