@@ -1,4 +1,4 @@
-package ch9J.chapter8DataStructure;
+package ch9J.chapter8_DataStructure;
 
 public class TreeNode {
 	int val;
