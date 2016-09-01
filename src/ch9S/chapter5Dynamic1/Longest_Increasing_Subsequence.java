@@ -1,4 +1,4 @@
-package ch9S.chapter5Dynamic; //不是动态规划
+package ch9S.chapter5Dynamic1; //不是动态规划
 
 //1. 判断
 //2. 看是哪一类

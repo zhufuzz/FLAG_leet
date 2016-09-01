@@ -1,4 +1,4 @@
-package ch9S.chapter5Dynamic;
+package ch9S.chapter5Dynamic1;
 //方法一
 public class _4Coins_in_a_Line_1 {
 	/**

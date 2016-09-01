@@ -1,4 +1,4 @@
-package ch9S.chapter5Dynamic;
+package ch9S.chapter5Dynamic1;
 
 public class _2House_Robber_II {
 	public int houseRobber2(int[] nums) {

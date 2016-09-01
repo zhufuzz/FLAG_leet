@@ -1,4 +1,4 @@
-package ch9S.chapter5Dynamic;
+package ch9S.chapter5Dynamic1;
 
 public class Longest_Increasing_Continuous_subsequence_II {
 	public int longestIncreasingContinuousSubsequence(int[] A) {

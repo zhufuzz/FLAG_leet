@@ -1,4 +1,4 @@
-package ch9S.chapter5Dynamic;
+package ch9S.chapter5Dynamic1;
 
 public class _1House_Robber {
 	/**

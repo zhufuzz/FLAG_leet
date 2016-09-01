@@ -1,6 +1,6 @@
-package ch9S.chapter5Dynamic;
+package ch9S.chapter5Dynamic1;
 
-public class _6Coins_in_a_Line_III_1 {
+public class _6Coins_in_a_Line_III_2 {
 	/**
      * @param values: an array of integers
      * @return: a boolean which equals to true if the first player will win
@@ -10,22 +10,17 @@ public class _6Coins_in_a_Line_III_1 {
         int n = values.length;
         int [][]dp = new int[n + 1][n + 1];
         boolean [][]flag =new boolean[n + 1][n + 1];
-        int[][] sum = new int[n + 1][n + 1];
-        for (int i = 0; i < n; i++) {
-            for (int j = i; j < n; j++) {
-                sum[i][j] = i == j ? values[j] : sum[i][j-1] + values[j];
-            }
-        }
-        int allsum = 0;
-        for(int now : values) 
-            allsum += now;
         
-        return allsum < 2*MemorySearch(0,values.length - 1, dp, flag, values, sum);
+        int sum = 0;
+        for(int now : values) 
+            sum += now;
+        
+        return sum < 2*MemorySearch(0,values.length - 1, dp, flag, values);
     }
-    int MemorySearch(int left, int right, int [][]dp, boolean [][]flag, int []values, int [][]sum) {
+    int MemorySearch(int left, int right, int [][]dp, boolean [][]flag, int []values) {
+        
         if(flag[left][right])   
             return dp[left][right];
-            
         flag[left][right] = true;
         if(left > right) {
             dp[left][right] = 0;
@@ -34,8 +29,9 @@ public class _6Coins_in_a_Line_III_1 {
         } else if(left + 1 == right) {
             dp[left][right] = Math.max(values[left], values[right]);
         } else {
-            int cur = Math.min(MemorySearch(left+1, right, dp, flag, values, sum), MemorySearch(left,right-1, dp, flag, values, sum));
-            dp[left][right] = sum[left][right] - cur;
+            int  pick_left = Math.min(MemorySearch(left + 2, right, dp, flag, values), MemorySearch(left + 1, right - 1, dp, flag, values)) + values[left];
+            int  pick_right = Math.min(MemorySearch(left, right - 2, dp, flag, values), MemorySearch(left + 1, right - 1, dp, flag, values)) + values[right];
+            dp[left][right] = Math.max(pick_left, pick_right);    
         }
         return dp[left][right];   
     }
