@@ -1,7 +1,9 @@
 package ch9J.chapter8_DataStructure;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 
+//linkedlashmap
 public class _8LRU_Cache {
 	private class Node{
         Node prev;

@@ -6,9 +6,9 @@ public class _23Sort_Colors {
             return;
         }
         
-        int pl = 0;
-        int pr = a.length - 1;
-        int i = 0;
+        int pl = 0;//have only 0 on its left
+        int pr = a.length - 1;//have only 2 on its right
+        int i = 0;//have both 0 and 1 on its left
         while (i <= pr) {
             if (a[i] == 0) {
                 swap(a, pl, i);
