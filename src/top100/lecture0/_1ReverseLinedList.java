@@ -49,7 +49,7 @@ class Recursion {
 	}
 }
 
-public class ReverseLinedList {
+public class _1ReverseLinedList {
 	public static void main (String[] args) throws FileNotFoundException{
 		Scanner in = new Scanner(new File("input.txt"));
 		int n = in.nextInt();
