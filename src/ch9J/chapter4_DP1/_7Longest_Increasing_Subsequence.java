@@ -7,8 +7,8 @@ package ch9J.chapter4_DP1; //不是动态规划
 //1. state： f[i] 代表从“任意点”出发，跳到坐标i，一共踩过多少个数。
 //2. function： f[i] = MAX{f[j]} + 1 {j < i && nums[j] < nums[i]}
 //右边点依赖左边点。
-//3. initialize f[0..n-1] = 1
-//4. answer: max{f[0..n-1]}
+//3. initialize f[0..n-1] = 1  :因为本题可以从任何一点出发
+//4. answer: max{f[0..n-1]}    ：answer也必须每一点都比较
 //
 
 

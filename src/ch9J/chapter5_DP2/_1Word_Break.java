@@ -13,13 +13,13 @@ import java.util.Set;
  */
 
 public class _1Word_Break {
-private int getMaxLength(Set<String> dict) {
-    int maxLength = 0;
-    for (String word : dict) {
-        maxLength = Math.max(maxLength, word.length());
-    }
-    return maxLength;
-}
+	private int getMaxLength(Set<String> dict) {
+	    int maxLength = 0;
+	    for (String word : dict) {
+	        maxLength = Math.max(maxLength, word.length());
+	    }
+	    return maxLength;
+	}
 
 public boolean wordBreak(String s, Set<String> dict) {
     if (s == null || s.length() == 0) {

@@ -60,7 +60,7 @@ class Triangle2016_2{
 	//
 	private int divideConquer(int[][] triangle, int x, int y){
 		//2, 递归的出口，当我走过了最后一层的时候
-		//the last level shoudl be triangle.length - 1
+		//the last level should be triangle.length - 1
 		if(x == triangle.length){
 			return 0; //有负数也应该return 0
 		}
@@ -76,7 +76,7 @@ class Triangle2016_2{
 
 //Ch9 2016 summer
 //DFS， Divide Conquer + memorization
-//这里n代表二叉树的高度， O(2 ^ n)， 多项式级别
+//这里n代表二叉树的高度， O(n ^ 2)， 多项式级别
 //动态规划无法彻底分开左边右边，所以记忆可以避免重复计算，从而提高速度
 
 /*O(n ^ 2)是这么算出来的：

@@ -16,8 +16,8 @@ public class _6Jump_Game_II {
 class Jump_Game_II1 {
  public int jump(int[] A) {
      int[] steps = new int[A.length];
-     
      steps[0] = 0;
+     
      for (int i = 1; i < A.length; i++) {
          steps[i] = Integer.MAX_VALUE;
          for (int j = 0; j < i; j++) {
@@ -28,7 +28,6 @@ class Jump_Game_II1 {
              }
          }
      }
-     
      return steps[A.length - 1];
  }
 }
