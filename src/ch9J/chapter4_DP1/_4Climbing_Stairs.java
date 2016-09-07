@@ -2,7 +2,7 @@ package ch9J.chapter4_DP1;
 
 /*
  * Climbing Stairs
-￼￼• state: f[i]表示跳到第i个位置的方案总数 
+￼￼• state: f[i]表示跳到第i个位置的方案总数 f[n + 1]
 • function: f[i] = f[i-1] + f[i-2]
 • initialize: f[0] = 1
 • answer: f[n] // index from 0~n

@@ -31,6 +31,7 @@ public void helper(ArrayList<ArrayList<Integer>> result,
     
     for ( int i = fromIndex; i < nums.size(); i++){
      	//跳过重复元素
+    	//Pay Attention!!! i vs i-1, NOT i vs i+1
             if ( i != fromIndex && nums.get(i) == nums.get(i - 1)){
                 continue;
             }

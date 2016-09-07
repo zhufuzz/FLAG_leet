@@ -30,6 +30,7 @@ public boolean wordBreak(String s, Set<String> dict) {
     boolean[] canSegment = new boolean[s.length() + 1];
 
     canSegment[0] = true;
+    //WHY <= here????
     for (int i = 1; i <= s.length(); i++) {
         canSegment[i] = false;
         for (int lastWordLength = 1;

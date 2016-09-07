@@ -19,6 +19,7 @@ public class _10First_Bad_Version {
         if (SVNRepo.isBadVersion(start)) {
             return start;
         }
+        //only this condition will not call SVNRepo too many times
         return end;
     }
 }

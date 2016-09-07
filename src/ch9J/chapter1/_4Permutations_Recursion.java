@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class _4Permutations_Recursion {
     public ArrayList<ArrayList<Integer>> permute(int[] num) {
         ArrayList<ArrayList<Integer>> rst = new ArrayList<>();
+        //if the question expect [[]] when num is empty, 
+        //only use if (num == null)
         if (num == null || num.length == 0) {
             return rst; 
         }

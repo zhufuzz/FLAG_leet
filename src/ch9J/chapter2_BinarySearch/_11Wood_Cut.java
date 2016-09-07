@@ -13,6 +13,7 @@ public class _11Wood_Cut {
 	    }
 	    
 // find the largest length that can cut more than k pieces of wood.
+	    //Start should be 1!!!!!!
 	    int start = 1, end = max;
 	    while (start + 1 < end) {
 	        int mid = start + (end - start) / 2;

@@ -1,5 +1,7 @@
 package ch9J.chapter1;
 
+import org.junit.Test;
+
 public class _1strstr {
 	/**
      * Returns a index to the first occurrence of target in source,
@@ -11,9 +13,11 @@ public class _1strstr {
         if (source == null || target == null) {
             return -1;
         }
-        
-        for (int i = 0; i < source.length() - target.length() + 1; i++) {
-            int j = 0;
+        //be careful with the +1
+        for (int i = 0; i < source.length() - target.length() ; i++) {
+            int j = 0;//need to define the j here because will use it out of for
+            
+            //j = 0 !!!!
             for (j = 0; j < target.length(); j++) {
                 if (source.charAt(i + j) != target.charAt(j)) {
                     break;
@@ -26,6 +30,14 @@ public class _1strstr {
         }
         return -1;
     }
+    
+    @Test
+    public void testStrstr() {
+    		String source = "";
+    		String target = "";
+    		System.out.println(strStr(source, target));
+    		
+    } 
 }
 
 /*
