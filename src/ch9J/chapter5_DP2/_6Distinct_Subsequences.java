@@ -4,8 +4,11 @@ package ch9J.chapter5_DP2;
  * Distinct Subsequence
 • state: f[i][j] 表示 S的前i个字符中选取T的前j个字符,有多少种方案
 • function: f[i][j] = f[i - 1][j] + f[i - 1][j - 1] // S[i-1] == T[j-1]
-• 					= f[i - 1][j] // S[i-1] != T[j-1]
-• initialize: f[i][0] = 1, f[0][j] = 0 (j > 0)
+• 					= f[i - 1][j]                  // S[i-1] != T[j-1]
+// 以上只有i-1是因为目标是j，j不能删除，只能变化i
+• initialize: 
+f[i][0] = 1, 就是从S里挑一个T（空串）有几种方案，有1种，就是一个字符都不要
+f[0][j] = 0 (j > 0) ， 就是从S（空串）里挑一个T有几种方案，有0种，怎么都挑不出来
 • answer: f[n][m] (n = sizeof(S), m = sizeof(T))
  */
 

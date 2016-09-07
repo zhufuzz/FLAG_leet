@@ -28,7 +28,7 @@ package ch9J.chapter5_DP2;
 
 
 //state2: f[0] = -1;  f[i] 表示前i个字符组成的前缀，最少切割几次，能切成全部是回文串
-public class _2Palindrome_Partitioning_II2 {
+public class _2Palindrome_Partitioning_II_2 {
 	
 //O(n)
 @SuppressWarnings("unused")
