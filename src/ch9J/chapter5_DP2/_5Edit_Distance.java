@@ -34,7 +34,7 @@ public int minDistance(String word1, String word2) {
                 dp[i][j] = dp[i-1][j-1];
             }else{
                 dp[i][j] = 1 + 
-                		Math.min(dp[i-1][j-1],Math.min(dp[i-1][j],dp[i][j-1]));
+                	Math.min(dp[i-1][j-1],Math.min(dp[i-1][j],dp[i][j-1]));
                 // 1 + 的操作可能是给word1删除一个字符
                 // 1 + 的操作可能是给word2插入一个字符
                 // 1 + 的操作可能是给word1或word2做替换

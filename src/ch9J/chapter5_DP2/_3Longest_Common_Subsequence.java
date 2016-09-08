@@ -38,36 +38,36 @@ public int longestCommonSubsequence(String A, String B) {
 
 //9CH summer 2016
 class longestCommonSubsequence_2016{
-	public int longestCommonSubsequence(String A, String B){
-		int n = A.length();
-		int m = B.length();
-		
-		//state: lcs[i][j] 代表A的前i个字符和B的前j个字符的LCS的长度是多少
-		int[][] lcs = new int[n + 1][m + 1];
-		//initialize
-		for(int i = 0; i <= n; i++){
-			lcs[i][0] = 0;
-		}
-		for(int j = 0; j <= m; j++){
-			lcs[0][j] = 0;
-		}
-		//function
-		for(int i = 1; i <= n; i++){
-			for(int j = 1; j <= m; j++){
-				if(A.charAt(i - 1) == B.charAt(j - 1)){
-				//lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
-				//lcs[i][j] = Math.max(lcs[i][j], lcs[i - 1][j - 1] + 1);
-					lcs[i][j] = lcs[i - 1][j - 1] + 1; //＋1指的是charAt(i - 1) 
-				} else {
-					lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
-				//lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
-				//lcs[i][j] = Math.max(lcs[i][j], lcs[i - 1][j - 1]);
-				}
+public int longestCommonSubsequence(String A, String B){
+	int n = A.length();
+	int m = B.length();
+	
+	//state: lcs[i][j] 代表A的前i个字符和B的前j个字符的LCS的长度是多少
+	int[][] lcs = new int[n + 1][m + 1];
+	//initialize
+	for(int i = 0; i <= n; i++){
+		lcs[i][0] = 0;
+	}
+	for(int j = 0; j <= m; j++){
+		lcs[0][j] = 0;
+	}
+	//function
+	for(int i = 1; i <= n; i++){
+		for(int j = 1; j <= m; j++){
+			if(A.charAt(i - 1) == B.charAt(j - 1)){
+	//lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
+	//lcs[i][j] = Math.max(lcs[i][j], lcs[i - 1][j - 1] + 1);
+				lcs[i][j] = lcs[i - 1][j - 1] + 1; //＋1指的是charAt(i - 1) 
+			} else {
+				lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
+	//lcs[i][j] = Math.max(lcs[i - 1][j], lcs[i][j - 1]);
+	//lcs[i][j] = Math.max(lcs[i][j], lcs[i - 1][j - 1]);
 			}
 		}
-		//answer
-		return lcs[n][m];
 	}
+	//answer
+	return lcs[n][m];
+}
 }
  
 
