@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.PriorityQueue;
+import java.util.Queue;
 import java.util.Stack;
 import java.util.List;
 
@@ -99,7 +100,70 @@ public class Linear_List {
 	@Test
 	public void testLinkedList(){
 		LinkedList<Integer>  list = new LinkedList<>();
-		 list.addFirst(1);
+		 list.addFirst(0);
+		 list.add(2);
+		 list.addLast(9);
+		 System.out.println(list.getFirst());
+		 System.out.println(list.getLast());
+		 System.out.println(list.removeFirst());
+		 System.out.println(list.removeLast());
+		
+	}
+	@Test
+	public void testStack() {
+		Stack<Integer> stack = new Stack<>();
+		Stack<Integer> stack2 = new Stack<>();
+		
+		stack.push(0);
+		stack.push(1);
+		stack.push(2);
+		stack.push(3);
+		System.out.println(stack);
+		System.out.println(stack.get(0));
+		//This method is identical in functionality to the get(int) 
+		//method (which is part of the List interface).
+		System.out.println(stack.elementAt(0));
+		System.out.println(stack.pop());
+		System.out.println(stack.peek());
+		System.out.println(stack.get(0));
+		System.out.println(stack.get(0));
+		System.out.println(stack.size());
+		System.out.println(stack.capacity());
+		System.out.println(stack.isEmpty());
+		System.out.println(stack.set(0, 99));
+		System.out.println(stack);
+		System.out.println(stack.indexOf(99));
+		System.out.println(stack.indexOf(1, 99));
+		System.out.println(stack.lastIndexOf(1));
+		System.out.println(stack.remove(0));//index
+		System.out.println(stack.remove(0));//obj
+		System.out.println(stack.removeElement(99));//obj
+
+		
+		
+		//stack.get(0);
+		//stack.
+		
+		
+	}
+	@Test
+	public void testQueue() {
+		Queue<Integer> queue = new LinkedList<>();
+		queue.add(0);
+		queue.add(1);
+		queue.add(2);
+		queue.add(3);
+		queue.offer(4);
+		System.out.println(queue);
+		System.out.println(queue.peek());
+		System.out.println(queue.poll());
+		
+		
+	}
+	@Test
+	public void testPQ() {
+		Queue<Integer> pq = new PriorityQueue<>();
+		
 	}
 	
 }
