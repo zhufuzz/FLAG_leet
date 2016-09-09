@@ -15,6 +15,8 @@ public class _8Search_in_Rotated_Sorted_Array {
 	        if (A[mid] == target) {
 	            return mid;
 	        }
+	        
+	        // USE START TO COMPARE !!!!
 	        if (A[start] < A[mid]) {
 	            // situation 1, red line
 	            if (A[start] <= target && target <= A[mid]) {

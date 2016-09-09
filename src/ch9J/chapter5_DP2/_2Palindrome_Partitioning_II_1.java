@@ -62,3 +62,43 @@ public class _2Palindrome_Partitioning_II_1 {
      return f[s.length()] - 1;
  }
 }
+
+////////////////////////////////////
+class lint_AC{
+    boolean[][] canPP(String s) {
+        int n = s.length();
+        boolean[][] f = new boolean[n][n];
+        for (int i = 0; i < n; i++) {
+            f[i][i] = true;
+        }
+        for (int i = 0; i < n - 1; i++) {
+            f[i][i + 1] = (s.charAt(i) == s.charAt(i + 1));
+        }
+        for (int i = 2; i < n; i++) {
+            for (int j = 0; j + i < n; j++) {
+                f[j][j + i] = f[j + 1][j + i - 1] && 
+                        (s.charAt(j) == s.charAt(j + i));
+            }
+        }
+        return f;
+    } 
+    public int minCut(String s) {
+        // write your code here
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        int n = s.length();
+        boolean[][] isPP = canPP(s);
+        int[] f = new int[n + 1];
+        f[0] = 0;
+        for (int i = 1; i <= n; i++) {
+            f[i] = Integer.MAX_VALUE;
+            for (int j = 0; j < i; j++) {
+                if (isPP[j][i - 1]) {
+                    f[i] = Math.min(f[i], f[j] + 1);
+                }
+            }
+        }
+        return f[n] - 1;
+    }
+}
