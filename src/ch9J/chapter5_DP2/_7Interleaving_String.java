@@ -30,10 +30,8 @@ public class _7Interleaving_String {
     
     for (int i = 1; i <= s1.length(); i++) {
         for (int j = 1; j <= s2.length(); j++) {
-            if(((s3.charAt(i + j - 1) == s1.charAt(i - 1) 
-            			&& interleaved[i - 1][j]))
-                || ((s3.charAt(i + j - 1)) == s2.charAt(j - 1) 
-                		&& interleaved[i][j - 1]))
+     if(((s3.charAt(i + j - 1) == s1.charAt(i - 1) && interleaved[i - 1][j]))
+    || ((s3.charAt(i + j - 1)) == s2.charAt(j - 1) && interleaved[i][j - 1]))
             interleaved[i][j] = true;
         }
     }
