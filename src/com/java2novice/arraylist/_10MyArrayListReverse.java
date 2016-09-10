@@ -16,10 +16,13 @@ public class _10MyArrayListReverse {
         list.add("Play");
         list.add("Watch");
         list.add("Glass");
+        System.out.println(list);
         Collections.reverse(list);
-        System.out.println("Results after reverse operation:");
+        System.out.println(list);
+      
+        /*System.out.println("Results after reverse operation:");
         for(String str: list){
             System.out.println(str);
-        }
+        }*/
     }
 }

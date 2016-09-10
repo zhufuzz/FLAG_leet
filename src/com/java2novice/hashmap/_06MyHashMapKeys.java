@@ -1,5 +1,6 @@
 package com.java2novice.hashmap;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Set;
  /*Program: How to get all keys from HashMap?
@@ -19,8 +20,10 @@ public class _06MyHashMapKeys {
         hm.put("third","THIRD INSERTED");
         System.out.println(hm);
         Set<String> keys = hm.keySet();
+        Collection<String> values = hm.values();
         for(String key: keys){
             System.out.println(key);
         }
+        System.out.println(values);
     }
 }

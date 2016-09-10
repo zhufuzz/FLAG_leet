@@ -25,6 +25,7 @@ public class _06MyHashSetRetain {
         subSet.add("rat");
         subSet.add("second");
         subSet.add("first");
+        subSet.add("hehe hehe");
         hs.retainAll(subSet);
         System.out.println("HashSet content:");
         System.out.println(hs);

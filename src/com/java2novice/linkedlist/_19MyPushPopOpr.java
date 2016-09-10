@@ -23,7 +23,7 @@ public class _19MyPushPopOpr {
         arrl.push("push element");
         System.out.println("After push operation:");
         System.out.println(arrl);
-        arrl.pop();
+        System.out.println("pop element: " + arrl.pop());
         System.out.println("After pop operation:");
         System.out.println(arrl);
     }
