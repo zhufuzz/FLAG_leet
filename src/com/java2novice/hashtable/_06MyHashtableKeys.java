@@ -1,5 +1,6 @@
 package com.java2novice.hashtable;
 
+import java.util.Collection;
 import java.util.Hashtable;
 import java.util.Set;
  /*Program: How to get all keys from Hashtable?
@@ -22,5 +23,7 @@ public class _06MyHashtableKeys {
         for(String key: keys){
             System.out.println(key);
         }
+        Collection<String> values = hm.values();
+        System.out.println(values);
     }
 }

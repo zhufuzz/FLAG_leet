@@ -6,7 +6,7 @@ import java.util.List;
  
 public class _05MyCheckedList {
  
-    public static void main(String a[]){
+	public static void main(String a[]){
          
         List myList = new ArrayList();
         myList.add("one");

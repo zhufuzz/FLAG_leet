@@ -2,6 +2,7 @@ package com.java2novice.hashtable;
 
 import java.util.Enumeration;
 import java.util.Hashtable;
+import java.util.Iterator;
 /*Program: How to read elements using Enumeration in Hashtable?
 
 Description:

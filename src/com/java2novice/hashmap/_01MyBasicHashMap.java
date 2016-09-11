@@ -1,5 +1,6 @@
 package com.java2novice.hashmap;
 
+import java.util.Enumeration;
 import java.util.HashMap;
 /*Program: Basic HashMap Operations.
 
@@ -25,5 +26,6 @@ public class _01MyBasicHashMap {
         hm.remove("third");
         System.out.println(hm);
         System.out.println("Size of the HashMap: "+hm.size());
+        
     }
 }

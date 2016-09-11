@@ -19,6 +19,7 @@ public class _02MyHashtableRead {
         hm.put("third","THIRD INSERTED");
         System.out.println(hm);
         Set<String> keys = hm.keySet();
+        System.out.println(keys);
         for(String key: keys){
             System.out.println("Value of "+key+" is: "+hm.get(key));
         }

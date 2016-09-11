@@ -7,7 +7,6 @@ import java.util.List;
  
 public class _04MyCheckedCollection {
  
-    @SuppressWarnings("rawtypes")
 	public static void main(String a[]){
          
         List myList = new ArrayList();
