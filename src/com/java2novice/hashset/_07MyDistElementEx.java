@@ -27,6 +27,11 @@ public class _07MyDistElementEx {
         for(Price pr:lhm){
             System.out.println(pr);
         }
+        
+       // System.out.println(lhm.get("java").hashCode()%16);
+       // System.out.println(lhm.get("computer").hashCode()%16);
+       // System.out.println(lhm.get("india").hashCode()%16);
+       // System.out.println(lhm.get("mango").hashCode()%16);
     }
 }
  
