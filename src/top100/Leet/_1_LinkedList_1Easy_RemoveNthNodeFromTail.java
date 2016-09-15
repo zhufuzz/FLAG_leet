@@ -1,6 +1,7 @@
 package top100.Leet;
 
 import amazon.ListNode;
+//https://leetcode.com/problems/remove-nth-node-from-end-of-list/
 
 public class _1_LinkedList_1Easy_RemoveNthNodeFromTail {
 	public ListNode removeNthfromEnd(ListNode head, int n) {
@@ -23,3 +24,5 @@ public class _1_LinkedList_1Easy_RemoveNthNodeFromTail {
 		return dummy.next;
 	}
 }
+//follow up: Linked List Cycle
+//https://leetcode.com/problems/linked-list-cycle/
