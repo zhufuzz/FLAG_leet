@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//https://leetcode.com/problems/two-sum-iii-data-structure-design/
 
 public class _1_Arrays_1Easy_TwoSumII {
 	//<number, frequency>
@@ -26,7 +27,7 @@ public class _1_Arrays_1Easy_TwoSumII {
 			int target = value - curKey;
 			Integer count = map.get(target);
 			if (count != null) {
-				if (curKey != target || (curKey ==target && count >= 2)) {
+				if (curKey != target || (curKey == target && count >= 2)) {
 					return true;
 				}
 			}
@@ -34,3 +35,4 @@ public class _1_Arrays_1Easy_TwoSumII {
 		return false;
 	}
 }
+//follow up: https://leetcode.com/problems/moving-average-from-data-stream/

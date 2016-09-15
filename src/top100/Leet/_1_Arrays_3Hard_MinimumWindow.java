@@ -1,5 +1,7 @@
 package top100.Leet;
 
+//https://leetcode.com/problems/minimum-window-substring/
+
 public class _1_Arrays_3Hard_MinimumWindow {
 	public String minWindwo(String s, String t) {
 		if(s == null || t == null || s.length() == 0 || t.length() == 0 
@@ -9,7 +11,7 @@ public class _1_Arrays_3Hard_MinimumWindow {
 		int[] map = new int[128];
 		int count = t.length(), start = 0, end = 0, 
 				minLen = Integer.MAX_VALUE, startIndex = 0;
-		for (char c : toString().toCharArray()) {
+		for (char c : t.toCharArray()) {
 			map[c]++;
 		}
 		char[] chS = s.toCharArray();
@@ -31,3 +33,5 @@ public class _1_Arrays_3Hard_MinimumWindow {
 				new String() : new String(chS, startIndex, minLen);
 	}
 }
+//follow up: longest Substring without repeating character
+//https://leetcode.com/problems/longest-substring-without-repeating-characters/

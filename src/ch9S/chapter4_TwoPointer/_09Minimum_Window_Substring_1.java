@@ -11,6 +11,7 @@ public class _09Minimum_Window_Substring_1 {
         }
         return targetnum;
     }
+    //判断source hash是否包含target hash
     boolean valid(int []sourcehash, int []targethash) {
         
         for(int i = 0; i < 256; i++) {
@@ -38,6 +39,7 @@ public class _09Minimum_Window_Substring_1 {
                 else 
                     break;
             }
+            //如果满足条件，则更新当前答案
             if(valid(sourcehash, targethash) ){
                 if(ans > j - i ) {
                     ans = Math.min(ans, j - i );

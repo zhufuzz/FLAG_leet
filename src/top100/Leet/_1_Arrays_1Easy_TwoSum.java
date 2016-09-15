@@ -3,6 +3,7 @@ package top100.Leet;
 import java.util.HashMap;
 import java.util.Map;
 
+//https://leetcode.com/problems/two-sum/
 
 public class _1_Arrays_1Easy_TwoSum {
 	public int[] twosum(int[] nums, int target) {
@@ -24,3 +25,4 @@ public class _1_Arrays_1Easy_TwoSum {
 		return res;
 	}
 }
+//follow up: 3 Sum
