@@ -36,9 +36,8 @@ public class _1_Stack_2Medium_EvaluateReversePolishRotaion_2 {
 		return valStack.pollLast();
 	}
 
-	private boolean isLowerThan(char c, Character peekLast) {
-		// TODO Auto-generated method stub
-		return false;
+	private boolean isLowerThan(char cur, char toPeek) {
+		return (toPeek == '*' || toPeek == '/') && (cur == '+' || cur == '-');
 	}
 	
 }

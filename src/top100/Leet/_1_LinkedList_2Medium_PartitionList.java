@@ -37,3 +37,4 @@ public class _1_LinkedList_2Medium_PartitionList {
 
 	}
 }
+//follow up: reorder listê
