@@ -1,4 +1,4 @@
-package top100.lecture2;
+package top100.LiveCoding_2;
 
 import java.io.File;
 import java.io.FileNotFoundException;

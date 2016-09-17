@@ -4,7 +4,8 @@ import amazon.ListNode;
 
 public class _01ReorderList {
 	public void reorderList(ListNode head) {  
-        if (head == null || head.next == null || head.next.next == null) {
+        if (head == null || head.next == null ||
+        		head.next.next == null) {
             return ;
         }
         //1. Find middle and cut
@@ -30,7 +31,8 @@ public class _01ReorderList {
         }
         return newHead;
     }
-    private ListNode findMid (ListNode head) {//Key Point: finally slow is pointing to the last node of first half  
+//Key Point: finally slow is pointing to the last node of first half 
+    private ListNode findMid (ListNode head) { 
 
         //fast is one step ahead at the beginning
         ListNode fast = head.next;

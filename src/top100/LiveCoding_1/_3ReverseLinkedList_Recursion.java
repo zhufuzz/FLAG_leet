@@ -1,29 +1,22 @@
-package top100.lecture1;
+package top100.LiveCoding_1;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-class Node {
-	int value;
-	Node next;
-	Node() {
-		next = null;
-	}
-}
+class Recursion {
+	Node reverse (Node head){
+		//Ending process
+		if (head == null || head.next == null) return head;
+		Node newTail = head.next;
 
-class Iteration {
-	public Node reverse (Node head) {
-		Node pre = null;
-		Node current = head;
-		Node next = null;
-		while (current != null) {
-			next = current.next;
-			current.next = pre;
-			pre = current;
-			current = next;
-		}
-		return pre;
+		//Divide&Conquer
+		Node newHead = reverse(head.next);
+		
+		//Combination
+		newTail.next = head;
+		head.next = null;
+		return newHead;
 	}
 	public void display(Node head) {
 		while(head != null) {
@@ -34,7 +27,7 @@ class Iteration {
 	}
 }
 
-public class _3ReverseLinkedList_Iteration {
+public class _3ReverseLinkedList_Recursion {
 	public static void main (String[] args) throws FileNotFoundException {
 		Scanner in = new Scanner(new File("input.txt"));
 		int n = in.nextInt();
@@ -52,12 +45,11 @@ public class _3ReverseLinkedList_Iteration {
 				}
 				pre = temp;
 			}
-			Iteration itr = new Iteration();
-			itr.display(head);
+			Recursion rec = new Recursion();
+			rec.display(head);
 			
-			head = itr.reverse(head);
-			itr.display(head);
-			n = in.nextInt();
+			Node newHead = rec.reverse(head);
+			rec.display(newHead);
 		}
 		in.close();
 	}

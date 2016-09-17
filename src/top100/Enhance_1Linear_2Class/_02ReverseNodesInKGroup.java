@@ -11,7 +11,8 @@ public ListNode reverseKGroup(ListNode head, int k) {
         //Dummy node: unify the first subproblem with all others   
         ListNode dummy = new ListNode(0);
         dummy.next = head;
-        ListNode pre = dummy;//pre.next points to head of sublist to be reversed
+      //pre.next points to head of sublist to be reversed
+        ListNode pre = dummy;
         int count = k;
 
         while (head != null) {

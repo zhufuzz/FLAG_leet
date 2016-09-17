@@ -7,7 +7,8 @@ public List <List <Integer>>   threeSum(int[] array) {
    List <List <Integer>>   res = new ArrayList <List <Integer>>  ();
    if(array == null || array.length ==  3)
      return res;
-   //Method: three pointers, one fixed, one left to right from fixed, one right to left from rightmos
+   //Method: three pointers, one fixed, one left to right from fixed, 
+   //one right to left from rightmos
    Arrays.sort(array);
    int fixed = 0;
    while(fixed <  array.length - 2) {
