@@ -1,4 +1,4 @@
-package top100.Leet;
+package top100.Enhance_1Linear_1HW;
 
 import amazon.ListNode;
 //https://leetcode.com/problems/remove-nth-node-from-end-of-list/

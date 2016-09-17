@@ -1,4 +1,4 @@
-package top100.Leet;
+package top100.Enhance_1Linear_1HW;
 
 public class _1_Queue_1Easy_GasStation {
 	public int canCompleteCircuit(int[] gas, int[] cost) {
