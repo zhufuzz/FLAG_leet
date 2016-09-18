@@ -5,17 +5,23 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 class Recursion {
-	Node reverse (Node head){
+	Node reverse (Node head){ 
 		//Ending process
 		if (head == null || head.next == null) return head;
-		Node newTail = head.next;
+		/*Node newTail = head.next;
 
 		//Divide&Conquer
 		Node newHead = reverse(head.next);
 		
 		//Combination
 		newTail.next = head;
+		head.next = null;*/
+		
+		Node newHead = reverse(head.next);
+		
+		head.next.next = head;
 		head.next = null;
+		
 		return newHead;
 	}
 	public void display(Node head) {
