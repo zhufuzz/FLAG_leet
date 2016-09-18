@@ -24,8 +24,9 @@ class Pair{
 	}
 	
 }
-
+@SuppressWarnings({"rawtypes", "unchecked"})
 class BFS{
+	
 	HashMap<Integer, LinkedList> rank;
 	BFS() {
 		rank = new HashMap<Integer, LinkedList>();

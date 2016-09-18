@@ -5,7 +5,7 @@ import java.util.*;
 
 
 class Perfect7{
-
+	int best;
     int bfs (int n){
         LinkedList <Integer> processing = new LinkedList <Integer>();
         processing.add(n);

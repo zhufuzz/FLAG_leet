@@ -1,11 +1,10 @@
 package top100.LiveCoding._1Linear;
-
+ 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Scanner;
-
  
 class DFSNode{
 	int value;
@@ -13,6 +12,7 @@ class DFSNode{
 	DFSNode right;
 }
 
+@SuppressWarnings({ "unchecked", "rawtypes" })
 class DFS {
 	
 	HashMap<Integer, LinkedList> rank;
@@ -21,7 +21,7 @@ class DFS {
 		rank = new HashMap<Integer, LinkedList>();
 	}
 	
-	@SuppressWarnings("unchecked")
+	
 	void traverse(DFSNode ptr, int pos){
 		if (ptr == null) return;
 		if (rank.containsKey(pos) == false) rank.put(pos, new LinkedList());
@@ -30,14 +30,12 @@ class DFS {
 		traverse(ptr.right, pos + 1);
 	}
 	
-	@SuppressWarnings("unchecked")
 	void display(){
 		int n = 0;
 		while (rank.containsKey(n) == true){
 			--n;
 		}
 		for (int i = n + 1; rank.containsKey(i); ++i) {
-			@SuppressWarnings("rawtypes")
 			LinkedList list = rank.get(i);
 			list.forEach((value) -> System.out.println(" " + value));
 		}
@@ -45,8 +43,9 @@ class DFS {
 	}	
 }
 
+@SuppressWarnings("unused")
 public class _7BinaryTreeVerticalTraversal_DFS{
-	@SuppressWarnings("unused")
+	
 	public static void main(String[] args) throws FileNotFoundException {
 		Scanner in = new Scanner(new File("input.txt"));		
 		DFS solution = new DFS();
@@ -55,20 +54,20 @@ public class _7BinaryTreeVerticalTraversal_DFS{
 			
 			DFSNode[] tree = new DFSNode[n];
 			for(int i = 0; i < n; ++i) tree[i] = new DFSNode();
-				for(int i = 0; i < n; ++i) {
-					tree[i].value= in.nextInt();
-					
-					int left = in.nextInt();
-					if (left != -1) tree[i].left = tree[left];
-					int right = in.nextInt();
-					if (right != -1) tree[i].right = tree[right];
-				}
+			for(int i = 0; i < n; ++i) {
+				tree[i].value= in.nextInt();
 				
-				DFS dfs = new DFS();
-				dfs.traverse(tree[0], 0);
-				dfs.display();
+				int left = in.nextInt();
+				if (left != -1) tree[i].left = tree[left];
+				int right = in.nextInt();
+				if (right != -1) tree[i].right = tree[right];
+			}
+			
+			DFS dfs = new DFS();
+			dfs.traverse(tree[0], 0);
+			dfs.display();
 
-				n = in.nextInt();
+			n = in.nextInt();
 		}
 		in.close();
 	}
