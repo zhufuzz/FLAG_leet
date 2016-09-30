@@ -25,7 +25,9 @@ public class _1_Stack_2Medium_EvaluateReversePolishRotaion_2 {
 				opStack.offerLast(tokens[i]); //offer current operator
 				
 			} else {//Case 4: number
-				valStack.offerLast(Integer.parseInt(tokens[i]));
+	//			valStack.offerLast(Integer.parseInt(tokens[i]));
+	//这行出错
+				
 			}
 		}
 		//Calculate all numbers rest in stack
@@ -33,6 +35,11 @@ public class _1_Stack_2Medium_EvaluateReversePolishRotaion_2 {
 			valStack.offerLast(cal(opStack.pollLast(), valStack.pollLast(), valStack.pollLast()));
 		}
 		return valStack.pollLast();
+	}
+
+	private Integer cal(Character pollLast, Integer peekLast, Integer pollLast2) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	private boolean isLowerThan(char cur, char toPeek) {

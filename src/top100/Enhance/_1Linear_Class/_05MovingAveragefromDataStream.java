@@ -1,6 +1,7 @@
 package top100.Enhance._1Linear_Class;
 
-import java.util.*;
+import java.util.Deque;
+import java.util.LinkedList;
 
 public class _05MovingAveragefromDataStream {
 
