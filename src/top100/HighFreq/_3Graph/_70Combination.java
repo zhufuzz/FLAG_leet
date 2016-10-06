@@ -25,3 +25,4 @@ public class _70Combination {
 		}
 	}
 }
+//WHAT if there is duplicate?
