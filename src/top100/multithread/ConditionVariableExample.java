@@ -14,16 +14,17 @@ public class ConditionVariableExample {
 			} catch (InterruptedException e) {
 				Thread.currentThread().interrupt();
 			}
-			synchronized (thread) {
+			synchronized (ConditionVariableExample.this) {
 				running = false;
 				ConditionVariableExample.this.notify();
 			}
+			
 		});
 		thread.start();
 	}
 	
 	public void join() throws InterruptedException {
-		synchronized (thread) {
+		synchronized (this) {
 			while(running) {
 				print("Waiting for the peer thread to finish.");
 				wait();//waiting, not running

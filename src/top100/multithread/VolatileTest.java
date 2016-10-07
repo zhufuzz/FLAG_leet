@@ -7,7 +7,9 @@ public class VolatileTest {
 	private static final int THREADS_COUNT = 20;
 	
 	public static void increase() {
-		race++;
+		race++;//not atomic op
+		//main memory -> work memory, work memory increment, 
+		//write the data back to memory
 	}
 	
 	public static void main(String[] args) {

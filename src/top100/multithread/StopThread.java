@@ -11,6 +11,8 @@ public class StopThread {
 			public void run() {
 				int i = 0;
 				while (!stopRequested) {
+					//syso
+					//Thread.sleep(1000);
 					i++;
 				}
 			}

@@ -9,7 +9,7 @@ public class SynchronizedExample {
 	private static final long SLEEP_INTERVAL_MS = 5000;
 	
 	public synchronized void foo() {
-		System.out.println("Inside food");
+		System.out.println("Inside foo");
 		try {
 			Thread.sleep(SLEEP_INTERVAL_MS);
 		} catch (InterruptedException e) {
