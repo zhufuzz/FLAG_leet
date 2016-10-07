@@ -43,8 +43,10 @@ public class App {
         /**
          * Created 2 threads, and assign tasks (Processor(i).run) to the threads
          */
-        ExecutorService executor = Executors.newFixedThreadPool(2);//2 Threads
-        for (int i = 0; i < 2; i++) { // call the (Processor(i).run) 2 times with 2 threads
+        ExecutorService executor = Executors.newFixedThreadPool(2);
+        //2 Threads
+        for (int i = 0; i < 2; i++) { 
+        	// call the (Processor(i).run) 2 times with 2 threads
             executor.submit(new Processor(i));
         }
         executor.shutdown();

@@ -77,7 +77,7 @@ public class Worker {
 
         Thread t2 = new Thread(new Runnable() {
             public void run() {
-                process();
+                process();  
             }
         });
 
