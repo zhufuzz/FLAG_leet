@@ -5,7 +5,6 @@ public class ConditionVariableExample {
 	private static final long SLEEP_INTERVAL_MS = 1000;
 	private boolean running = true;
 	private Thread thread;
-	
 	public void start() {
 		thread = new Thread((Runnable) () -> {
 			print("Hello, world!");
@@ -22,7 +21,6 @@ public class ConditionVariableExample {
 		});
 		thread.start();
 	}
-	
 	public void join() throws InterruptedException {
 		synchronized (this) {
 			while(running) {
@@ -40,7 +38,4 @@ public class ConditionVariableExample {
 		cve.start();
 		cve.join();
 	}
-
-	
-	
 }

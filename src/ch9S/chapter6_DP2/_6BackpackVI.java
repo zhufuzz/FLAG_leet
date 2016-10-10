@@ -18,3 +18,34 @@ public class _6BackpackVI {
         return f[target];
     }
 }
+
+/*
+Given an integer array nums with all positive numbers and no duplicates, 
+find the number of possible combinations that add up to a positive integer target.
+
+Notice
+
+The different sequences are counted as different combinations.
+
+Have you met this question in a real interview? Yes
+Example
+Given nums = [1, 2, 4], target = 4
+
+The possible combination ways are:
+[1, 1, 1, 1]
+[1, 1, 2]
+[1, 2, 1]
+[2, 1, 1]
+[2, 2]
+[4]
+return 6
+
+Tags 
+Dynamic Programming
+Related Problems 
+Medium Backpack V 39 %
+Medium Backpack IV 35 %
+Hard Backpack III 50 %
+Medium Backpack II 37 %
+Medium Backpack 23 %
+*/
