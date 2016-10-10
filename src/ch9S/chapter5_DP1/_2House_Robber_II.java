@@ -8,7 +8,8 @@ public class _2House_Robber_II {
         if (nums.length == 1) {
             return nums[0];
         }
-        return Math.max(robber1(nums, 0, nums.length - 2), robber1(nums, 1, nums.length - 1));
+        return Math.max(robber1(nums, 0, nums.length - 2), 
+        		robber1(nums, 1, nums.length - 1));
     }
     public int robber1(int[] nums, int st, int ed) {
         int []res = new int[2];
