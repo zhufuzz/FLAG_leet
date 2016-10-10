@@ -22,7 +22,8 @@ public class _01Coins_in_a_Line_III_1 {
         
         return allsum < 2*MemorySearch(0,values.length - 1, dp, flag, values, sum);
     }
-    int MemorySearch(int left, int right, int [][]dp, boolean [][]flag, int []values, int [][]sum) {
+    int MemorySearch(int left, int right, int [][]dp, boolean [][]flag, 
+    					int []values, int [][]sum) {
         if(flag[left][right])   
             return dp[left][right];
             
@@ -34,7 +35,8 @@ public class _01Coins_in_a_Line_III_1 {
         } else if(left + 1 == right) {
             dp[left][right] = Math.max(values[left], values[right]);
         } else {
-            int cur = Math.min(MemorySearch(left+1, right, dp, flag, values, sum), MemorySearch(left,right-1, dp, flag, values, sum));
+            int cur = Math.min(MemorySearch(left+1, right, dp, flag, values, sum),
+            						MemorySearch(left,right-1, dp, flag, values, sum));
             dp[left][right] = sum[left][right] - cur;
         }
         return dp[left][right];   

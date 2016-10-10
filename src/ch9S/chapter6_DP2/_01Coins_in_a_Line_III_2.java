@@ -29,8 +29,12 @@ public class _01Coins_in_a_Line_III_2 {
         } else if(left + 1 == right) {
             dp[left][right] = Math.max(values[left], values[right]);
         } else {
-            int  pick_left = Math.min(MemorySearch(left + 2, right, dp, flag, values), MemorySearch(left + 1, right - 1, dp, flag, values)) + values[left];
-            int  pick_right = Math.min(MemorySearch(left, right - 2, dp, flag, values), MemorySearch(left + 1, right - 1, dp, flag, values)) + values[right];
+            int  pick_left = Math.min(MemorySearch(left + 2, right, dp, flag, values), 
+            		MemorySearch(left + 1, right - 1, dp, flag, values)) + values[left];
+            
+            int  pick_right = Math.min(MemorySearch(left, right - 2, dp, flag, values), 
+            		MemorySearch(left + 1, right - 1, dp, flag, values)) + values[right];
+            
             dp[left][right] = Math.max(pick_left, pick_right);    
         }
         return dp[left][right];   
