@@ -16,7 +16,8 @@ public class _02Stone_Game_MemorizeSearch {
         
         f[l][r] = Integer.MAX_VALUE;
         for (int k = l; k < r; k++) {
-            f[l][r] = Math.min(f[l][r], search(l, k, f, visit, sum) + search(k + 1, r, f, visit, sum) + sum[l][r]);
+            f[l][r] = Math.min(f[l][r], 
+search(l, k, f, visit, sum) + search(k + 1, r, f, visit, sum) + sum[l][r]);
         }
         visit[l][r] = 1;
         return f[l][r];
