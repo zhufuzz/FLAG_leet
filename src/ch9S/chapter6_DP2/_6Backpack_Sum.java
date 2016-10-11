@@ -92,6 +92,8 @@ A solution set is:
 [7]
 [1, 3, 3]
 return 2*/
+
+//初始条件 f[0][0] = 1;
 //f[i][j] = f[i - 1][j] + f[i - 1][j - A[i]] 
 //背包九讲
 public int backPackV(int[] nums, int target) {
