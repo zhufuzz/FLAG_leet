@@ -53,7 +53,7 @@ public int backPack_2(int m, int[] A) {
 		for (int j = 1; j <= m; j++) {
 			f[i][j] = f[i - 1][j];
 			if (j >= A[i - 1]) {
-				f[i][j] = Math.max(f[i - 1][j], f[i - 1][j - A[i - 1]]+ A[i - 1]);
+				f[i][j] = Math.max(f[i - 1][j], f[i - 1][j - A[i - 1]] + A[i - 1]);
 			}
 		}
 	}
