@@ -31,10 +31,8 @@ public class _16Binary_Tree_Level_Order_Traversal_DFS {
 	   return results;
 	}
 	
-	private void dfs(TreeNode root,
-	                ArrayList<Integer> level,
-	                int curtLevel,
-	                int maxLevel) {
+	private void dfs(TreeNode root, ArrayList<Integer> level,
+	                int curtLevel, int maxLevel) {
 	   if (root == null || curtLevel > maxLevel) {
 	       return;
 	   }

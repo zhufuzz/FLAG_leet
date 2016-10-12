@@ -39,6 +39,7 @@ private ResultType validateHelper(TreeNode root) {
        return new ResultType(false, 0, 0);
    }
    
+   //前面都是不正常，这里时正常
    return new ResultType(true,
                          Math.max(root.val, right.maxValue),
                          Math.min(root.val, left.minValue));
