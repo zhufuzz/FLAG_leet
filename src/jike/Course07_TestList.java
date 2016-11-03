@@ -5,6 +5,35 @@ import java.util.Comparator;
 import org.junit.Test;
 
 public class Course07_TestList {
+	
+	/**
+	 * 链表节点
+	 */
+	public class ListNode<T> {
+		/**
+		 * 值
+		 */
+		public T value;
+		/**
+		 * 指向下一个节点的指针(引用)
+		 */
+		public ListNode<T> next;
+		public ListNode(T value, ListNode<T> next) {
+			super();
+			this.value = value;
+			this.next = next;
+		}
+		public ListNode() {
+			super();
+		}
+		/**
+		 * 指向前趋节点的指针，用于双链表
+		 */
+		public ListNode<T> pre;
+	}
+	
+	
+	
 @SuppressWarnings("unused")
 @Test
 public void testNode01(){
@@ -23,8 +52,8 @@ public void testNode02(){
  * 测试：单链表的功能
  */
 @Test
-public void testMiniList(){
-	MiniList<Integer> list=new MiniList<Integer>();
+public void testCourse07_MiniList(){
+	Course07_MiniList<Integer> list=new Course07_MiniList<Integer>();
 	Integer[] array={0,1,2,3,4};
 	list.arrayToList(array);
 	list.printList();
@@ -41,7 +70,7 @@ public void testMiniList(){
  */
 @Test
 public void testPrintReverse(){
-	MiniList<Integer> list=new MiniList<Integer>();
+	Course07_MiniList<Integer> list=new Course07_MiniList<Integer>();
 	Integer[] array={0,1,2,3,4};
 	list.arrayToList(array);
 	list.printList();
@@ -53,7 +82,7 @@ public void testPrintReverse(){
  */
 @Test
 public void testMaxInteger(){
-	MiniList<Integer> list=new MiniList<Integer>();
+	Course07_MiniList<Integer> list=new Course07_MiniList<Integer>();
 	Integer[] array={3,4,1,2};
 	list.arrayToList(array);
 	System.out.println(list.getMax());
@@ -63,17 +92,17 @@ public void testMaxInteger(){
  */
 @Test
 public void testMaxPerson(){
-	MiniList<Person> list=new MiniList<Person>();
-	list.comp=new Comparator<Person>() {
+	Course07_MiniList<Course07_Person> list=new Course07_MiniList<Course07_Person>();
+	list.comp=new Comparator<Course07_Person>() {
 		@Override
-		public int compare(Person o1, Person o2) {
+		public int compare(Course07_Person o1, Course07_Person o2) {
 			return o2.getId()-o1.getId();
 		}
 	};
-	Person[] array={new Person(3, "AAA"),
-			new Person(2, "BBB"),
-			new Person(1, "CCC"),
-			new Person(4, "DDD")};
+	Course07_Person[] array={new Course07_Person(3, "AAA"),
+			new Course07_Person(2, "BBB"),
+			new Course07_Person(1, "CCC"),
+			new Course07_Person(4, "DDD")};
 	list.arrayToList(array);
 	System.out.println(list.getMax());
 }

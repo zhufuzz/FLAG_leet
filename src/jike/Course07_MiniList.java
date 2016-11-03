@@ -7,10 +7,36 @@ import java.util.Stack;
 泛型版本的单链表
  */
 public class Course07_MiniList<T> {
+	/**
+	 * 链表节点
+	 */
+	public class ListNode<T> {
+		/**
+		 * 值
+		 */
+		public T value;
+		/**
+		 * 指向下一个节点的指针(引用)
+		 */
+		public ListNode<T> next;
+		public ListNode(T value, ListNode<T> next) {
+			super();
+			this.value = value;
+			this.next = next;
+		}
+		public ListNode() {
+			super();
+		}
+		/**
+		 * 指向前趋节点的指针，用于双链表
+		 */
+		public ListNode<T> pre;
+	}
+	
 /**
  * 默认的头结点
  */
-private Course07_ListNode<T> head=new Course07_ListNode<T>(null, null);
+private ListNode<T> head=new ListNode<T>(null, null);
 /**
  * 比较器
  */
@@ -37,7 +63,7 @@ public T getMax(){
 	if(head.next==null){
 		return null;
 	}
-	Course07_Person<T> p=head.next;
+	ListNode<T> p=head.next;
 	T max=p.value;
 	p=p.next;
 	while(p!=null){
@@ -52,9 +78,9 @@ public T getMax(){
  * 数组转换成链表
  */
 public void arrayToList(T[] array){
-	Course07_ListNode<T> p=head;
+	ListNode<T> p=head;
 	for(T t:array){
-		Course07_ListNode<T> node=new Course07_ListNode<T>(t, null);
+		ListNode<T> node=new ListNode<T>(t, null);
 		p.next=node;
 		p=node;
 	}
