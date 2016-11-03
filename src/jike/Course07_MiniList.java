@@ -2,7 +2,7 @@ package jike;
 
 import java.util.Comparator;
 import java.util.Stack;
- 
+
 /**
 泛型版本的单链表
  */
