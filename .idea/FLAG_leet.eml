@@ -5,7 +5,4 @@
 	<contentEntry url="file://$MODULE_DIR$">
 		<excludeFolder url="file://$MODULE_DIR$/out"/>
 	</contentEntry>
-	<levels>
-		<level name="junit-4.12" value="project"/>
-	</levels>
 </component>
